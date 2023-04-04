@@ -44,6 +44,29 @@
       font-size: 14px;
     }
   </style>
+
+  <style>
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -545,6 +568,38 @@
         </p>
       </div>
 
+      <div class="row">
+        </p>
+        <div class="col-md-2">GALLERY</div>
+        <div class="col-md-10">
+
+          <div class="gallery">
+            <a target="_blank" href="res/img/basketball.JPG">
+              <img src="res/img/basketball.JPG" alt="Hiking" width="600" height="400">
+            </a>
+            <div class="desc">Harbin, captain of the basketball team.</div>
+          </div>
+
+          <div class="gallery">
+            <a target="_blank" href="res/img/hiking.jpeg">
+              <img src="res/img/hiking.jpeg" alt="Hiking" width="600" height="400">
+            </a>
+            <div class="desc">Tibet, 5000m above sea level.</div>
+          </div>
+
+          <div class="gallery">
+            <a target="_blank" href="res/img/disney.jpeg">
+              <img src="res/img/disney.jpeg" alt="Hiking" width="600" height="400">
+            </a>
+            <div class="desc">Shanghai, Disney.</div>
+          </div>
+
+        </div>
+        </p>
+      </div>
+
+
+
       </br>
 
       <footer class="text-center">
@@ -553,6 +608,8 @@
         <a href="http://getbootstrap.com/">bootstrap</a>.
       </footer>
     </div>
+
+
 </body>
 
 </html>
