@@ -1271,4 +1271,26 @@ footer {
     padding: .25rem
 }
 
+div.gallery {
+    margin: 0px;
+    border: 0px solid #FFFFFF;
+    float: left;
+    width: 250px;
+}
+
+div.gallery:hover {
+    border: 0px solid #FFFFFF;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
 /*# sourceMappingURL=styles.css.map */
