@@ -1,647 +1,198 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The design of this website is based on https://nlp.stanford.edu/~johnhew/ and https://isakzhang.github.io/index.html modified by Xiachong Feng.
+     PLS ask for permission & add a link to this website before you directly copy and apply to yours -->
 
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-  <meta name="msvalidate.01" content="67E7EDB1C51D8636FBFDE580F4C6BFD1" />
-  <meta name="baidu-site-verification" content="SS7G439MNv" />
-  <title>
-    CV | Xiachong Feng
-  </title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <!--<link rel="stylesheet" href=""> -->
-  <style type="text/css">
-    .prettyprint ol.linenums>li {
-      list-style-type: decimal;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .nav {}
+  <title> Xiachong Feng's Homepage </title>
+  <!-- link rel="icon" href="images/nlp_logo.jpg" / -->
+  <meta name="author" content="Xiachong Feng">
+  <meta name="keywords" content="Xiachong Feng, 冯夏冲, Xiachong Feng HIT, SCIR, NLP">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Homepage of Xiachong Feng">
+  <link rel="stylesheet" href="./styles.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    .nav li {
-      float: left;
-      width: 70px;
-    }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134238626-1"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    .content {
-      padding: 30px 0;
-    }
+    gtag('config', 'UA-134238626-1');
+  </script>
 
-    body,
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-family: "Fjalla One", "Georgia", "Helvetica Neue", Arial, sans-serif;
-    }
-
-    header {
-      width: 100%;
-      height: 80px;
-    }
-
-    blockquote p {
-      font-size: 14px;
-    }
-  </style>
-
-  <style>
-    div.gallery {
-      margin: 5px;
-      border: 1px solid #ccc;
-      float: left;
-      width: 180px;
-    }
-
-    div.gallery:hover {
-      border: 1px solid #777;
-    }
-
-    div.gallery img {
-      width: 100%;
-      height: auto;
-    }
-
-    div.desc {
-      padding: 15px;
-      text-align: center;
-    }
-  </style>
 </head>
 
 <body>
+  <div class="container content">
+    <main>
+      <div class="home">
 
-  <div class="container">
-    <header class="header">
-      <h1 class="site_title">Simple Life</h1>
-      <ul class="nav pull-right">
-        <!-- <li><a href="./index.html">Home</a></li> -->
-        <!-- <li><a href="./notes.html">Notes</a></li> -->
-      </ul>
-    </header>
+        <div class="mini-intro">
+          <img class="avatar" src="./res/img/xcfeng.JPG" alt="xcfeng-photo">
 
-    <div class="content">
-      <div id="content">
-        <h3>Xiachong Feng (冯夏冲)</h3>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-12">
-                <a href="http://ir.hit.edu.cn/2112.html" target="_blank">Text Generation group</a> in <a
-                  href="http://ir.hit.edu.cn/" target="_blank">Research Center for Social Computing and Information
-                  Retrieval</a> | mail: xiachongfeng1996(at)gmail.com | <a href="./cv/cv_for_xcfeng_en.pdf"
-                  target="_blank">[Get CV in
-                  PDF]</a> | <a href="https://scholar.google.com/citations?user=Wifx6goAAAAJ" target="_blank">[Google
-                  Scholar]</a> | <a href="https://github.com/xcfcode" target="_blank">[Github]</a> |
-              </div>
-            </div>
-          </div>
-        </div>
+          <h1 id="xcfeng">Xiachong Feng <span style="font-family:STFangsong">(冯夏冲)</span></h1>
+          <br>Text Generation group
+          <br>Research Center for Social Computing and Information Retrieval
+          <br>Harbin Institute of Technology
+          <br><br>
+          Contact: <code class="language-plaintext highlighter-rouge">xiachongfeng1996 [at] gmail.com</code>
 
-        <hr />
-
-        <div class="row">
-          <p>
-          <div class="col-md-2">RESEARCH INTERESTS</div>
-          <div class="col-md-10">
-            Natural language processing, <a href="https://github.com/xcfcode/Summarization-Papers">Summarization</a>,
-            AI+Neuroscience</div>
-          </p>
-        </div>
-
-        <div class="row">
-          <p>
-          <div class="col-md-2">EDUCATION</div>
-          <div class="col-md-10">
-            <div class="row">
-              <div class="col-md-12"><em>Ph.D. Student</em>, Harbin Institute of Technology<span
-                  class="pull-right">2018.9 - Present</span></div>
-              <div class="col-md-12">Major: Computer Science, Supervisors: <a href="http://ir.hit.edu.cn/~qinb/">Prof.
-                  Bing Qin</a> and <a href="http://ir.hit.edu.cn/~xcfeng/">A.P Xiaocheng Feng</a></div>
-            </div>
-
-            <p></p>
-            <div class="row">
-              <div class="col-md-12"><em>Remote Intern</em>, <a href="https://wing.comp.nus.edu.sg/">WING</a>, National
-                University of Singapore<span class="pull-right">2020.8 - Present</span></div>
-              <div class="col-md-12">Supervisor: <a href="https://www.comp.nus.edu.sg/~kanmy/">A.P Min-Yen Kan</a></div>
-            </div>
-
-            <p></p>
-            <div class="row">
-              <div class="col-md-12"><em>B.E.</em>, Harbin Institute of Technology<span class="pull-right">2014.9 -
-                  2018.6</span></div>
-              <div class="col-md-12">Major: Software Engineering</div>
-            </div>
-          </div>
-          </p>
-        </div>
+          <br>More about me: <a href="https://scholar.google.com/citations?user=Wifx6goAAAAJ">Google Scholar</a> /
+          <a href="https://github.com/xcfcode">Github</a> / <a href="" target="_blank">[Get CV in PDF]</a>
 
 
-        <div class="row">
-          <p>
-          <div class="col-md-2">TALK</div>
-          <div class="col-md-10">
-            <div class="row">
-              <div class="col-md-12">
-                <a href="./res/presentation/LLMs.pdf" target="_blank">Recent Advances in Large Language
-                  Models</a>, at Interactive Data Exploration System (IDEAS) lab, Shandong University.
-                <span class="pull-right">2023.5</span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <a href="./res/presentation/Dialogue_Summarization_DAMO.pdf" target="_blank">Dialogue Summarization</a>,
-                at the Alibaba
-                DAMO Academy, Language Technology Lab, Conversational AI.
-                <span class="pull-right">2022.1</span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <a href="./res/presentation/Dialogue_Summarization.pdf" target="_blank">Dialogue Summarization</a>, at
-                the Natural
-                Language Processing Lab at Tsinghua University: THUNLP.
-                <span class="pull-right">2021.6</span>
-              </div>
-            </div>
-          </div>
-          </p>
-        </div>
-
-
-        <div class="row">
-          <p>
-          <div class="col-md-2">PREPRINT</div>
-          <div class="col-md-10">
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:plum;">Brain-to-Text</span>
-                <strong>Xiachong Feng</strong>, Xiaocheng Feng, Bing Qin.
-                <a href="https://arxiv.org/abs/2301.09237">Semantic-aware Contrastive Learning for
-                  Electroencephalography-to-Text Generation with
-                  Curriculum Learning</a>. arXiv Preprint 2023. Under Review.
-              </div>
-            </div>
-            <p></p>
-
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:#FFCCCC;">Summarization</span>
-                <strong>Xiachong Feng</strong>, Xiaocheng Feng, Bing Qin.
-                <a href="https://arxiv.org/abs/2305.01253">The Role of Summarization in Generative Agents: A Preliminary
-                  Perspective </a>. arXiv Preprint 2023.
-              </div>
-            </div>
-            <p></p>
-
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:#FFCCCC;">Summarization</span>
-                Kun Zhu, Xiaocheng Feng, <strong>Xiachong Feng</strong>, Yingsheng Wu, Bing Qin.
-                <a href="https://arxiv.org/abs/2304.03512">Hierarchical Catalogue Generation for Literature Review: A
-                  Benchmark</a>. arXiv Preprint 2023.
-              </div>
-            </div>
-            <p></p>
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:#FFCCCC;">Summarization</span>
-                Yichong Huang, <strong>Xiachong Feng</strong>, Xiaocheng Feng, Bing Qin.
-                <a href="https://arxiv.org/abs/2104.14839">The Factual Inconsistency Problem in Abstractive Text
-                  Summarization: A Survey</a>. arXiv Preprint 2021. <a
-                  href="https://mp.weixin.qq.com/s/Aye9FBwG-v2JO2MLoEjo0g">[Chinese Blog]</a>
-              </div>
-            </div>
-          </div>
-          </p>
-        </div>
-
-
-
-        <div class="row">
-          <p>
-          <div class="col-md-2">PUBLICATION</div>
-          <div class="col-md-10">
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:#FFCCCC;">Summarization</span>
-                <strong>Xiachong Feng</strong>, Xiaocheng Feng, Bing Qin.
-                <a href="https://arxiv.org/abs/2107.03175">A Survey on Dialogue Summarization: Recent Advances and New
-                  Frontiers</a>. In <em>Proceeding of The 31th International Joint Conference on Artificial
-                  Intelligence</em> <strong>(IJCAI 2022)</strong>. <a
-                  href="https://mp.weixin.qq.com/s/628OAOW1_-Yc_vQbeuY_uA">[Chinese Blog]</a> <a
-                  href="https://docs.google.com/presentation/d/1ib5GgMd6Mtu8bzssaf7r2uPR8loOrThwtZLTJ5dM44I/edit?usp=sharing">[Google
-                  Doc]</a>
-              </div>
-            </div>
-            <p></p>
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:#FFCCCC;">Summarization</span>
-                <strong>Xiachong Feng</strong>, Xiaocheng Feng, Bing Qin.
-                <a href="https://aclanthology.org/2022.dialdoc-1.1/">MSAMSum: Towards Benchmarking Multi-lingual
-                  Dialogue Summarization</a>. In <em>The 2nd DialDoc workshop on Document-grounded Dialogue and
-                  Conversational Question Answering</em> <strong>(ACL 2022 DialDoc Workshop)</strong>. <a
-                  href="https://github.com/xcfcode/MSAMSum">[Data]</a> <a
-                  href="./res/poster/MSAMSum-Poster.pdf">[Poster]</a> <a
-                  href="./res/paper-slides/MSAMSum-Slides.pdf">[Slides]</a>
-              </div>
-            </div>
-            <p></p>
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:#FFCCCC;">Summarization</span>
-                <strong>Xiachong Feng</strong>, Xiaocheng Feng, Libo Qin, Bing Qin, Ting Liu.
-                <a href="https://aclanthology.org/2021.acl-long.117/">Language Model as an Annotator: Exploring DialoGPT
-                  for Dialogue Summarization</a>. In <em>The 59th Annual Meeting of the Association for Computational
-                  Linguistics</em> <strong>(ACL 2021)</strong>. <a
-                  href="https://github.com/xcfcode/PLM_annotator">[Code]</a> <a
-                  href="./res/poster/ACL2021-poster.pdf">[Poster]</a> <a
-                  href="./res/paper-slides/ACL2021-slides.pdf">[Slides]</a> <a
-                  href="https://mp.weixin.qq.com/s/GQQRRS3F7p4Zv6wSuDh0ng">[Chinese Blog]</a>
-              </div>
-            </div>
-            <p></p>
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:#FFCCCC;">Summarization</span>
-                <strong>Xiachong Feng</strong>, Xiaocheng Feng, Bing Qin, Xinwei Geng.
-                <a href="https://www.ijcai.org/proceedings/2021/524">Dialogue Discourse-Aware Graph Model and Data
-                  Augmentation for Meeting Summarization</a>. In <em>Proceeding of The 30th International Joint
-                  Conference on Artificial Intelligence</em> <strong>(IJCAI 2021)</strong>. <a
-                  href="https://arxiv.org/abs/2012.03502">[arXiv]</a> <a
-                  href="https://github.com/xcfcode/DDAMS">[Code]</a> <a
-                  href="./res/poster/IJCAI2021-poster.pdf">[Poster]</a> <a
-                  href="./res/paper-slides/IJCAI2021-slides.pdf">[Slides]</a> <a
-                  href="https://mp.weixin.qq.com/s/Be7AYUPdux8NvAO4wo6_fg">[Chinese Blog]</a>
-              </div>
-            </div>
-            <p></p>
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:#FFCCCC;">Summarization</span>
-                <strong>Xiachong Feng</strong>, Xiaocheng Feng, Bing Qin.
-                <a href="https://aclanthology.org/2021.ccl-1.86/">Incorporating Commonsense Knowledge into Abstractive
-                  Dialogue Summarization via Heterogeneous Graph Networks</a>. In <em>The 20th China National Conference
-                  on Computational Linguistics</em> <strong>(CCL 2021, 🏆 <b>Best Paper Award</b>)</strong>. <a
-                  href="https://github.com/xcfcode/DHGN">[Code]</a> <a
-                  href="./res/paper-slides/CCL-2021.pdf">[Slides]</a> <a
-                  href="https://mp.weixin.qq.com/s/x3zqGc4pqh4x3q_uorNKcg">[Chinese Blog]</a>
-              </div>
-            </div>
-            <p></p>
-
-            <div class="row">
-              <div class="col-md-12">
-                <span style="background-color:#FFCC99;">Information Extraction</span>
-                Xiaocheng Feng, <strong>Xiachong Feng</strong>, Bing Qin, Zhangyin Feng, Ting Liu.
-                <a href="https://www.ijcai.org/Proceedings/2018/566">Improving Low Resource Named Entity Recognition
-                  using Cross-lingual Knowledge Transfer</a>.
-                In <em>Proceeding of The 27th International Joint Conference on Artificial Intelligence</em>
-                <strong>(IJCAI 2018)</strong>. <a href="https://github.com/xcfcode/lrner">[Code]</a> <a
-                  href="https://mp.weixin.qq.com/s/-SQETPUnV2hu5QRqYsXdmg">[Chinese Blog]</a>
-              </div>
-            </div>
-          </div>
-          </p>
-        </div>
-
-
-
-        <div class="row">
-          <p>
-          <div class="col-md-2">PATENTS</div>
-          <div class="col-md-10">
-
-            <div class="row">
-              <div class="col-md-12">
-                <a
-                  href="https://cprs.patentstar.com.cn/Search/Detail?ANE=9HHH9CIB9FHF2BAA9GFD5BEAEIIA8AGA8AGABIBA7DBA9HDD">[CN113204627B]</a>
-                Xiaocheng Feng, <strong>Xiachong Feng</strong>, Bing Qin, Ting Liu, Kun Zhu. 2022.
-                <a
-                  href="https://cprs.patentstar.com.cn/Search/Detail?ANE=9HHH9CIB9FHF2BAA9GFD5BEAEIIA8AGA8AGABIBA7DBA9HDD">Dialogue
-                  Summarization System Using DialoGPT as A Feature Annotator.</a>
-              </div>
-            </div>
-            <p></p>
-
-            <div class="row">
-              <div class="col-md-12">
-                <a
-                  href="https://cprs.patentstar.com.cn/Search/Detail?ANE=4CAA8HBA9FIG8AIA9ICC9EIE7BFA8GCA9DGE9IFE9GCB9EHF">[CN112148863B]</a>
-                Xiaocheng Feng, <strong>Xiachong Feng</strong>, Bing Qin, Ting Liu. 2022. <a
-                  href="https://cprs.patentstar.com.cn/Search/Detail?ANE=4CAA8HBA9FIG8AIA9ICC9EIE7BFA8GCA9DGE9IFE9GCB9EHF">A
-                  Method for Abstractive Dialogue Summarization by Incorporating Commonsense Knowledge.</a>
-              </div>
-            </div>
-            <p></p>
-
-            <div class="row">
-              <div class="col-md-12">
-                <a
-                  href="https://cprs.patentstar.com.cn/Search/Detail?ANE=9HDD5FAA9FFD9FFB9IFF8GCA9BIB9DEE4BAA5CBA9BDD9FGD">[CN111460132B]</a>
-                Xiaocheng Feng, Bing Qin, <strong>Xiachong Feng</strong>, Ting Liu. 2021. <a
-                  href="https://cprs.patentstar.com.cn/Search/Detail?ANE=9HDD5FAA9FFD9FFB9IFF8GCA9BIB9DEE4BAA5CBA9BDD9FGD">A
-                  Method for Abstractive Meeting Summarization Based on Graph Convolutional Networks</a>
-              </div>
-            </div>
-
-
-          </div>
-          </p>
-        </div>
-
-        <div class="row">
-          </p>
-          <div class="col-md-2">TEACHING EXPERIENCE</div>
-          <div class="col-md-10">
-
-            <div class="row">
-              <div class="col-md-12">
-                <div>TA, NUS <a href="https://www.edx.org/course/natural-language-processing-foundations" target="
-                  ">Natural Language Processing: Foundations</a> <span class="pull-right">Sept.2022-June.2023</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          </p>
-        </div>
-
-        <div class="row">
-          </p>
-          <div class="col-md-2">SERVICES</div>
-          <div class="col-md-10">
-
-            <div class="row">
-              <div class="col-md-12">
-                <div><em>Conference Reviewer</em>: NeurIPS 2023, ACL Rolling Review, ACL 2023; EMNLP 2021; NLPCC 2021;
-                  CCL 2021;</div>
-              </div>
-            </div>
-          </div>
-          </p>
-        </div>
-
-        <div class="row">
-          </p>
-          <div class="col-md-2">COMPETITION</div>
-          <div class="col-md-10">
-            <div> <a href="https://aistudio.baidu.com/aistudio/competition/detail/726/0/leaderboard"
-                target="_blank">千言：第二届面向事实一致性的生成评测比赛</a> Leader of Team GPT-66. Rank 4/70.
-            </div>
-            <div> <a href="https://modelscope.cn/headlines/article/52" target="_blank">ICASSP 2023 General Meeting
-                Understanding and
-                Generation Challenge</a>
-              <ul>
-                <li> 🏅 Track5: Action Item Detection (AID) <a href="https://modelscope.cn/competition/17/ranking"
-                    target="_blank">Rank 1st.</a> <a href="./res/paper/ICASSP_2023_MUG.pdf" target="_blank">[Report]</a>
-                <li> 🥈 Track2: Topic-level and
-                  Session-level
-                  Extractive Summarization <a href="https://modelscope.cn/competition/13/ranking" target="_blank">Rank
-                    2nd.</a>
-              </ul>
-            </div>
-          </div>
-          </p>
-        </div>
-
-        <div class="row">
-          </p>
-          <div class="col-md-2">AWARDS</div>
-          <div class="col-md-10">
-            <div>Tencent Scholarship <span class="pull-right">2022.</span></div>
-            <div>National Scholarship <span class="pull-right">2021.</span></div>
-            <div>China Scholarship Council (CSC) Scholarship <span class="pull-right">2019.</span></div>
-            <div>Outstanding Graduate Award at Provincial Level <span class="pull-right">2018.</span></div>
-            <div>Outstanding Student Cadres at Provincial Level <span class="pull-right">2017.</span></div>
-            <div>National Scholarship <span class="pull-right">2017.</span></div>
-            <div>National Scholarship <span class="pull-right">2016.</span></div>
-          </div>
-          </p>
-        </div>
-
-
-
-
-        <div class="row">
-          </p>
-          <div class="col-md-2">PROJECTS</div>
-          <div class="col-md-10">
-            <div>HIT "HuoZi" large language model</div>
-            <div><a href="https://github.com/xcfcode/Summarization-Papers">Summarization-papers </a><iframe
-                src="https://ghbtns.com/github-btn.html?user=xcfcode&repo=Summarization-Papers&type=star&count=true"
-                frameborder="0" scrolling="0" width="100" height="20" title="GitHub"></iframe><iframe
-                src="https://ghbtns.com/github-btn.html?user=xcfcode&repo=Summarization-Papers&type=fork&count=true"
-                frameborder="0" scrolling="0" width="100" height="20" title="GitHub"></iframe></div>
-            <div><a href="https://mlnlp-world.github.io/NLP-Course-Chinese/">NLP Course | 专属定制 </a><iframe
-                src="https://ghbtns.com/github-btn.html?user=MLNLP-World&repo=NLP-Course-Chinese&type=star&count=true"
-                frameborder="0" scrolling="0" width="100" height="20" title="GitHub"></iframe><iframe
-                src="https://ghbtns.com/github-btn.html?user=MLNLP-World&repo=NLP-Course-Chinese&type=fork&count=true"
-                frameborder="0" scrolling="0" width="100" height="20" title="GitHub"></iframe></div>
-            <div><a href="https://github.com/ExpressAI/DataLab">Datalab (summarization part) </a><iframe
-                src="https://ghbtns.com/github-btn.html?user=ExpressAI&repo=DataLab&type=star&count=true"
-                frameborder="0" scrolling="0" width="100" height="20" title="GitHub"></iframe><iframe
-                src="https://ghbtns.com/github-btn.html?user=ExpressAI&repo=DataLab&type=fork&count=true"
-                frameborder="0" scrolling="0" width="100" height="20" title="GitHub"></iframe></div>
-          </div>
-
-        </div>
-        </p>
-      </div>
-
-
-      <div class="row">
-        </p>
-        <div class="col-md-2">PRESENTATIONS</div>
-        <div class="col-md-10">
-          <div><span style="background-color:rgb(142, 234, 180);">[New]</span> Recent Advances in Large Language
-            Models 大语言模型最新进展概述 <a href="./res/presentation/LLMs.pdf" target="_blank">[PDF]</a>
-          </div>
-          <div><span style="background-color:rgb(142, 234, 180);">[New]</span> ChatGPT
-            Evaluation for NLP: A Meta Survey <a href="./res/presentation/ChatGPT_for_NLP.pdf" target="_blank">[PDF]</a>
-            <a href="https://docs.google.com/presentation/d/1PnzlHl8qDra6S4Zuuftk_o4v7WWN0uZTb-I7uNwNwAY/edit?usp=sharing&resourcekey=0-xbkOuvWVlGZTbPnflAqrCQ"
-              target="_blank">[Google Doc]</a>
-          </div>
-          <div><span style="background-color:rgb(142, 234, 180);">[New]</span><a
-              href="./res/presentation/FedDistill.pdf"> Federated Learning Meets Knowledge
-              Distillation</a></div>
-          <div><a href="./res/presentation/Dialogue_Summarization_DAMO.pdf">Dialogue Summarization(2022.1)</a>
+          <!--Navigation bar-->
+          <div id="menu">
             <div>
-              <div>Prompt Survey: <a href="./res/presentation/Prompt-part1.pdf">[PDF]</a>,<a
-                  href="./res/presentation/Prompt-part1.pptx">[PPTX]</a></div>
-              <div><a href="./res/presentation/Dialogue_Summarization.pdf">Dialogue Summarization(2021.5)</a>,<a
-                  href="https://mp.weixin.qq.com/s/628OAOW1_-Yc_vQbeuY_uA">对话摘要最新进展简述</a></div>
-              <div><a href="./res/presentation/Cross-lingual_Summarization.pdf">Cross-lingual Summarization</a></div>
-              <div><a href="./res/presentation/Efficient_Transformers.pdf">Efficient Transformers</a></div>
-              <div><a href="./res/presentation/Multi-modal-Summarization.pdf">Multi-modal Summarization</a></div>
-              <div><a href="./res/presentation/acl2020-summarization.pdf">ACL20 Summarization</a></div>
-              <div><a href="./res/presentation/Data Augmentation.pdf">Data Augmentation</a></div>
-              <div><a href="./res/presentation/文本摘要简述.pdf">文本摘要简述</a></div>
-              <div><a href="./res/presentation/ACL19 Summarization.pdf">ACL19 Summarization</a></div>
-              <div><a href="./res/presentation/Graph Neural Networks.pdf">Graph Neural Networks</a></div>
-              <div><a href="./res/presentation/Knowledge Distillation.pdf">Knowledge Distillation</a></div>
-              <div><a href="./res/presentation/Meta Learning.pdf">Meta Learning</a></div>
-              <div><a href="./res/presentation/Non-Autoregressive Decoding.pdf">Non-Autoregressive Decoding</a></div>
-              <div><a href="./res/presentation/Event Extraction.pdf">Event Extraction</a></div>
-              <div><a href="./res/presentation/Advanced pre-training language models a brief introduction.pdf">Advanced
-                  Pre-training Language Models: a Brief Introduction</a></div>
+              <a href="index.html">Home</a>
             </div>
-            </p>
+            <div>
+              <a href="research.html">Publications & Patents</a>
+            </div>
+            <div>
+              <a href="presentation.html">Talk & Presentation</a>
+            </div>
+            <div>
+              <a href="project.html">Projects & Competitions</a>
+            </div>
+            <script>
+              $(function () {
+                const current = window.location.pathname.split("/");
+                $('#menu div a').each(function () {
+                  const $this = $(this);
+                  // if the current path is like this link, make it active
+                  if (current.indexOf($this.attr("href")) !== -1) {
+                    $this.parent().addClass("now");
+                  }
+                })
+              });
+            </script>
           </div>
+          <!--end of Navigation bar-->
 
+          <h3><a name="bio"></a>About me</h3>
+
+          Hi, I am a Ph.D student from Harbin Institute of Technology, where I am a member of <a
+            href="http://ir.hit.edu.cn/2112.html" target="_blank">Text Generation Group</a> of
+          <a href="http://ir.hit.edu.cn/" target="_blank">HIT-SCIR</a> Lab under the supervision of <a
+            href="http://ir.hit.edu.cn/~qinb/" target="_blank">Prof.
+            Bing Qin </a> and <a href="http://ir.hit.edu.cn/~xcfeng/" target="_blank">
+            A.P Xiaocheng Feng </a>. Currently, I am also a remote intern of NUS-<a href="https://wing.comp.nus.edu.sg/"
+            target="_blank">WING</a> Lab, advised by Prof. <a href="https://www.comp.nus.edu.sg/~kanmy/" target="">A.P
+            Min-Yen Kan</a>.
+
+          <!-- <h3 id="news">News</h3>
+          <ul>
+            <li><span style="color:#B08519">[June 2023]</span> xxx <a href="https://arxiv.org/pdf/2306.05179.pdf">xxx</a> xxx <a
+                href="">xxx</a> xxx</li>
+          </ul> -->
+
+
+          <h3><a name="research-interests"></a>Research Interests</h3>
+          <ul>
+            <li> Natural Language Processing </li>
+            <li> Text Generation </li>
+            <li> Summarization </li>
+            <li> AI + Neuroscience </li>
+          </ul>
+
+
+          <h3><a name="edu"></a>Education</h3>
+
+          <table>
+            <tbody>
+              <td width="15%">
+                <img src="./res/img/hit_high.png" width="120">
+              </td>
+
+              <td style="width:75%;vertical-align:middle">
+                <strong>Harbin Institute of Technology</strong>, Harbin, China
+
+                <ul>
+                  <li> <i>Ph.D</i> in Computer Science
+                  <li> Aug.2018 - Mar.2024 (Expected)
+                  <li> Supervisors: <a href="http://ir.hit.edu.cn/~qinb/" target="_blank">Prof.
+                      Bing Qin </a> and <a href="http://ir.hit.edu.cn/~xcfeng/" target="_blank">
+                      A.P Xiaocheng Feng </a>
+                </ul>
+
+                <ul>
+                  <li> <i>B.E</i> in Software Engineering
+                  <li> Sep.2014 - Jun.2018
+                  <li> Rank: 3/167
+                </ul>
+              </td>
+            </tbody>
+          </table>
+
+          <h3><a name="experience"></a>Experience</h3>
+
+          <table>
+            <tbody>
+              <td width="15%">
+                <img src="./res/img/nus.jpeg" width="120">
+              </td>
+
+              <td style="width:75%;vertical-align:middle">
+                <strong><a href="https://wing.comp.nus.edu.sg/" target="_blank">WING</a>, National University of
+                  Singapore</strong>
+                <ul>
+                  <li>Remote Intern
+                  <li>Aug.2020 - Present
+                  <li>Supervisor: <a href="https://www.comp.nus.edu.sg/~kanmy/" target="">A.P Min-Yen Kan</a>
+                </ul>
+              </td>
+            </tbody>
+          </table>
+
+          <h3><a name="teaching"></a>Teaching Experience</h3>
+          <ul>
+            <li> TA, NUS <a href="https://www.edx.org/course/natural-language-processing-foundations"
+                target="_blank">Natural Language Processing: Foundations</a>, Sep.2022 - May.2023</li>
+
+          </ul>
+
+          <h3><a name="awards"></a>Honors & Awards</h3>
+          <ul>
+            <li> Tencent Scholarship, 2022</li>
+            <li> National Scholarship for Ph.D., Ministry of Education of China, 2021 </li>
+            <li> China Scholarship Council (CSC) Scholarship, 2019 </li>
+            <li> Outstanding Graduate Award at Provincial Level, 2018</li>
+            <li> Outstanding Student Cadres at Provincial Level, 2017 </li>
+            <li> National Scholarship for B.E., Ministry of Education of China, 2017 </li>
+            <li> National Scholarship for B.E., Ministry of Education of China, 2016 </li>
+          </ul>
+
+          <h3><a name="professional"></a>Professional Service</h3>
+          <ul>
+            <li> Regular PC Member (or Reviewer):
+              <ul>
+                <li>ACL, EMNLP, ACL Rolling Review, COLING, NLPCC, CCL</li>
+                <li>NeurIPS</li>
+              </ul>
+              <!-- <li> Journal Reviewer:
+              <ul>
+                <li> Transactions on Audio, Speech and Language Processing (TASLP)
+              </ul>
+            </li> -->
+          </ul>
+        </div>
+
+        <div id='footer'>
+          <p style="text-align:right;">Last modified date: July 2023</p>
         </div>
       </div>
-
-
-
-      <div class="row">
-        </p>
-        <div class="col-md-2">PAPER SLIDES</div>
-        <div class="col-md-10">
-          <div> <span style="background-color:rgb(142, 234, 180);">[New]</span><a
-              href="https://docs.google.com/presentation/d/18Md2n4aq9_nZZPRPgEnCaVeAa0RnslktRErL87PS6aM/edit?usp=sharing&resourcekey=0-yIcktTYo_UeX4Gsjh2t0gQ"
-              target="_blank"> Evidence of a predictive
-              coding hierarchy in the human brain listening to speech</a>
-          </div>
-
-          <div><span style="background-color:rgb(142, 234, 180);">[New]</span><a
-              href="./res/paper-slides/BrainBERT Self-supervised representation learning for Intracranial Electrodes.pdf">
-              BrainBERT:
-              Self-supervised representation learning for Intracranial Electrodes</a></div>
-          <div><a href="./res/paper-slides/switch-GLAT.pdf">switch-GLAT: Multilingual Parallel Machine Translation Via
-              Code-Switch Decoder</a></div>
-          <div><a href="./res/paper-slides/Memorizing_Transformers.pdf">Memorizing Transformers</a></div>
-          <div><a
-              href="./res/paper-slides/One Model, Multiple Tasks Pathways for Natural Language Understanding.pdf">One
-              Model, Multiple Tasks: Pathways for Natural Language Understanding</a></div>
-          <div><a href="./res/paper-slides/CPT Colorful Prompt Tuning for Pre-trained Vision-Language Models.pptx">CPT
-              Colorful Prompt Tuning for Pre-trained Vision-Language Models</a></div>
-          <div><a
-              href="./res/paper-slides/Contrastive Learning with Adversarial Perturbations for Conditional Text Generation.pdf">Contrastive
-              Learning with Adversarial Perturbations for Conditional Text Generation</a></div>
-          <div><a href="./res/paper-slides/Making Pre-trained Language Models Better Few-shot Learners.pdf">Making
-              Pre-trained Language Models Better Few-shot Learners</a></div>
-          <div><a
-              href="./res/paper-slides/group-wise-contrastive-learning-for-neural-dialogue-generation.pdf">Group-wise
-              Contrastive Learning for Neural Dialogue Generation</a></div>
-          <div><a href="./res/paper-slides/Heterogeneous-Graph-Transformer.pdf">Heterogeneous Graph Transformer</a>
-          </div>
-          <div><a
-              href="./res/paper-slides/Plug and Play Language Model- A Simple Baseline for Controlled Language Generation.pdf">Plug
-              and Play Language Model- A Simple Baseline for Controlled Language Generation</a></div>
-          <div><a href="./res/paper-slides/Multimodal Abstractive Summarization for How2 Videos.pdf">Multimodal
-              Abstractive Summarization for How2 Videos</a></div>
-          <div><a href="./res/paper-slides/A Simple Theoretical Model of Importance for Summarization.pdf">A Simple
-              Theoretical Model of Importance for Summarization</a></div>
-          <div><a href="./res/paper-slides/Text Generation from Knowledge Graphs with Graph Transformers.pdf">Text
-              Generation from Knowledge Graphs with Graph Transformers</a></div>
-          <div><a href="./res/paper-slides/The Curious Case of Neural Text Degeneration.pdf">The Curious Case of Neural
-              Text Degeneration</a></div>
-          <div><a href="./res/paper-slides/Episodic Memory in Lifelong Language Learning.pdf">Episodic Memory in
-              Lifelong Language Learning</a></div>
-          <div><a
-              href="./res/paper-slides/DialogueGCN-A Graph Convolutional Neural Network for Emotion Recognition in Conversation.pdf">DialogueGCN-A
-              Graph Convolutional Neural Network for Emotion Recognition in Conversation</a></div>
-          <div><a
-              href="./res/paper-slides/Commonsense for Generative Multi-Hop Question Answering Tasks.pdf">Commonsense
-              for Generative Multi-Hop Question Answering Tasks</a></div>
-          <div><a
-              href="./res/paper-slides/Commonsense Knowledge Aware Conversation Generation with Graph Attention.pdf">Commonsense
-              Knowledge Aware Conversation Generation with Graph Attention</a></div>
-          <div><a href="./res/paper-slides/Deep Multitask Learning for Semantic Dependency Parsing.pdf">Deep Multitask
-              Learning for Semantic Dependency Parsing</a></div>
-          <div><a href="./res/paper-slides/Dynamically Fused Graph Network for Multi-hop Reasoning.pdf">Dynamically
-              Fused Graph Network for Multi-hop Reasoning</a></div>
-          <div><a
-              href="./res/paper-slides/Emotional Chatting Machine Emotional Conversation Generation with Internal and External Memory.pdf">Emotional
-              Chatting Machine Emotional Conversation Generation with Internal and External Memory</a></div>
-          <div><a href="./res/paper-slides/Learning Neural Templates for Text Generation.pdf">Learning Neural Templates
-              for Text Generation</a></div>
-          <div><a
-              href="./res/paper-slides/Learning to Ask Questions in Open-domain Conversational Systems with Typed Decoders .pdf">Learning
-              to Ask Questions in Open-domain Conversational Systems with Typed Decoders </a></div>
-          <div><a
-              href="./res/paper-slides/Linguistic Knowledge and Transferability of Contextual Representations.pdf">Linguistic
-              Knowledge and Transferability of Contextual Representations</a></div>
-          <div><a
-              href="./res/paper-slides/Multi-Domain Neural Machine Translation with Word-Level Domain Context Discrimination.pdf">Multi-Domain
-              Neural Machine Translation with Word-Level Domain Context Discrimination</a></div>
-          <div><a href="./res/paper-slides/Semi-Supervised QA with Generative Domain-Adaptive Nets.pdf">Semi-Supervised
-              QA with Generative Domain-Adaptive Nets</a></div>
-        </div>
-        </p>
-      </div>
-
-      <div class="row">
-        </p>
-        <div class="col-md-2">NOTES</div>
-        <div class="col-md-10">
-          <div><a href="./res/notes/EMNLP19_Summarization.pdf">EMNLP19 Summarization</a></div>
-          <div><a href="./res/notes/x-lingual-v1.0.pdf">Cross-Lingual Word Embedding</a></div>
-          <div><a href="./res/notes/Brief-intro-to-summarization.pdf">Brief intro to summarization</a></div>
-          <div><a href="./res/notes/GAN in Text Generation.pdf">GAN in Text Generation</a></div>
-          <div><a href="./res/notes/EMNLP19_and_NIPS19_Notes.pdf">EMNLP19 and NIPS19 Notes</a></div>
-          <div><a href="./res/notes/Boosting.pdf">Boosting</a></div>
-          <div><a href="./res/notes/The Maximum Entropy Model.pdf">The Maximum Entropy Model</a></div>
-          <div><a href="./res/notes/HMM.pdf">HMM</a></div>
-          <div><a href="./res/notes/ConceptNet.pdf">ConceptNet</a></div>
-        </div>
-        </p>
-      </div>
-
-      <div class="row">
-        </p>
-        <div class="col-md-2">TECHNIQUES</div>
-        <div class="col-md-10">
-          <div><a href="./matplotlib.html">Matplotlib, Notes for Python数据可视化之matplotlib实践</a></div>
-        </div>
-        </p>
-      </div>
-
-      <div class="row">
-        </p>
-        <div class="col-md-2">GALLERY</div>
-        <div class="col-md-10">
-
-          <div class="gallery">
-            <a target="_blank" href="res/img/basketball.JPG">
-              <img src="res/img/basketball.JPG" alt="Hiking" width="600" height="400">
-            </a>
-            <div class="desc">Harbin, captain of the basketball team.</div>
-          </div>
-
-          <div class="gallery">
-            <a target="_blank" href="res/img/hiking.jpeg">
-              <img src="res/img/hiking.jpeg" alt="Hiking" width="600" height="400">
-            </a>
-            <div class="desc">Tibet, 5000m above sea level.</div>
-          </div>
-
-        </div>
-        </p>
-      </div>
-
-
-
-      </br>
-
-      <footer class="text-center">
-        &copy; <a href="">Xiachong Feng</a> 2018 - 2023 |
-        This site is built by <a href="http://middlemanapp.com/" target="_blank">Middleman</a> and
-        <a href="http://getbootstrap.com/">bootstrap</a>.
-      </footer>
-    </div>
-
+    </main>
+  </div>
 
 </body>
 
