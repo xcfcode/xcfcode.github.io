@@ -659,12 +659,12 @@ But mirrors of our own amazement.`
 // TOKENIZER
 // ═══════════════════════════════════════════════════
 function tokenize(text) {
-  // Split into word-level tokens, preserving whitespace and newlines
+  // Each token = one visible word + its trailing whitespace
   const tokens = [];
-  const regex = /(\S+|\n| +)/g;
-  let match;
-  while ((match = regex.exec(text)) !== null) {
-    tokens.push(match[0]);
+  const regex = /(\S+)(\s*)/g;
+  let m;
+  while ((m = regex.exec(text)) !== null) {
+    tokens.push({ word: m[1], ws: m[2] });
   }
   return tokens;
 }
@@ -821,15 +821,25 @@ class SpeculativeEngine {
     return Math.max(1, Math.min(this.draftBudget, val));
   }
 
-  createTokenSpan(text) {
+  createTokenSpan(token) {
     const span = document.createElement('span');
     span.className = 'token';
-    if (text === '\n') {
-      span.innerHTML = '<br>';
-    } else {
-      span.textContent = text;
-    }
+    span.textContent = token.word;
     return span;
+  }
+
+  // Create whitespace node(s) after a token span
+  appendTrailingWS(token) {
+    if (!token.ws) return;
+    if (token.ws.includes('\n')) {
+      // Split on newlines and insert <br> for each
+      const parts = token.ws.split('\n');
+      for (let i = 1; i < parts.length; i++) {
+        this.genEl.appendChild(document.createElement('br'));
+      }
+    } else {
+      this.genEl.appendChild(document.createTextNode(token.ws));
+    }
   }
 
   async run() {
@@ -854,11 +864,7 @@ class SpeculativeEngine {
           span.classList.add('drafting');
           this.genEl.appendChild(span);
           draftSpans.push(span);
-          // Add space between tokens (not for newlines)
-          if (token !== '\n' && (this.cursor + i + 1) < this.tokens.length && this.tokens[this.cursor + i + 1] !== '\n') {
-            const space = document.createTextNode(' ');
-            this.genEl.appendChild(space);
-          }
+          this.appendTrailingWS(token);
           this.genEl.scrollTop = this.genEl.scrollHeight;
           await this.sleep(this.draftDelayPerToken);
         }
@@ -872,10 +878,7 @@ class SpeculativeEngine {
           span.classList.add('drafting', 'block-glow');
           this.genEl.appendChild(span);
           draftSpans.push(span);
-          if (token !== '\n' && (this.cursor + i + 1) < this.tokens.length && this.tokens[this.cursor + i + 1] !== '\n') {
-            const space = document.createTextNode(' ');
-            this.genEl.appendChild(space);
-          }
+          this.appendTrailingWS(token);
         }
         this.genEl.scrollTop = this.genEl.scrollHeight;
       }
@@ -915,11 +918,11 @@ class SpeculativeEngine {
         draftSpans[i].classList.add('final');
       }
 
-      // Remove rejected tokens and their associated spaces
+      // Remove rejected tokens and their trailing whitespace nodes
       for (let i = draftSpans.length - 1; i >= tau; i--) {
         const span = draftSpans[i];
-        // Remove trailing text node (space) if present
-        if (span.nextSibling && span.nextSibling.nodeType === 3) {
+        // Remove all trailing whitespace nodes (text nodes and <br> elements)
+        while (span.nextSibling && (span.nextSibling.nodeType === 3 || span.nextSibling.tagName === 'BR')) {
           span.nextSibling.remove();
         }
         span.remove();
