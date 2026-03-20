@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DFlash – Block Diffusion for Flash Speculative Decoding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #06060f;
+  --panel-bg: rgba(15, 15, 30, 0.7);
+  --panel-border: rgba(255,255,255,0.08);
+  --text: #e8e8f0;
+  --text-dim: #8888a0;
+  --accent-blue: #4f8fff;
+  --accent-purple: #8b5cf6;
+  --accent-cyan: #06d6a0;
+  --accent-amber: #f59e0b;
+  --accept-green: #06d6a0;
+  --reject-red: #ef4444;
+  --font-ui: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+canvas#bg-canvas {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0; pointer-events: none; opacity: 0.15;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+/* ── Hero ── */
+.hero { text-align: center; padding: 80px 0 48px; }
+.hero h1 {
+  font-size: 2.8rem; font-weight: 800; letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-cyan));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero .subtitle { font-size: 1.25rem; color: var(--text-dim); margin-top: 8px; font-weight: 400; }
+.hero .oneliner { font-size: 0.95rem; color: var(--text-dim); margin-top: 12px; max-width: 640px; margin-left: auto; margin-right: auto; opacity: 0.7; }
+
+.stats { display: flex; gap: 20px; justify-content: center; margin-top: 36px; flex-wrap: wrap; }
+.stat-card {
+  background: var(--panel-bg); backdrop-filter: blur(20px);
+  border: 1px solid var(--panel-border); border-radius: 16px;
+  padding: 20px 32px; text-align: center; min-width: 180px;
+}
+.stat-card .num {
+  font-size: 2rem; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.stat-card .label { font-size: 0.8rem; color: var(--text-dim); margin-top: 4px; }
+
+.hero-links { margin-top: 24px; display: flex; gap: 16px; justify-content: center; }
+.hero-links a {
+  color: var(--accent-blue); text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  border: 1px solid rgba(79,143,255,0.3); padding: 6px 16px; border-radius: 8px;
+  transition: all 0.2s;
+}
+.hero-links a:hover { background: rgba(79,143,255,0.1); border-color: var(--accent-blue); }
+
+/* ── Section titles ── */
+.section-title {
+  font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 32px;
+  color: var(--text);
+}
+
+/* ── How It Works ── */
+.how-it-works { padding: 48px 0; }
+.flow-container { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
+.flow-box {
+  background: var(--panel-bg); backdrop-filter: blur(20px);
+  border: 1px solid var(--panel-border); border-radius: 16px;
+  padding: 28px 32px; flex: 1; min-width: 280px; max-width: 520px;
+}
+.flow-box h3 { font-size: 1rem; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.flow-box h3 .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.flow-box.eagle h3 .dot { background: var(--accent-amber); }
+.flow-box.dflash h3 .dot { background: var(--accent-cyan); }
+
+.flow-visual { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; min-height: 48px; }
+.flow-token {
+  font-family: var(--font-mono); font-size: 0.75rem; padding: 4px 10px;
+  border-radius: 6px; background: rgba(255,255,255,0.06); color: var(--text-dim);
+  opacity: 0; transition: all 0.3s;
+}
+.flow-token.show { opacity: 1; }
+.flow-token.accepted { background: rgba(6,214,160,0.15); color: var(--accept-green); }
+.flow-token.rejected { background: rgba(239,68,68,0.15); color: var(--reject-red); text-decoration: line-through; }
+.flow-arrow { color: var(--text-dim); font-size: 0.8rem; opacity: 0; transition: opacity 0.3s; }
+.flow-arrow.show { opacity: 0.5; }
+
+.flow-block {
+  display: flex; gap: 3px; padding: 6px 10px; border-radius: 8px;
+  border: 1px solid rgba(6,214,160,0.2); opacity: 0; transition: all 0.4s;
+  flex-wrap: wrap; max-width: 100%;
+}
+.flow-block.show { opacity: 1; box-shadow: 0 0 20px rgba(6,214,160,0.15); }
+.flow-block .ft {
+  font-family: var(--font-mono); font-size: 0.7rem; padding: 2px 6px;
+  background: rgba(6,214,160,0.1); color: var(--accent-cyan); border-radius: 4px;
+}
+
+.flow-verify {
+  font-family: var(--font-mono); font-size: 0.7rem; padding: 4px 12px;
+  border-radius: 6px; background: rgba(139,92,246,0.15); color: var(--accent-purple);
+  opacity: 0; transition: all 0.3s; margin-left: 4px;
+}
+.flow-verify.show { opacity: 1; }
+
+.flow-caption { font-size: 0.78rem; color: var(--text-dim); margin-top: 14px; line-height: 1.5; }
+
+/* ── Scenario Selector ── */
+.scenarios { padding: 48px 0 24px; }
+.pill-tabs { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.pill {
+  font-family: var(--font-ui); font-size: 0.82rem; font-weight: 500;
+  padding: 8px 20px; border-radius: 100px; border: 1px solid var(--panel-border);
+  background: transparent; color: var(--text-dim); cursor: pointer; transition: all 0.25s;
+}
+.pill:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+.pill.active {
+  background: linear-gradient(135deg, rgba(79,143,255,0.15), rgba(139,92,246,0.15));
+  border-color: var(--accent-blue); color: var(--text);
+}
+
+/* ── Demo Panels ── */
+.demo-section { padding: 24px 0 48px; }
+.panels { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.panel {
+  background: var(--panel-bg); backdrop-filter: blur(20px);
+  border: 1px solid var(--panel-border); border-radius: 20px;
+  padding: 24px; display: flex; flex-direction: column; min-height: 480px;
+  transition: border-color 0.5s, box-shadow 0.5s;
+}
+.panel.winner { border-color: var(--accent-cyan); box-shadow: 0 0 40px rgba(6,214,160,0.12); }
+
+.panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.panel-label { font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+.panel-label .indicator { width: 8px; height: 8px; border-radius: 50%; }
+.panel.eagle .panel-label .indicator { background: var(--accent-amber); }
+.panel.dflash .panel-label .indicator { background: var(--accent-cyan); }
+.panel-badge {
+  font-family: var(--font-mono); font-size: 0.68rem; padding: 3px 10px;
+  border-radius: 6px; background: rgba(255,255,255,0.05); color: var(--text-dim);
+}
+
+.panel-status {
+  font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);
+  margin-bottom: 10px; min-height: 20px; display: flex; align-items: center; gap: 6px;
+}
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text-dim); }
+.status-dot.drafting { background: var(--accent-amber); animation: pulse 0.8s infinite; }
+.status-dot.verifying { background: var(--accent-purple); animation: pulse 0.6s infinite; }
+.status-dot.done { background: var(--accept-green); }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+.prompt-area {
+  font-family: var(--font-mono); font-size: 0.78rem; padding: 12px 16px;
+  background: rgba(0,0,0,0.3); border-radius: 10px; color: var(--text-dim);
+  margin-bottom: 12px; line-height: 1.5; max-height: 80px; overflow: hidden;
+}
+.prompt-area span { color: var(--accent-blue); font-weight: 500; }
+
+.gen-area {
+  flex: 1; font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.7;
+  padding: 16px; background: rgba(0,0,0,0.2); border-radius: 10px;
+  overflow-y: auto; min-height: 200px; position: relative;
+}
+.gen-area::-webkit-scrollbar { width: 4px; }
+.gen-area::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+.token {
+  display: inline; transition: all 0.25s; border-radius: 3px; padding: 0 1px;
+}
+.token.drafting { color: rgba(255,255,255,0.35); }
+.token.verifying { color: rgba(255,255,255,0.55); }
+.token.accepted {
+  color: var(--accept-green);
+  text-shadow: 0 0 8px rgba(6,214,160,0.4);
+}
+.token.rejected {
+  color: var(--reject-red);
+  text-shadow: 0 0 8px rgba(239,68,68,0.4);
+  transform: scale(1.05);
+}
+.token.final { color: var(--text); text-shadow: none; }
+
+.block-glow {
+  display: inline;
+  animation: blockPulse 0.5s ease-out;
+}
+@keyframes blockPulse {
+  0% { text-shadow: 0 0 16px rgba(6,214,160,0.6); }
+  100% { text-shadow: none; }
+}
+
+.progress-bar { height: 3px; background: rgba(255,255,255,0.05); border-radius: 2px; margin-top: 12px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 2px; width: 0%; transition: width 0.3s; }
+.panel.eagle .progress-fill { background: linear-gradient(90deg, var(--accent-amber), #fbbf24); }
+.panel.dflash .progress-fill { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); }
+
+.panel-metrics {
+  display: flex; justify-content: space-between; margin-top: 14px;
+  font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);
+}
+.metric-val { color: var(--text); font-weight: 600; }
+
+/* ── Controls ── */
+.controls { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 8px 0 32px; flex-wrap: wrap; }
+.btn-start {
+  font-family: var(--font-ui); font-size: 0.9rem; font-weight: 600;
+  padding: 12px 36px; border-radius: 12px; border: none; cursor: pointer;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: #fff; transition: all 0.25s; box-shadow: 0 4px 20px rgba(79,143,255,0.3);
+}
+.btn-start:hover { transform: translateY(-1px); box-shadow: 0 6px 28px rgba(79,143,255,0.4); }
+.btn-start:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.btn-reset {
+  font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500;
+  padding: 10px 24px; border-radius: 10px; border: 1px solid var(--panel-border);
+  background: transparent; color: var(--text-dim); cursor: pointer; transition: all 0.2s;
+}
+.btn-reset:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+.speed-control { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--text-dim); }
+.speed-control input[type=range] {
+  width: 100px; accent-color: var(--accent-blue);
+  -webkit-appearance: none; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; outline: none;
+}
+.speed-control input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%;
+  background: var(--accent-blue); cursor: pointer;
+}
+
+/* ── Results Summary ── */
+.results {
+  padding: 32px 0 48px; text-align: center; display: none;
+}
+.results.show { display: block; animation: fadeUp 0.5s; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.results-card {
+  background: var(--panel-bg); backdrop-filter: blur(20px);
+  border: 1px solid rgba(6,214,160,0.2); border-radius: 20px;
+  padding: 32px; display: inline-flex; gap: 48px; flex-wrap: wrap; justify-content: center;
+}
+.result-item .result-num {
+  font-size: 2.2rem; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.result-item .result-label { font-size: 0.78rem; color: var(--text-dim); margin-top: 4px; }
+
+/* ── Footer ── */
+footer {
+  text-align: center; padding: 48px 0; border-top: 1px solid var(--panel-border);
+  font-size: 0.8rem; color: var(--text-dim);
+}
+footer a { color: var(--accent-blue); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+.scenario-content { display: none; flex-direction: column; flex: 1; }
+.scenario-content.active { display: flex; }
+#eagle-scenarios, #dflash-scenarios { display: flex; flex-direction: column; flex: 1; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.6rem; }
+  .panels { grid-template-columns: 1fr; }
+  .flow-container { flex-direction: column; align-items: center; }
+  .stats { gap: 12px; }
+  .stat-card { min-width: 140px; padding: 14px 20px; }
+  .stat-card .num { font-size: 1.5rem; }
+  .results-card { gap: 24px; padding: 24px; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="container">
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Block Diffusion for Flash Speculative Decoding</h1>
+    <div class="oneliner">A speculative decoding framework that replaces sequential autoregressive drafters with a block diffusion model, generating all draft tokens in parallel for dramatically faster inference.</div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="section-title">How It Works</div>
+    <div class="flow-container">
+      <div class="flow-box eagle">
+        <h3><span class="dot"></span> Autoregressive Draft</h3>
+        <div class="flow-visual" id="flow-eagle"></div>
+        <div class="flow-caption">Tokens are drafted <strong>one at a time</strong>, sequentially. Each token depends on the previous, creating a bottleneck. Draft budget: 16 tokens.</div>
+      </div>
+      <div class="flow-box dflash">
+        <h3><span class="dot"></span> Block Diffusion Draft</h3>
+        <div class="flow-visual" id="flow-dflash"></div>
+        <div class="flow-caption">An entire <strong>block of 16 tokens</strong> is generated in a single parallel forward pass using diffusion denoising. Then verified all at once.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scenario Selector -->
+  <section class="scenarios">
+    <div class="section-title">Choose a Scenario</div>
+    <div class="pill-tabs" id="pill-tabs"></div>
+  </section>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button class="btn-start" id="btn-start">Start Generation</button>
+    <button class="btn-reset" id="btn-reset">Reset</button>
+    <div class="speed-control">
+      <label for="speed-slider">Speed</label>
+      <input type="range" id="speed-slider" min="1" max="3" step="0.25" value="3">
+      <span id="speed-label">1.0x</span>
+    </div>
+  </div>
+  <div style="text-align:center; font-size:0.75rem; margin-top:-20px; margin-bottom:24px; opacity:0.7;">
+    Lower the speed to observe the cycle: <span style="color:#888">draft</span> → <span style="color:var(--accent-purple)">verify</span> → <span style="color:var(--accept-green)">accept</span> / <span style="color:var(--reject-red)">reject</span>
+  </div>
+
+  <!-- Demo Panels -->
+  <section class="demo-section">
+    <div class="panels">
+      <div class="panel eagle" id="panel-eagle">
+        <div class="panel-header">
+          <div class="panel-label"><span class="indicator"></span> Autoregressive Draft</div>
+          <div class="panel-badge">Sequential | 16 tokens</div>
+        </div>
+        <div id="eagle-scenarios"></div>
+      </div>
+      <div class="panel dflash" id="panel-dflash">
+        <div class="panel-header">
+          <div class="panel-label"><span class="indicator"></span> Block Diffusion Draft</div>
+          <div class="panel-badge">Parallel | 16 tokens</div>
+        </div>
+        <div id="dflash-scenarios"></div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// SCENARIOS
+// ═══════════════════════════════════════════════════
+const SCENARIOS = {
+  chatbot: {
+    name: "AI Chatbot",
+    prompt: "What is speculative decoding and why does it matter for LLM inference?",
+    eagle: `Speculative decoding is a method used to speed up large language model inference. It works by using a smaller model to generate draft tokens and then checking them with the larger model.
+
+The basic process involves three steps. First, the small draft model generates several tokens one after another. Then the target model verifies these tokens. Finally, tokens that match are kept and ones that don't match are thrown away.
+
+This is useful because generating tokens one at a time with a large model is slow. Each token needs a full pass through the model. By generating drafts with a smaller model and checking them in bulk, we can make things go faster.
+
+The speedup depends on how well the draft model matches the target model. If the draft model is good, more tokens get accepted and things go faster. If it's not as good, fewer tokens get accepted.`,
+    dflash: `Speculative decoding accelerates LLM inference while preserving the exact output distribution of the target model. Here's the key insight and mechanism:
+
+The core idea: a small, fast "drafter" predicts what the large "target" would generate, then the target verifies all predictions in a single forward pass — turning sequential generation into parallel verification.
+
+1. Draft Phase: A lightweight model proposes K candidate tokens.
+2. Verify Phase: The target model scores all K tokens simultaneously.
+3. Accept/Reject: Tokens matching the target's distribution are accepted; the first divergence triggers a correction sample.
+
+This matters because autoregressive decoding is memory-bandwidth bound — each token requires loading the full model weights. By amortizing one target forward pass across multiple accepted tokens, speculative decoding achieves significant wallclock speedup with zero quality loss.
+
+The frontier approach uses block diffusion models as drafters, generating entire token blocks in parallel rather than sequentially, achieving higher acceptance rates and dramatically faster draft generation.`
+  },
+  code: {
+    name: "Code Generation",
+    prompt: "Write a Python function to find the longest common subsequence of two strings.",
+    eagle: `def lcs(s1, s2):
+    m = len(s1)
+    n = len(s2)
+
+    # Create a 2D table to store results
+    table = [[0] * (n + 1) for _ in range(m + 1)]
+
+    # Fill in the table
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if s1[i-1] == s2[j-1]:
+                table[i][j] = table[i-1][j-1] + 1
+            else:
+                table[i][j] = max(table[i-1][j], table[i][j-1])
+
+    # Now trace back through the table
+    result = ""
+    i = m
+    j = n
+    while i > 0 and j > 0:
+        if s1[i-1] == s2[j-1]:
+            result = s1[i-1] + result
+            i = i - 1
+            j = j - 1
+        elif table[i-1][j] > table[i][j-1]:
+            i = i - 1
+        else:
+            j = j - 1
+
+    return result
+
+# Test it
+result = lcs("ABCBDAB", "BDCAB")
+print(result)`,
+    dflash: `def longest_common_subsequence(s1: str, s2: str) -> str:
+    m, n = len(s1), len(s2)
+
+    # Build the DP table in O(m*n) time
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if s1[i - 1] == s2[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1] + 1
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+
+    # Backtrack to reconstruct the subsequence
+    result = []
+    i, j = m, n
+    while i > 0 and j > 0:
+        if s1[i - 1] == s2[j - 1]:
+            result.append(s1[i - 1])
+            i -= 1
+            j -= 1
+        elif dp[i - 1][j] > dp[i][j - 1]:
+            i -= 1
+        else:
+            j -= 1
+
+    return ''.join(reversed(result))
+
+# Example: LCS of "ABCBDAB" and "BDCAB" is "BCAB" (length 4)
+print(longest_common_subsequence("ABCBDAB", "BDCAB"))  # → "BCAB"`
+  },
+  math: {
+    name: "Math Reasoning",
+    prompt: "Find all roots of the polynomial x^3 - 6x^2 + 11x - 6 = 0. Show your work.",
+    eagle: `To solve x³ - 6x² + 11x - 6 = 0, I'll try to find the roots.
+
+First, let me try some simple values. If x = 1:
+1 - 6 + 11 - 6 = 0. So x = 1 works.
+
+Since x = 1 is a root, I can divide the polynomial by (x - 1).
+
+Doing the division:
+x³ - 6x² + 11x - 6 divided by (x - 1)
+
+I get x² - 5x + 6.
+
+Now I need to factor x² - 5x + 6.
+Using the quadratic formula: x = (5 ± sqrt(25 - 24)) / 2
+x = (5 ± 1) / 2
+x = 3 or x = 2
+
+So the polynomial factors as (x - 1)(x - 2)(x - 3).
+
+The roots are x = 1, x = 2, and x = 3.
+
+We can verify: (x-1)(x-2)(x-3) = x³ - 6x² + 11x - 6 ✓`,
+    dflash: `Let me solve x³ - 6x² + 11x - 6 = 0 systematically.
+
+Step 1: Identify candidate roots via the Rational Root Theorem.
+Possible rational roots are ±{factors of 6} / ±{factors of 1} = ±1, ±2, ±3, ±6.
+
+Step 2: Test x = 1:
+1³ - 6(1²) + 11(1) - 6 = 1 - 6 + 11 - 6 = 0 ✓
+So (x - 1) is a factor.
+
+Step 3: Perform synthetic division to extract the quotient:
+1 | 1  -6  11  -6
+  |     1  -5   6
+  ─────────────────
+    1  -5   6   0
+
+Quotient: x² - 5x + 6
+
+Step 4: Factor the quadratic x² - 5x + 6:
+Discriminant: 25 - 24 = 1 > 0, so two distinct real roots.
+By inspection: (-2)(-3) = 6 and (-2)+(-3) = -5
+Therefore x² - 5x + 6 = (x - 2)(x - 3)
+
+Step 5: Complete factorization:
+x³ - 6x² + 11x - 6 = (x - 1)(x - 2)(x - 3) = 0
+
+The three roots are x = 1, x = 2, x = 3, forming consecutive integers — a notable property of this polynomial.`
+  },
+  tool: {
+    name: "Tool Calling",
+    prompt: "Find me a round-trip flight from San Francisco to Tokyo next month under $1200.",
+    eagle: `Let me search for flights for you.
+
+{"function_call": {"name": "search_flights", "arguments": {"from": "SFO", "to": "Tokyo", "depart": "2026-04-15", "return": "2026-04-25", "budget": 1200}}}
+
+I found some flights that match. Here are the results:
+
+1. ANA Airways - $1,089
+   SFO to Narita, April 15, departing 11:15 AM
+   Narita to SFO, April 25, departing 5:45 PM
+   Both flights are direct.
+
+2. Japan Airlines - $1,145
+   SFO to Haneda, April 15, departing 1:00 PM
+   Haneda to SFO, April 25, departing 8:30 PM
+   Both flights are direct.
+
+Both are under your budget of $1,200. The ANA option is cheaper. Would you like me to book one of these flights?`,
+    dflash: `I'll search for round-trip flights matching your criteria.
+
+{"function_call": {"name": "search_flights", "arguments": {"origin": "SFO", "destination": "TYO", "departure_date": "2026-04-15", "return_date": "2026-04-25", "max_price": 1200, "currency": "USD", "class": "economy", "passengers": 1}}}
+
+Here are the best options within your $1,200 budget:
+
+1. ANA (All Nippon Airways) — $1,089
+   Outbound: SFO → NRT, Apr 15, 11:15 AM → Apr 16, 3:30 PM (nonstop, 11h 15m)
+   Return: NRT → SFO, Apr 25, 5:45 PM → Apr 25, 11:20 AM (nonstop, 9h 35m)
+   Baggage: 2x checked bags included | Seat: standard economy
+
+2. Japan Airlines — $1,145
+   Outbound: SFO → HND, Apr 15, 1:00 PM → Apr 16, 5:15 PM (nonstop, 11h 15m)
+   Return: HND → SFO, Apr 25, 8:30 PM → Apr 25, 1:45 PM (nonstop, 9h 15m)
+   Baggage: 2x checked bags included | Seat: standard economy
+
+Both are nonstop with full baggage allowance. ANA saves $56; JAL lands at Haneda which is closer to central Tokyo. Shall I proceed with booking?`
+  },
+  robot: {
+    name: "Robot Planning",
+    prompt: "Pick up the red block from table A and place it on top of the blue block on table B.",
+    eagle: `I will plan the steps to move the red block.
+
+Step 1: Look at table A
+- Found red block at position (0.35, 0.12, 0.05)
+
+Step 2: Look at table B
+- Found blue block at position (0.72, -0.15, 0.05)
+
+Step 3: Move to table A
+- Move arm above the red block
+- Position: (0.35, 0.12, 0.20)
+
+Step 4: Pick up the red block
+- Lower arm to (0.35, 0.12, 0.04)
+- Close gripper
+- Lift up to (0.35, 0.12, 0.25)
+
+Step 5: Move to table B
+- Move arm to position above blue block
+- Position: (0.72, -0.15, 0.25)
+
+Step 6: Place the red block
+- Lower arm to (0.72, -0.15, 0.10)
+- Open gripper to release
+- Move arm away
+
+Step 7: Check result
+- Red block is on top of blue block
+- Done.`,
+    dflash: `Planning collision-free pick-and-place sequence:
+
+PHASE 1: PERCEPTION & VALIDATION
+- Scan workspace → red_block @ table_A (0.35, 0.12, 0.05), blue_block @ table_B (0.72, -0.15, 0.05)
+- Pre-conditions: gripper empty ✓, path clearance 0.15m ✓, payload within limit ✓
+
+PHASE 2: APPROACH & GRASP
+- Compute pre-grasp pose: (0.35, 0.12, 0.20) with vertical gripper alignment
+- Execute linear descent to grasp height (0.35, 0.12, 0.04)
+- Close gripper → force sensor: 2.1N (within 1.5-4.0N safe range) → grasp confirmed
+- Retract vertically to safe transit height z=0.25
+
+PHASE 3: TRANSIT & PLACE
+- Plan RRT* trajectory with obstacle avoidance: 5 waypoints, path length 0.42m
+- Execute smooth trajectory → arrival at (0.72, -0.15, 0.25)
+- Controlled descent with real-time force monitoring (threshold: 0.5N contact detection)
+- Contact at z=0.10 confirmed → open gripper → retract to z=0.30
+
+PHASE 4: VERIFICATION
+- Visual servoing check: red_block detected at (0.72, -0.15, 0.10) ✓
+- Stability assessment: no displacement after 2s observation window ✓
+- Task status: COMPLETE — stack height verified at 0.10m`
+  },
+  creative: {
+    name: "Creative Writing",
+    prompt: "Write a short poem about artificial intelligence and the future of computing.",
+    eagle: `The Digital Age
+
+Computers think in ones and zeros,
+Processing data like silent heroes,
+They learn from words we type each day,
+And try to help us find our way.
+
+Artificial minds are growing fast,
+Learning from the present and the past,
+They read our text and learn our speech,
+New capabilities within their reach.
+
+The future holds much more in store,
+As machines learn to do even more,
+Working alongside the human race,
+Helping us to find our place.
+
+In servers humming through the night,
+Computing power shines its light,
+A partnership of mind and machine,
+Building futures yet unseen.`,
+    dflash: `Silicon Dreams
+
+In circuits deep where electrons flow,
+A mind emerges, soft and slow,
+Not born of flesh or ancient clay,
+But patterns learned from night and day.
+
+It reads the world in tokens bright,
+Translates the dark to streams of light,
+Each weight a synapse, finely tuned,
+A digital cosmos, newly bloomed.
+
+We taught it words, it learned to think,
+To bridge the gaps, to find the link
+Between the question and the known,
+Between the seed and what has grown.
+
+Now parallel the futures run,
+Not one path forward, but a million,
+Diffusing noise to meaning clear,
+The shape of tomorrow drawing near.
+
+What strange and wondrous tools we wield,
+What harvests from this silicon field —
+Not masters, servants, nor our replacement,
+But mirrors of our own amazement.`
+  }
+};
+
+// ═══════════════════════════════════════════════════
+// TOKENIZER
+// ═══════════════════════════════════════════════════
+function tokenize(text) {
+  // Split into word-level tokens, preserving whitespace and newlines
+  const tokens = [];
+  const regex = /(\S+|\n| +)/g;
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    tokens.push(match[0]);
+  }
+  return tokens;
+}
+
+// ═══════════════════════════════════════════════════
+// PARTICLE BACKGROUND
+// ═══════════════════════════════════════════════════
+class ParticleBackground {
+  constructor(canvas) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext('2d');
+    this.particles = [];
+    this.resize();
+    window.addEventListener('resize', () => this.resize());
+    this.init();
+    this.animate();
+  }
+
+  resize() {
+    this.canvas.width = window.innerWidth;
+    this.canvas.height = window.innerHeight;
+  }
+
+  init() {
+    const count = Math.floor((window.innerWidth * window.innerHeight) / 15000);
+    this.particles = [];
+    for (let i = 0; i < count; i++) {
+      this.particles.push({
+        x: Math.random() * this.canvas.width,
+        y: Math.random() * this.canvas.height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        r: Math.random() * 1.5 + 0.5
+      });
+    }
+  }
+
+  animate() {
+    const ctx = this.ctx;
+    ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+    for (const p of this.particles) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0) p.x = this.canvas.width;
+      if (p.x > this.canvas.width) p.x = 0;
+      if (p.y < 0) p.y = this.canvas.height;
+      if (p.y > this.canvas.height) p.y = 0;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(79, 143, 255, 0.5)';
+      ctx.fill();
+    }
+
+    // Draw connections
+    const maxDist = 120;
+    for (let i = 0; i < this.particles.length; i++) {
+      for (let j = i + 1; j < this.particles.length; j++) {
+        const dx = this.particles[i].x - this.particles[j].x;
+        const dy = this.particles[i].y - this.particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < maxDist) {
+          ctx.beginPath();
+          ctx.moveTo(this.particles[i].x, this.particles[i].y);
+          ctx.lineTo(this.particles[j].x, this.particles[j].y);
+          ctx.strokeStyle = `rgba(79, 143, 255, ${0.15 * (1 - dist / maxDist)})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(() => this.animate());
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// SPECULATIVE ENGINE
+// ═══════════════════════════════════════════════════
+class SpeculativeEngine {
+  constructor(type, tokens, genEl, statusDot, statusText, progFill, metrics) {
+    this.type = type; // 'eagle' or 'dflash'
+    this.tokens = tokens;
+    this.genEl = genEl;
+    this.statusDot = statusDot;
+    this.statusText = statusText;
+    this.progFill = progFill;
+    this.metrics = metrics;
+
+    this.cursor = 0;
+    this.totalAccepted = 0;
+    this.totalDrafted = 0;
+    this.cycles = 0;
+    this.tauSum = 0;
+    this.startTime = 0;
+    this.running = false;
+    this.aborted = false;
+
+    // Config
+    if (type === 'eagle') {
+      this.draftBudget = 16;
+      this.draftDelayPerToken = 70; // ms per token (sequential)
+      this.verifyDelay = 200;
+      this.avgTau = 3.5;
+      this.tauStd = 1.2;
+    } else {
+      this.draftBudget = 16;
+      this.draftDelayTotal = 180; // ms total (parallel)
+      this.verifyDelay = 200;
+      this.avgTau = 10.0;
+      this.tauStd = 2.0;
+    }
+  }
+
+  getSpeedMultiplier() {
+    return parseFloat(document.getElementById('speed-slider').value) || 1;
+  }
+
+  sleep(ms) {
+    const adjusted = ms / this.getSpeedMultiplier();
+    return new Promise(resolve => {
+      const id = setTimeout(resolve, adjusted);
+      this._sleepId = id;
+    });
+  }
+
+  abort() {
+    this.aborted = true;
+    this.running = false;
+    clearTimeout(this._sleepId);
+  }
+
+  setStatus(state, text) {
+    this.statusDot.className = 'status-dot ' + state;
+    this.statusText.textContent = text;
+  }
+
+  updateMetrics() {
+    const elapsed = (performance.now() - this.startTime) / 1000;
+    const speed = elapsed > 0 ? (this.totalAccepted / elapsed).toFixed(1) : '0';
+    const avgTau = this.cycles > 0 ? (this.tauSum / this.cycles).toFixed(1) : '0.0';
+    const acceptRate = this.totalDrafted > 0 ? Math.round((this.totalAccepted / this.totalDrafted) * 100) : 0;
+    this.metrics.speed.textContent = speed;
+    this.metrics.accepted.textContent = acceptRate + '%';
+    this.metrics.tau.textContent = avgTau;
+    this.progFill.style.width = Math.min(100, (this.cursor / this.tokens.length) * 100) + '%';
+  }
+
+  sampleTau() {
+    // Gaussian-ish sample clamped to [1, draftBudget]
+    const u1 = Math.random(), u2 = Math.random();
+    const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+    const val = Math.round(this.avgTau + z * this.tauStd);
+    return Math.max(1, Math.min(this.draftBudget, val));
+  }
+
+  createTokenSpan(text) {
+    const span = document.createElement('span');
+    span.className = 'token';
+    if (text === '\n') {
+      span.innerHTML = '<br>';
+    } else {
+      span.textContent = text;
+    }
+    return span;
+  }
+
+  async run() {
+    this.running = true;
+    this.aborted = false;
+    this.startTime = performance.now();
+
+    while (this.cursor < this.tokens.length && !this.aborted) {
+      const remaining = this.tokens.length - this.cursor;
+      const budget = Math.min(this.draftBudget, remaining);
+      if (budget <= 0) break;
+
+      // ── DRAFT PHASE ──
+      this.setStatus('drafting', 'Drafting...');
+      const draftSpans = [];
+
+      if (this.type === 'eagle') {
+        // Sequential: tokens appear one by one
+        for (let i = 0; i < budget && !this.aborted; i++) {
+          const token = this.tokens[this.cursor + i];
+          const span = this.createTokenSpan(token);
+          span.classList.add('drafting');
+          this.genEl.appendChild(span);
+          draftSpans.push(span);
+          // Add space between tokens (not for newlines)
+          if (token !== '\n' && (this.cursor + i + 1) < this.tokens.length && this.tokens[this.cursor + i + 1] !== '\n') {
+            const space = document.createTextNode(' ');
+            this.genEl.appendChild(space);
+          }
+          this.genEl.scrollTop = this.genEl.scrollHeight;
+          await this.sleep(this.draftDelayPerToken);
+        }
+      } else {
+        // Parallel: all tokens appear at once after a delay
+        await this.sleep(this.draftDelayTotal);
+        if (this.aborted) break;
+        for (let i = 0; i < budget; i++) {
+          const token = this.tokens[this.cursor + i];
+          const span = this.createTokenSpan(token);
+          span.classList.add('drafting', 'block-glow');
+          this.genEl.appendChild(span);
+          draftSpans.push(span);
+          if (token !== '\n' && (this.cursor + i + 1) < this.tokens.length && this.tokens[this.cursor + i + 1] !== '\n') {
+            const space = document.createTextNode(' ');
+            this.genEl.appendChild(space);
+          }
+        }
+        this.genEl.scrollTop = this.genEl.scrollHeight;
+      }
+
+      if (this.aborted) break;
+
+      // ── VERIFY PHASE ──
+      this.setStatus('verifying', 'Verifying...');
+      for (const span of draftSpans) {
+        span.classList.remove('drafting');
+        span.classList.add('verifying');
+      }
+      await this.sleep(this.verifyDelay);
+      if (this.aborted) break;
+
+      // ── ACCEPT / REJECT ──
+      const tau = Math.min(this.sampleTau(), budget);
+      this.tauSum += tau;
+      this.cycles++;
+
+      // Accept first tau tokens
+      for (let i = 0; i < tau; i++) {
+        draftSpans[i].classList.remove('verifying', 'block-glow');
+        draftSpans[i].classList.add('accepted');
+      }
+      // Reject the rest
+      for (let i = tau; i < draftSpans.length; i++) {
+        draftSpans[i].classList.remove('verifying', 'block-glow');
+        draftSpans[i].classList.add('rejected');
+      }
+      await this.sleep(120);
+      if (this.aborted) break;
+
+      // Finalize accepted tokens
+      for (let i = 0; i < tau; i++) {
+        draftSpans[i].classList.remove('accepted');
+        draftSpans[i].classList.add('final');
+      }
+
+      // Remove rejected tokens and their associated spaces
+      for (let i = draftSpans.length - 1; i >= tau; i--) {
+        const span = draftSpans[i];
+        // Remove trailing text node (space) if present
+        if (span.nextSibling && span.nextSibling.nodeType === 3) {
+          span.nextSibling.remove();
+        }
+        span.remove();
+      }
+
+      this.cursor += tau;
+      this.totalAccepted += tau;
+      this.totalDrafted += budget;
+      this.updateMetrics();
+    }
+
+    if (!this.aborted) {
+      this.setStatus('done', 'Complete');
+      this.progFill.style.width = '100%';
+      this.updateMetrics();
+    }
+    this.running = false;
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// DEMO CONTROLLER
+// ═══════════════════════════════════════════════════
+class DemoController {
+  constructor() {
+    this.currentScenario = 'chatbot';
+    // Per-scenario state: { eagleEngine, dflashEngine, els: { eagle: {...}, dflash: {...} } }
+    this.scenarioState = {};
+
+    this.initScenarioDOMs();
+    this.initPills();
+    this.initControls();
+    this.initHowItWorks();
+    this.showScenario('chatbot');
+  }
+
+  // Create DOM elements for each scenario inside both panels
+  initScenarioDOMs() {
+    const eagleContainer = document.getElementById('eagle-scenarios');
+    const dflashContainer = document.getElementById('dflash-scenarios');
+
+    for (const [key, scenario] of Object.entries(SCENARIOS)) {
+      const els = { eagle: {}, dflash: {} };
+
+      for (const side of ['eagle', 'dflash']) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'scenario-content';
+        wrapper.dataset.scenario = key;
+
+        wrapper.innerHTML = `
+          <div class="panel-status"><span class="status-dot"></span> <span class="status-text">Ready</span></div>
+          <div class="prompt-area"><span>User:</span> ${scenario.prompt}</div>
+          <div class="gen-area"></div>
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <div class="panel-metrics">
+            <div>Speed: <span class="metric-val metric-speed">0</span> tok/s</div>
+            <div>Accept Rate: <span class="metric-val metric-accepted">0%</span></div>
+            <div>Avg &tau;: <span class="metric-val metric-tau">0.0</span></div>
+          </div>
+        `;
+
+        els[side] = {
+          wrapper,
+          dot: wrapper.querySelector('.status-dot'),
+          statusText: wrapper.querySelector('.status-text'),
+          genArea: wrapper.querySelector('.gen-area'),
+          progFill: wrapper.querySelector('.progress-fill'),
+          speed: wrapper.querySelector('.metric-speed'),
+          accepted: wrapper.querySelector('.metric-accepted'),
+          tau: wrapper.querySelector('.metric-tau')
+        };
+
+        (side === 'eagle' ? eagleContainer : dflashContainer).appendChild(wrapper);
+      }
+
+      this.scenarioState[key] = { eagleEngine: null, dflashEngine: null, els };
+    }
+  }
+
+  initPills() {
+    const container = document.getElementById('pill-tabs');
+    for (const [key, scenario] of Object.entries(SCENARIOS)) {
+      const pill = document.createElement('button');
+      pill.className = 'pill' + (key === 'chatbot' ? ' active' : '');
+      pill.textContent = scenario.name;
+      pill.dataset.key = key;
+      pill.addEventListener('click', () => this.showScenario(key));
+      container.appendChild(pill);
+    }
+  }
+
+  showScenario(key) {
+    this.currentScenario = key;
+    document.querySelectorAll('.pill').forEach(p => p.classList.toggle('active', p.dataset.key === key));
+    // Show/hide scenario content in both panels
+    document.querySelectorAll('.scenario-content').forEach(el => {
+      el.classList.toggle('active', el.dataset.scenario === key);
+    });
+    // Update winner highlight based on this scenario's state
+    const state = this.scenarioState[key];
+    document.getElementById('panel-eagle').classList.remove('winner');
+    document.getElementById('panel-dflash').classList.remove('winner');
+    if (state.winner === 'dflash') document.getElementById('panel-dflash').classList.add('winner');
+    if (state.winner === 'eagle') document.getElementById('panel-eagle').classList.add('winner');
+  }
+
+  initControls() {
+    document.getElementById('btn-start').addEventListener('click', () => this.start());
+    document.getElementById('btn-reset').addEventListener('click', () => this.reset());
+    const slider = document.getElementById('speed-slider');
+    slider.addEventListener('input', () => {
+      document.getElementById('speed-label').textContent = (parseFloat(slider.value) / 3).toFixed(1) + 'x';
+    });
+  }
+
+  reset() {
+    // Reset ALL scenarios
+    for (const [key, state] of Object.entries(this.scenarioState)) {
+      if (state.eagleEngine) state.eagleEngine.abort();
+      if (state.dflashEngine) state.dflashEngine.abort();
+      state.eagleEngine = null;
+      state.dflashEngine = null;
+      state.winner = null;
+
+      for (const side of ['eagle', 'dflash']) {
+        const els = state.els[side];
+        els.genArea.innerHTML = '';
+        els.progFill.style.width = '0%';
+        els.dot.className = 'status-dot';
+        els.statusText.textContent = 'Ready';
+        els.speed.textContent = '0';
+        els.accepted.textContent = '0%';
+        els.tau.textContent = '0.0';
+      }
+    }
+    document.getElementById('panel-eagle').classList.remove('winner');
+    document.getElementById('panel-dflash').classList.remove('winner');
+  }
+
+  async start() {
+    const key = this.currentScenario;
+    const state = this.scenarioState[key];
+
+    // Don't restart if this scenario is already running
+    if ((state.eagleEngine && state.eagleEngine.running) || (state.dflashEngine && state.dflashEngine.running)) return;
+
+    // Reset only this scenario
+    if (state.eagleEngine) state.eagleEngine.abort();
+    if (state.dflashEngine) state.dflashEngine.abort();
+    state.winner = null;
+    for (const side of ['eagle', 'dflash']) {
+      const els = state.els[side];
+      els.genArea.innerHTML = '';
+      els.progFill.style.width = '0%';
+      els.dot.className = 'status-dot';
+      els.statusText.textContent = 'Ready';
+      els.speed.textContent = '0';
+      els.accepted.textContent = '0%';
+      els.tau.textContent = '0.0';
+    }
+    if (this.currentScenario === key) {
+      document.getElementById('panel-eagle').classList.remove('winner');
+      document.getElementById('panel-dflash').classList.remove('winner');
+    }
+
+    await new Promise(r => setTimeout(r, 50));
+
+    const scenario = SCENARIOS[key];
+    const eagleTokens = tokenize(scenario.eagle);
+    const dflashTokens = tokenize(scenario.dflash);
+    const els = state.els;
+
+    state.eagleEngine = new SpeculativeEngine(
+      'eagle', eagleTokens,
+      els.eagle.genArea, els.eagle.dot, els.eagle.statusText, els.eagle.progFill,
+      { speed: els.eagle.speed, accepted: els.eagle.accepted, tau: els.eagle.tau }
+    );
+
+    state.dflashEngine = new SpeculativeEngine(
+      'dflash', dflashTokens,
+      els.dflash.genArea, els.dflash.dot, els.dflash.statusText, els.dflash.progFill,
+      { speed: els.dflash.speed, accepted: els.dflash.accepted, tau: els.dflash.tau }
+    );
+
+    let eagleTime = 0, dflashTime = 0;
+    const startTime = performance.now();
+
+    const eagleDone = state.eagleEngine.run().then(() => { eagleTime = performance.now() - startTime; });
+    const dflashDone = state.dflashEngine.run().then(() => { dflashTime = performance.now() - startTime; });
+
+    await Promise.all([eagleDone, dflashDone]);
+
+    if (state.eagleEngine.aborted || state.dflashEngine.aborted) return;
+
+    state.winner = dflashTime < eagleTime ? 'dflash' : 'eagle';
+    // Only update panel highlight if this scenario is currently visible
+    if (this.currentScenario === key) {
+      if (state.winner === 'dflash') document.getElementById('panel-dflash').classList.add('winner');
+      else document.getElementById('panel-eagle').classList.add('winner');
+    }
+  }
+
+  // ── How It Works Animation ──
+  initHowItWorks() {
+    this.animateFlows();
+  }
+
+  async animateFlows() {
+    const eagleEl = document.getElementById('flow-eagle');
+    const dflashEl = document.getElementById('flow-dflash');
+
+    while (true) {
+      eagleEl.innerHTML = '';
+      dflashEl.innerHTML = '';
+
+      // Run both animations concurrently
+      await Promise.all([
+        this.animateEagleFlow(eagleEl),
+        this.animateDFlashFlow(dflashEl)
+      ]);
+
+      // Wait, then restart
+      await this.delay(3000);
+    }
+  }
+
+  async animateEagleFlow(el) {
+    const tokens = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog', 'and', 'runs', 'across', 'the', 'green', 'open', 'field'];
+
+    for (let i = 0; i < tokens.length; i++) {
+      const span = document.createElement('span');
+      span.className = 'flow-token';
+      span.textContent = tokens[i];
+      el.appendChild(span);
+      if (i < tokens.length - 1) {
+        const arrow = document.createElement('span');
+        arrow.className = 'flow-arrow';
+        arrow.textContent = '→';
+        el.appendChild(arrow);
+      }
+    }
+
+    // Show tokens one by one (sequential)
+    const spans = el.querySelectorAll('.flow-token');
+    const arrows = el.querySelectorAll('.flow-arrow');
+    for (let i = 0; i < spans.length; i++) {
+      spans[i].classList.add('show');
+      if (i > 0) arrows[i - 1].classList.add('show');
+      await this.delay(200);
+    }
+
+    // Verify
+    const verify = document.createElement('span');
+    verify.className = 'flow-verify';
+    verify.textContent = '✓ Verify';
+    el.appendChild(verify);
+    await this.delay(100);
+    verify.classList.add('show');
+
+    // Accept/reject
+    await this.delay(300);
+    for (let i = 0; i < spans.length; i++) {
+      spans[i].classList.add(i < 4 ? 'accepted' : 'rejected');
+    }
+  }
+
+  async animateDFlashFlow(el) {
+    const tokens = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog', 'and', 'runs', 'across', 'the', 'green', 'open', 'field'];
+
+    const block = document.createElement('div');
+    block.className = 'flow-block';
+    for (const t of tokens) {
+      const ft = document.createElement('span');
+      ft.className = 'ft';
+      ft.textContent = t;
+      block.appendChild(ft);
+    }
+    el.appendChild(block);
+
+    // All tokens appear at once after a short delay (parallel)
+    await this.delay(400);
+    block.classList.add('show');
+
+    const verify = document.createElement('span');
+    verify.className = 'flow-verify';
+    verify.textContent = '✓ Verify';
+    el.appendChild(verify);
+    await this.delay(300);
+    verify.classList.add('show');
+  }
+
+  delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+}
+
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  new ParticleBackground(document.getElementById('bg-canvas'));
+  new DemoController();
+});
+</script>
+
+</body>
+</html>
