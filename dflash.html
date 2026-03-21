@@ -280,13 +280,112 @@ footer a:hover { text-decoration: underline; }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 1.6rem; }
-  .panels { grid-template-columns: 1fr; }
-  .flow-container { flex-direction: column; align-items: center; }
-  .stats { gap: 12px; }
-  .stat-card { min-width: 140px; padding: 14px 20px; }
-  .stat-card .num { font-size: 1.5rem; }
+  body { padding-bottom: 60px; }
+
+  .container {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  .container > .hero { order: 1; }
+  .container > .scenarios { order: 2; }
+  .container > .demo-section { order: 3; }
+  .container > .controls { order: 4; }
+  .container > .speed-hint { order: 5; }
+  .container > .how-it-works { order: 6; }
+
+  /* Hero — ultra compact */
+  .hero { padding: 32px 0 12px; }
+  .hero h1 { font-size: 1.2rem; }
+  .hero .oneliner { display: none; }
+  .hero .subtitle { font-size: 0.9rem; }
+  .stats { display: none; }
+  .hero-links { display: none; }
+
+  /* How It Works — hidden on mobile */
+  .how-it-works { display: none; }
+
+  /* Scenario pills — horizontal scroll */
+  .scenarios { padding: 8px 0; }
+  .scenarios .section-title { display: none; }
+  .pill-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    gap: 8px;
+    padding-bottom: 4px;
+  }
+  .pill {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Speed hint — hidden */
+  .speed-hint { display: none; }
+
+  /* Controls — fixed bottom bar */
+  .controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(6,6,15,0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--panel-border);
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    margin: 0;
+    gap: 12px;
+  }
+  .btn-start {
+    font-size: 0.8rem;
+    padding: 8px 20px;
+    border-radius: 8px;
+  }
+  .btn-reset {
+    font-size: 0.78rem;
+    padding: 6px 16px;
+    border-radius: 8px;
+  }
+  .speed-control input[type=range] { width: 70px; }
+
+  /* Demo panels — compact to fit both */
+  .demo-section { padding: 12px 0 16px; }
+  .panels { grid-template-columns: 1fr; gap: 12px; }
+  .panel {
+    min-height: auto;
+    padding: 14px;
+    border-radius: 14px;
+  }
+  .prompt-area { display: none; }
+  .gen-area {
+    min-height: 80px;
+    max-height: 120px;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    flex: none;
+  }
+  .panel-metrics { font-size: 0.62rem; }
+  .panel-metrics .metric-speed { font-size: 0.85rem; }
+  .panel-header { margin-bottom: 10px; }
+  .panel-label { font-size: 0.82rem; }
+  .panel-badge { font-size: 0.6rem; }
+
+  /* Results */
   .results-card { gap: 24px; padding: 24px; }
+
+  .flow-container { flex-direction: column; align-items: center; }
+}
+
+/* ── Small phones ── */
+@media (max-width: 375px) {
+  .container { padding: 0 12px; }
+  .hero h1 { font-size: 1.1rem; }
+  .gen-area { max-height: 100px; }
 }
 </style>
 </head>
@@ -335,7 +434,7 @@ footer a:hover { text-decoration: underline; }
       <span id="speed-label">1.0x</span>
     </div>
   </div>
-  <div style="text-align:center; font-size:0.75rem; margin-top:-20px; margin-bottom:24px; opacity:0.7;">
+  <div class="speed-hint" style="text-align:center; font-size:0.75rem; margin-top:-20px; margin-bottom:24px; opacity:0.7;">
     Lower the speed to observe the cycle: <span style="color:#888">draft</span> → <span style="color:var(--accent-purple)">verify</span> → <span style="color:var(--accept-green)">accept</span> / <span style="color:var(--reject-red)">reject</span>
   </div>
 
@@ -957,6 +1056,11 @@ class DemoController {
     this.initControls();
     this.initHowItWorks();
     this.showScenario('chatbot');
+
+    // Auto-start on mobile
+    if (window.innerWidth <= 768) {
+      setTimeout(() => this.start(), 1500);
+    }
   }
 
   // Create DOM elements for each scenario inside both panels
@@ -1221,7 +1325,9 @@ class DemoController {
 // INIT
 // ═══════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
-  new ParticleBackground(document.getElementById('bg-canvas'));
+  if (window.innerWidth > 768) {
+    new ParticleBackground(document.getElementById('bg-canvas'));
+  }
   new DemoController();
 });
 </script>
