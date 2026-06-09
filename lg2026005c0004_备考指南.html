@@ -1,0 +1,1744 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LG2026005C0004 综合管理岗直接业务考核备考指南</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #657386;
+      --line: #dfe6ef;
+      --blue: #1d4ed8;
+      --teal: #0f766e;
+      --green: #15803d;
+      --amber: #b45309;
+      --red: #b91c1c;
+      --soft-blue: #eff6ff;
+      --soft-teal: #ecfdf5;
+      --soft-amber: #fffbeb;
+      --soft-red: #fef2f2;
+      --radius: 8px;
+      --shadow: 0 10px 26px rgba(23, 32, 51, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.68;
+      background: var(--bg);
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand *,
+    .brand:hover * {
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      background: var(--blue);
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .brand p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: #334155;
+      font: inherit;
+      font-size: 14px;
+      line-height: 1.2;
+      text-decoration: none;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .nav a:hover,
+    .btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .btn.primary {
+      border-color: var(--blue);
+      color: #fff;
+      background: var(--blue);
+    }
+
+    .btn.primary:hover {
+      color: #fff;
+      background: #1e40af;
+    }
+
+    .btn.ghost {
+      background: transparent;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 26px 20px 64px;
+    }
+
+    .view {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero,
+    .panel,
+    .question-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .hero h2,
+    .panel h2,
+    .question-title {
+      margin: 0;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .hero h2 {
+      max-width: 760px;
+      font-size: clamp(28px, 5vw, 44px);
+    }
+
+    .lead {
+      max-width: 840px;
+      margin: 14px 0 0;
+      color: #334155;
+      font-size: 17px;
+    }
+
+    .meta-grid,
+    .card-grid,
+    .summary-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 22px;
+    }
+
+    .card-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .summary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .meta,
+    .card,
+    .note,
+    .mini-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .meta {
+      padding: 12px;
+    }
+
+    .meta b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .meta span {
+      display: block;
+      font-weight: 800;
+      line-height: 1.38;
+    }
+
+    .panel {
+      padding: 22px;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .panel-head p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .panel h2 {
+      font-size: 23px;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 26px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+      background: var(--soft-teal);
+      border: 1px solid rgba(15, 118, 110, .2);
+    }
+
+    .status.pending {
+      color: var(--muted);
+      background: #f8fafc;
+      border-color: var(--line);
+    }
+
+    .status.warn {
+      color: var(--amber);
+      background: var(--soft-amber);
+      border-color: rgba(180, 83, 9, .22);
+    }
+
+    .card {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 4px;
+    }
+
+    .question-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .question-link {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: inherit;
+      text-decoration: none;
+      background: #fff;
+    }
+
+    .question-link:hover {
+      border-color: var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .q-index {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 800;
+      background: var(--ink);
+    }
+
+    .question-link strong {
+      display: block;
+      line-height: 1.42;
+    }
+
+    .question-link span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .question-panel {
+      overflow: hidden;
+    }
+
+    .question-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 0;
+    }
+
+    .question-main {
+      padding: 28px;
+      border-right: 1px solid var(--line);
+    }
+
+    .question-aside {
+      padding: 24px;
+      background: #fbfdff;
+    }
+
+    .crumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .crumbs a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .question-type {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 12px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--soft-blue);
+      border: 1px solid rgba(29, 78, 216, .18);
+    }
+
+    .chip.teal {
+      color: var(--teal);
+      background: var(--soft-teal);
+      border-color: rgba(15, 118, 110, .18);
+    }
+
+    .chip.amber {
+      color: var(--amber);
+      background: var(--soft-amber);
+      border-color: rgba(180, 83, 9, .2);
+    }
+
+    .question-title {
+      font-size: clamp(24px, 4vw, 34px);
+    }
+
+    .prompt {
+      margin: 14px 0 0;
+      color: #334155;
+      font-size: 16px;
+    }
+
+    .answer-block {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .answer-block h3,
+    .question-aside h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .answer-block p {
+      margin: 0 0 10px;
+      color: #263244;
+    }
+
+    .answer-block p:last-child { margin-bottom: 0; }
+
+    .answer-block ol,
+    .answer-block ul,
+    .question-aside ul,
+    .question-aside ol,
+    .note ul,
+    .note ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .answer-block li,
+    .question-aside li,
+    .note li {
+      margin: 5px 0;
+    }
+
+    .note {
+      margin-top: 14px;
+      padding: 14px;
+    }
+
+    .note.blue { background: var(--soft-blue); border-color: rgba(29, 78, 216, .2); }
+    .note.teal { background: var(--soft-teal); border-color: rgba(15, 118, 110, .2); }
+    .note.amber { background: var(--soft-amber); border-color: rgba(180, 83, 9, .2); }
+    .note.red { background: var(--soft-red); border-color: rgba(185, 28, 28, .2); }
+
+    .note h4 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    .note p {
+      margin: 0;
+      color: #334155;
+      font-size: 14px;
+    }
+
+    .hl {
+      padding: 1px 4px;
+      border-radius: 5px;
+      font-weight: 800;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .hl.logic {
+      color: var(--blue);
+      background: rgba(29, 78, 216, .09);
+    }
+
+    .hl.key {
+      color: var(--teal);
+      background: rgba(15, 118, 110, .09);
+    }
+
+    .hl.policy {
+      color: var(--amber);
+      background: rgba(180, 83, 9, .11);
+    }
+
+    .hl.risk {
+      color: var(--red);
+      background: rgba(185, 28, 28, .09);
+    }
+
+    .ref-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .ref-item {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfdff;
+    }
+
+    .ref-kind {
+      display: inline-flex;
+      margin-bottom: 6px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--soft-teal);
+    }
+
+    .ref-item a,
+    .ref-title {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .ref-item a:hover {
+      text-decoration: underline;
+    }
+
+    .ref-item p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .side-box {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .side-box:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .progress {
+      height: 8px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e5eaf1;
+    }
+
+    .progress div {
+      height: 100%;
+      background: var(--blue);
+    }
+
+    .summary-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mini-card {
+      padding: 14px;
+    }
+
+    .mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: #3b4658;
+      font-size: 14px;
+    }
+
+    .day-roadmap {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .roadmap-item {
+      min-height: 94px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .roadmap-item b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--teal);
+      font-size: 13px;
+    }
+
+    .roadmap-item span {
+      display: block;
+      color: #334155;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .roadmap-item.current {
+      border-color: rgba(29, 78, 216, .4);
+      background: var(--soft-blue);
+    }
+
+    .source-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .source-list li {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .source-list a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .source-list a:hover { text-decoration: underline; }
+
+    .empty {
+      padding: 26px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav { justify-content: flex-start; }
+      .meta-grid,
+      .card-grid,
+      .summary-grid,
+      .question-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .question-main {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .day-roadmap {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar-inner,
+      .page {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .hero,
+      .panel,
+      .question-main,
+      .question-aside {
+        padding: 18px;
+      }
+
+      .question-link {
+        grid-template-columns: auto 1fr;
+      }
+
+      .question-link .status {
+        grid-column: 1 / -1;
+        width: fit-content;
+      }
+
+      .day-roadmap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="页面标题">
+        <span class="brand-mark">LG</span>
+        <div>
+          <h1>综合管理岗直接业务考核备考</h1>
+          <p>LG2026005C0004 · 每日10题 · 单题练习</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#home">总览</a>
+        <a href="#day-1">Day 1</a>
+        <a href="#day-1-summary">今日总结</a>
+        <a href="#overall">总复盘</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="app" aria-live="polite"></main>
+
+  <script>
+    const appData = {
+      job: {
+        code: "LG2026005C0004",
+        name: "综合管理岗",
+        unit: "深圳市龙岗区坪地街道综合事务中心",
+        duties: "从事政府采购、固定资产管理、政府物业管理、机关饭堂管理、公务车辆管理、办公场所管理、会务服务等后勤保障工作，承担街道日常财务管理工作，协助做好小型市政工程建设管理相关工作。"
+      },
+      roadmap: [
+        "岗位画像、通用框架、核心职责初诊",
+        "政府采购法基础、采购方式与预算约束",
+        "采购需求管理、招标文件、评审风险",
+        "合同履约、验收、质疑投诉与档案",
+        "固定资产全生命周期与盘点整改",
+        "政府物业、办公用房与物业服务监管",
+        "机关食堂：食品安全、成本与满意度",
+        "公务车辆：调度、维修、油耗与安全",
+        "会务服务、接待保障与突发事件",
+        "预算执行、报销审核、政府会计基础",
+        "行政事业单位内控与廉政风险防控",
+        "小型工程立项、采购衔接与合同管理",
+        "限额以下小型工程安全生产纳管",
+        "项目管理：进度、质量、成本、风险",
+        "街道综合协调、应急响应、部门联动",
+        "公文写作：请示、报告、通知、纪要",
+        "数据分析、统计思维与绩效评价",
+        "外包服务监管、考核扣分与整改闭环",
+        "档案、保密、信息公开与群众沟通",
+        "机关运行降本增效与绿色低碳机关",
+        "多方冲突协调：社区、科室、供应商",
+        "公共管理理论与基层治理综合分析",
+        "博士应届生优势、研究能力转化表达",
+        "团队协作、执行力、服务意识与边界",
+        "压力追问：原则底线与灵活处理",
+        "材料分析：从材料提炼问题和对策",
+        "方案策划：专项整治、制度建设、培训",
+        "综合案例：大型会议与后勤保障联动",
+        "综合案例：采购、资产、财务、工程一体化",
+        "全真模拟、个性化答题模板、复盘清单"
+      ],
+      days: [
+        {
+          id: 1,
+          date: "2026-06-09",
+          title: "岗位画像与核心业务初诊",
+          subtitle: "先建立岗位语言体系，掌握直接业务考核的答题骨架。",
+          summary: {
+            core: [
+              "这个岗位的核心不是单一后勤，而是机关运行保障和内部治理。",
+              "所有业务题都要同时答出：程序合规、资源节约、风险防控、服务保障、闭环改进。",
+              "博士优势不要停留在学历，要转化为政策学习、流程优化、数据分析和制度建设能力。"
+            ],
+            frameworks: [
+              "结构化四步：表态定性、分析风险、提出措施、复盘建制。",
+              "业务五要素：预算依据、程序合规、权责清晰、过程留痕、结果验收。",
+              "应急四动作：先控风险、再保运转、同步报告、事后复盘。"
+            ],
+            review: [
+              "政府采购题不能答成简单比价，要说需求、预算、方式、合同、验收。",
+              "固定资产题要强调账实相符、处置审批和责任可追。",
+              "食堂、车辆、物业、会务题要从服务满意度上升到制度化监管。",
+              "小型工程题要把安全生产、居民沟通、质量进度和台账闭环放在一起。"
+            ]
+          },
+          questions: [
+            {
+              type: ["结构化", "岗位匹配"],
+              title: "请结合坪地街道综合事务中心职责，谈谈你为什么适合综合管理岗。",
+              prompt: "追问方向：博士学历如何转化为街道后勤、财务、采购、工程等具体执行能力？",
+              answer: [
+                "我理解这个岗位不是单纯的事务性后勤岗位，而是街道机关运行保障和内部治理的综合管理岗位。岗位职责覆盖政府采购、资产物业、机关食堂、公务车辆、会务保障、日常财务和小型市政工程协助管理，背后共同指向的是公共资源配置、行政运行效率和廉政风险防控。",
+                "我的匹配度主要体现在三个方面。第一，博士阶段训练形成了较强的政策学习和系统分析能力，能够较快理解政府采购、行政事业单位资产管理、内部控制、工程管理等制度要求，并转化为可执行的流程和清单。第二，我习惯用数据和证据处理问题，例如对食堂满意度、车辆使用率、资产盘点差异、物业服务考核等事项，可以建立台账、发现异常、提出改进。第三，我重视规范和协同，能在科室、社区、供应商和财务之间做好沟通，把工作推进到闭环。",
+                "如果进入岗位，我会先熟悉现有制度、合同、资产台账和预算执行情况，梳理高频事项流程；再围绕采购、报销、资产、物业、食堂、车辆、会务等重点环节建立风险清单；最后通过月度复盘和数据化台账，推动后勤保障从被动响应转向主动管理。"
+              ],
+              explanation: [
+                "这道题不是普通自我介绍，考官重点看你是否真正理解岗位。答题要把“综合管理岗”解释成机关运行保障岗位，而不是把它说成杂务岗位。",
+                "高分答案要完成一次能力迁移：博士能力不是“学历高”，而是政策吸收、系统分析、数据处理、制度建设和跨部门沟通能力。"
+              ],
+              knowledge: [
+                "服务型政府：内部后勤保障最终服务于机关高效运转和群众办事体验。",
+                "整体性治理：采购、资产、财务、物业、工程不是孤立事项，要统一到流程、预算和风险控制中。",
+                "岗位表达关键词：合规、效率、节约、协同、留痕、复盘。"
+              ],
+              references: [
+                {
+                  kind: "岗位依据",
+                  title: "深圳市龙岗区事业单位2026年公开招聘高层次人才公告",
+                  url: "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html",
+                  note: "公告和岗位表明确本岗位从事政府采购、固定资产、政府物业、食堂、车辆、办公场所、会务、财务和小型市政工程协助管理等工作。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "服务型政府、整体性治理、公共资源管理",
+                  note: "用于把岗位职责从后勤事务上升到机关运行保障、内部治理和公共资源配置能力。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "PDCA闭环管理、台账管理、风险清单",
+                  note: "用于说明博士阶段的系统分析能力如何转化为制度梳理、流程优化和风险预判。"
+                }
+              ],
+              pitfalls: [
+                "只谈个人学历和学习能力，不谈岗位职责。",
+                "把后勤保障说成简单服务，没有上升到公共资源管理。",
+                "只说愿意吃苦，不说明如何处理采购、财务、资产等具体问题。"
+              ],
+              review: "背诵句：我会把研究训练形成的系统分析能力，用在制度梳理、流程优化、风险预判和台账管理上，把事务性工作做成可追踪、可复盘的管理工作。"
+            },
+            {
+              type: ["业务案例", "政府采购"],
+              title: "街道会议室投影设备老化，科室希望尽快采购，某熟悉供应商表示可以低价现货供应。你如何推进？",
+              prompt: "考点：紧急需求与采购合规冲突，是否能直接指定供应商。",
+              answer: [
+                "我会先明确态度：设备老化影响会议保障，应当尽快解决，但政府采购必须坚持依法合规，不能因为供应商熟悉、报价低或者供货快就直接指定。",
+                "具体推进上，第一步核实需求，确认设备老化程度、使用频率、是否维修优先、是否确需采购新设备。第二步核实预算，查看是否有相应预算指标，采购金额是否达到政府采购目录或限额标准。第三步规范采购需求，明确必要技术参数和验收标准，避免设置具有品牌指向性或排他性的参数。第四步按制度选择采购方式，开展询价、比选或其他规定程序，形成审批和过程记录。第五步签订合同并组织验收，确保型号、数量、安装调试、售后服务与合同一致。",
+                "如果确实存在会议保障的时间压力，我会优化内部流转，提前同步财务、采购和使用科室，压缩非必要等待时间；同时可以采取临时借用、调剂其他会议室设备等过渡措施，但不能先供货后补手续，更不能绕开采购程序。"
+              ],
+              explanation: [
+                "这道题的陷阱是“低价现货”和“熟悉供应商”。直接业务考核会看你是否有程序意识和廉政风险意识。",
+                "答题不要停留在“比价采购”，要把采购全链条答出来：需求、预算、方式、合同、验收、档案。"
+              ],
+              knowledge: [
+                "政府采购基本原则：公开透明、公平竞争、公正、诚实信用。",
+                "采购需求管理：参数应服务于实际需要，不能以不合理条件限制或排斥潜在供应商。",
+                "采购闭环：预算依据、采购程序、合同履约、验收付款、资料归档。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购应遵循公开透明、公平竞争、公正和诚实信用原则，不能因熟悉供应商而直接指定。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例（国务院令第658号）",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购需求、采购程序、合同履约和验收等全流程合规要求。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑采购需求应当合法合规、完整明确，技术参数和验收标准要前置设计。"
+                }
+              ],
+              pitfalls: [
+                "答成“找三家报价，谁低买谁”，忽略预算和采购方式。",
+                "认可熟人供应商，容易触碰廉政和公平竞争风险。",
+                "说“先买了再补流程”，这是明显失分点。"
+              ],
+              review: "背诵句：紧急事项可以优化流转，不能突破程序；服务效率要建立在采购合规、需求清晰和过程留痕基础上。"
+            },
+            {
+              type: ["业务案例", "固定资产"],
+              title: "年度固定资产盘点发现账实不符：一批电脑系统有账但现场找不到。你如何处理？",
+              prompt: "考点：资产安全、盘点整改、处置审批、责任追溯。",
+              answer: [
+                "我会把这类问题作为国有资产管理风险处理，不能简单认定为报废或丢失。首先封存盘点结果，列出差异清单，逐项核对资产编号、购置时间、领用人、使用科室、调拨记录、维修记录和报废处置记录。",
+                "其次组织复核。对登记错误、科室调拨未更新、维修外送未登记、报废未销账、人员变动未交接等情形分类处理。能找回实物的，及时补充使用地点和责任人；属于手续缺失的，补齐调拨、领用、归还或维修资料；确属遗失毁损的，要按制度开展原因核查、责任认定和审批处理。",
+                "最后形成整改闭环。一方面按审批结果调整资产台账和会计处理，确保账账相符、账实相符；另一方面完善制度，推行资产标签管理、领用交回签字、人员离岗资产交接、定期抽盘和盘点差异整改台账，防止同类问题再次发生。"
+              ],
+              explanation: [
+                "资产题要体现“国有资产不能随意处置”。找不到实物只是问题现象，背后可能是台账、调拨、报废、交接、责任管理任何一环出问题。",
+                "高分答案要从盘点差异处理上升到资产全生命周期管理。"
+              ],
+              knowledge: [
+                "固定资产管理链条：配置、登记、领用、使用、维护、盘点、处置、核销。",
+                "资产处置原则：先查明原因，再按权限审批，最后进行台账和会计处理。",
+                "关键目标：账账相符、账卡相符、账实相符、责任可追。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "行政事业性国有资产管理条例（国务院令第738号）",
+                  url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+                  note: "用于支撑行政事业单位国有资产应加强管理监督、维护资产安全完整。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "深圳市行政事业单位国有资产处置办法",
+                  url: "https://szfb.sz.gov.cn/gkmlpt/content/11/11073/post_11073202.html",
+                  note: "用于支撑资产报废、损失核销等处置事项应查明原因、按权限审批、及时核销台账和进行账务处理。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "固定资产全生命周期管理",
+                  note: "用于组织配置、登记、领用、盘点、处置、核销等步骤，防止只处理单个盘点差异。"
+                }
+              ],
+              pitfalls: [
+                "一上来就说报废或核销，没有查明原因。",
+                "只找实物，不处理台账和制度漏洞。",
+                "忽视人员调动、科室调拨、维修外送等常见原因。"
+              ],
+              review: "背诵句：盘点不是为了找数字，而是通过账实差异倒查流程漏洞，最终实现资产安全和责任闭环。"
+            },
+            {
+              type: ["应急处置", "机关饭堂"],
+              title: "机关饭堂近期收到多名干部反映菜品质量下降、价格不透明。你作为综合事务中心工作人员怎么处理？",
+              prompt: "考点：服务保障、食品安全、供应商监管、满意度提升。",
+              answer: [
+                "我会先把问题分成两类处理：一类是食品安全和卫生底线问题，必须立即检查；另一类是菜品质量、价格透明和服务满意度问题，需要调查、整改和长期监管。",
+                "第一，及时收集反映情况，了解具体问题集中在哪些菜品、时段、窗口和价格项目。第二，组织现场检查，重点查看后厨卫生、食品留样、采购进货台账、原材料质量、价格公示、成本核算和人员健康管理。第三，约谈食堂服务单位，对照合同、考核办法和食品安全要求提出整改清单，明确整改时限和复查要求；涉及严重食品安全隐患的，立即报告并按规定处置。第四，建立长期机制，例如月度菜单评审、价格和成本公示、满意度调查、随机抽查、扣分考核和问题通报。",
+                "处理过程中，我会注意沟通方式。一方面向干部职工说明已启动调查和整改，及时回应合理诉求；另一方面要求服务单位把质量、价格和安全责任落实到具体岗位，避免问题反复。"
+              ],
+              explanation: [
+                "食堂题不能只答“改善菜品”。机关饭堂管理既是后勤服务，也是食品安全、外包合同监管和成本控制。",
+                "答案要体现从投诉处理到服务监管的转化：有调查、有检查、有整改、有复查、有制度。"
+              ],
+              knowledge: [
+                "机关食堂监管重点：食品安全、成本控制、价格透明、服务满意度、合同履约。",
+                "PDCA适用：计划菜单和标准、执行供餐、检查满意度和安全、改进供应和考核。",
+                "外包服务监管：合同条款、服务标准、考核扣分、整改闭环。"
+              ],
+              references: [
+                {
+                  kind: "法律法规",
+                  title: "中华人民共和国食品安全法",
+                  url: "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817ab22e0c017abd8d85a205f1&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8%E6%B3%95&type=",
+                  note: "用于支撑食品安全是机关饭堂管理底线，应关注食品经营、贮存、运输和食品安全管理。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关运行经费、资产和服务管理应接受监督检查，机关后勤服务不能只看满意度。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "PDCA质量改进、外包服务合同绩效管理",
+                  note: "用于把投诉处理扩展为检查、整改、考核和复查的常态化监管机制。"
+                }
+              ],
+              pitfalls: [
+                "只说换厨师或增加菜品，没有食品安全和合同监管意识。",
+                "对价格不透明只做口头提醒，没有公示和成本核查。",
+                "忽视留样、进货台账、卫生检查等底线事项。"
+              ],
+              review: "背诵句：机关饭堂管理要把干部职工满意度建立在食品安全、价格透明、合同履约和常态化考核之上。"
+            },
+            {
+              type: ["组织协调", "公务车辆"],
+              title: "同一时间有两个科室申请公务用车，一个是临时检查，一个是重要会议，你如何调度？",
+              prompt: "考点：资源有限时的优先级、制度规则、沟通协调。",
+              answer: [
+                "我会先核实两个用车申请的任务性质、紧急程度、出行人数、路线距离、出发时间、是否有替代交通方式以及是否已经履行审批。公务用车调度不能只看谁先申请，更要按制度和任务轻重缓急处理。",
+                "如果临时检查涉及安全生产、民生保障或上级交办的紧急事项，应优先保障；如果重要会议时间不可调整且代表街道参加，也要优先保障。我会根据实际情况协调合并路线、调整出发时间、调剂车辆、使用社会化交通或向相关部门申请支持，尽量兼顾两个任务。",
+                "沟通上，我会向两个科室说明调度依据和替代方案，避免产生人情派车或随意派车的印象。调度完成后，做好派车单、审批记录、驾驶员安排、里程油耗、归还时间等登记，确保用车规范、节约、安全。"
+              ],
+              explanation: [
+                "这道题考的是原则和协调。车辆资源有限时，不能把矛盾简单上交，也不能凭关系安排。",
+                "答案要体现公务用车管理的三个关键词：规范、节约、安全。"
+              ],
+              knowledge: [
+                "公务用车调度要素：审批手续、任务性质、紧急程度、路线时间、替代方案、使用登记。",
+                "协调类题通用逻辑：核实信息、明确规则、排序优先级、提出替代方案、解释沟通、留痕复盘。",
+                "风险点：私车公用、公车私用、人情派车、油耗维修异常。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "党政机关公务用车管理办法",
+                  url: "https://www.gov.cn/gongbao/content/2018/content_5254302.htm",
+                  note: "用于支撑公务用车实行统一制度规范、分级分类管理，防范公车私用、私车公养等违规风险。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关事务管理中的经费、资产和服务管理监督要求。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "优先级排序与资源调度",
+                  note: "用于说明资源有限时应按任务紧急性、重要性、制度审批和替代方案综合调度。"
+                }
+              ],
+              pitfalls: [
+                "直接说谁级别高给谁用，缺乏制度意识。",
+                "只说请领导决定，没有主动协调方案。",
+                "忽略派车记录和后续油耗里程管理。"
+              ],
+              review: "背诵句：车辆调度要坚持制度优先、任务导向、过程透明，既保障重点工作，也避免随意派车和人情派车。"
+            },
+            {
+              type: ["应急处置", "政府物业"],
+              title: "街道办公楼突发漏水，影响下午会议和部分窗口办公。你如何组织处置？",
+              prompt: "考点：办公场所保障、物业单位管理、风险控制、会务调整。",
+              answer: [
+                "我会按照先安全、再运行、后追因的顺序处理。第一时间到现场查看漏水范围，提醒人员避开湿滑区域，必要时切断相关区域电源，转移电脑、档案和会议材料，防止触电、滑倒和资料损毁。",
+                "同时通知物业服务单位、维修人员和相关科室到场排查，判断是管道、空调、屋面还是外部施工导致。对受影响窗口，临时调整工位或设置引导标识，确保群众办事不断档；对下午会议，立即协调备用会议室、检查音视频设备、通知参会人员地点变化。",
+                "事后要形成记录，包括现场照片、维修过程、影响范围、损失情况、物业响应时间和整改结果。如果属于物业巡检不到位或合同履约问题，要按合同和考核办法处理。最后组织办公楼同类隐患排查，建立雨季、管线、空调和屋面巡检清单。"
+              ],
+              explanation: [
+                "漏水题表面是维修，实质是机关连续运行保障。你要同时想到安全、电力、设备、档案、窗口、会议和物业合同。",
+                "应急题高分结构是：控制风险、保障运转、协调资源、记录追责、复盘整改。"
+              ],
+              knowledge: [
+                "办公场所管理重点：安全、秩序、设施维护、空间调配、节能和应急保障。",
+                "物业监管重点：服务响应、巡检台账、维修质量、隐患整改、合同考核。",
+                "应急处置优先级：人身安全高于财产安全，机关运行保障高于一般事务。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "党政机关办公用房管理办法",
+                  url: "https://www.gov.cn/gongbao/content/2018/content_5254301.htm",
+                  note: "用于支撑办公用房规划、权属、配置、使用、维修、处置等管理应依法合规、有效利用。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关事务主管部门对机关运行经费、资产和服务管理进行监督检查。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "应急处置四步法",
+                  note: "先控安全风险，再保障机关运转，同步协调和记录，事后复盘整改。"
+                }
+              ],
+              pitfalls: [
+                "只说联系物业维修，答案过薄。",
+                "忽略窗口办公和群众办事影响。",
+                "没有后续考核物业和隐患排查。"
+              ],
+              review: "背诵句：办公场所突发问题要先控安全风险，再保障机关运行，同步记录责任，最后用巡检制度防止复发。"
+            },
+            {
+              type: ["压力追问", "财务内控"],
+              title: "某科室报销材料不完整，但项目负责人说经费马上要结转，请你“先报后补”。你怎么办？",
+              prompt: "考点：原则底线、服务意识、内控流程、沟通表达。",
+              answer: [
+                "我会先表明态度：理解项目负责人担心经费结转和工作进度，但财务报销必须以真实、完整、合规的材料为基础，不能先报后补，更不能因为时间紧而突破内部控制要求。",
+                "具体处理上，我会一次性告知缺失材料清单，例如合同、验收单、审批表、发票、会议或活动佐证、预算指标等，并说明每项材料的审核目的。对于可以立即补齐的材料，主动协助对方联系相关经办人、验收人或供应商，加快补正；对于确有特殊情况的，按制度向财务负责人或分管领导报告，由有权限主体依法依规处理。",
+                "同时我会核对预算、合同、发票、验收、付款对象和审批链条是否一致，防止虚假报销、超预算支出、合同履约不清等风险。事后可以梳理高频缺件问题，制作报销材料清单或开展小范围培训，让科室在项目执行前就知道凭证要求。"
+              ],
+              explanation: [
+                "这道题最容易被追问“领导很急怎么办”。正确方向是：态度上服务，程序上不突破，路径上帮对方最快合规。",
+                "财务内控不是刁难科室，而是保护财政资金安全、保护经办人和单位。"
+              ],
+              knowledge: [
+                "行政事业单位内控范围：预算、收支、采购、资产、建设项目、合同等经济活动。",
+                "报销审核常见一致性：预算一致、合同一致、验收一致、发票一致、审批一致、付款对象一致。",
+                "原则表达：服务不等于放松审核，效率不等于跳过程序。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑行政事业单位应围绕预算、收支、采购、资产、建设项目、合同等经济活动建立内控机制。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关运行经费管理和监督检查要求，说明报销审核不是形式主义。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "授权审批、岗位制衡、凭证链一致性",
+                  note: "用于解释为什么不能“先报后补”，而要把服务意识体现在一次性告知和快速补正。"
+                }
+              ],
+              pitfalls: [
+                "答“领导同意就可以报”，内控意识不足。",
+                "只说不行，没有提供补正路径，显得服务意识弱。",
+                "忽略预算指标和合同验收。"
+              ],
+              review: "背诵句：服务不是放松审核，而是把规则讲清、把路径压缩、把风险挡住。"
+            },
+            {
+              type: ["业务案例", "小型市政工程"],
+              title: "社区微改造工程工期紧，居民投诉噪音，现场还发现个别工人未规范佩戴安全帽。你会如何协助管理？",
+              prompt: "考点：小型工程安全、居民沟通、质量进度成本平衡。",
+              answer: [
+                "我会把安全作为第一优先。发现工人未规范佩戴安全帽，应立即要求施工单位现场整改，必要时暂停相关危险作业，并通知项目负责人、安全管理人员到场核查。小型工程虽然规模不大，但安全生产责任不能降低。",
+                "在管理推进上，我会核对该项目的立项、采购、合同、施工方案、现场负责人、安全交底、作业人员信息和监管台账，确认是否按照限额以下小型工程和零星作业安全生产要求纳管。对于居民噪音投诉，要协调社区、施工单位和物业，明确施工时段、降噪措施、公告范围、联系人和投诉反馈渠道。",
+                "同时兼顾进度和质量。可以把剩余工序列成进度表，明确每天完成量、安全检查点和质量验收节点；对扰民工序尽量避开休息时间，对确需连续施工的事项提前公告解释。最后形成整改记录和复查记录，把安全、噪音、进度和质量纳入同一张台账。"
+              ],
+              explanation: [
+                "小型工程题不要只答工程进度。岗位职责是“协助做好”，所以要体现协助监管、协调沟通、资料台账和安全底线。",
+                "这类题的高分点是把居民诉求、施工安全、质量进度和合同管理统一起来。"
+              ],
+              knowledge: [
+                "小型工程管理关键词：安全生产、合同履约、质量验收、进度控制、居民沟通、资料归档。",
+                "深圳限额以下小型工程和零星作业强调纳管，工程小不代表责任小。",
+                "项目管理三角：质量、进度、成本；基层场景还要加上安全和民意。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "深圳市限额以下小型工程和零星作业安全生产纳管办法",
+                  url: "https://www.sz.gov.cn/szsrmzfxxgk/zc/gfxwj/szfgfxwj/content/post_12360862.html",
+                  note: "用于支撑限额以下小型工程和零星作业应纳入安全生产管理，开展巡查、隐患处置和全过程信息化闭环监管。"
+                },
+                {
+                  kind: "法律法规",
+                  title: "中华人民共和国安全生产法",
+                  url: "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817a66b816017a7956b7db0ad4&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E6%B3%95&type=",
+                  note: "用于支撑生产经营活动中的安全生产责任和隐患治理要求。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府投资条例（国务院令第712号）",
+                  url: "https://www.gov.cn/zhengce/zhengceku/2019-05/05/content_5388798.htm",
+                  note: "用于支撑使用预算资金开展固定资产投资建设活动时，应规范政府投资行为、加强项目实施和档案管理。"
+                }
+              ],
+              pitfalls: [
+                "为了赶工忽视安全帽等现场隐患。",
+                "只安抚居民，不要求施工单位整改。",
+                "没有资料台账和复查闭环。"
+              ],
+              review: "背诵句：安全是底线，进度是目标，沟通是保障，台账是闭环。"
+            },
+            {
+              type: ["组织协调", "会务服务"],
+              title: "区领导临时到坪地街道调研，要求半天内完成会务保障方案。你会列哪些重点？",
+              prompt: "考点：会务服务的流程化、细节意识和综合协调。",
+              answer: [
+                "我会先快速确认调研主题、时间地点、参会人员、会议规格、议程安排、路线安排和材料要求，形成简明任务清单。半天内完成方案，关键是用清单化方式并行推进。",
+                "方案重点包括：一是会场保障，落实会议室、座次、桌签、音视频、话筒、投屏、茶水和备用设备；二是材料保障，准备汇报材料、议程、签到表、参会名单和必要背景资料；三是人员保障，明确签到引导、会场服务、车辆衔接、摄影记录、纪要整理等分工；四是秩序保障，做好安保、停车、路线、候会和保密材料管理；五是应急预案，准备设备故障、人员变动、交通延误、天气变化等替代方案。",
+                "会前要进行一次快速彩排和设备测试，会中安排专人盯关键环节，会后及时整理会议纪要、领导交办事项和资料归档。这样才能把临时任务做得有序、规范、可追踪。"
+              ],
+              explanation: [
+                "会务题看细节，也看整体统筹。不要只说桌椅茶水，要覆盖人、会、车、材料、设备、秩序、保密和会后交办。",
+                "半天内完成方案，最好用5W2H和清单化表达，展示执行力。"
+              ],
+              knowledge: [
+                "5W2H：为什么、谁、何时、何地、做什么、怎么做、成本多少。",
+                "会务闭环：会前准备、会中保障、会后纪要、交办跟踪、资料归档。",
+                "会务风险点：设备故障、座次错误、材料泄密、车辆衔接失误、议程变动。"
+              ],
+              references: [
+                {
+                  kind: "岗位依据",
+                  title: "深圳市龙岗区事业单位2026年公开招聘高层次人才公告",
+                  url: "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html",
+                  note: "岗位职责明确包含会务服务等后勤保障工作。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关事务服务保障应当规范、节约、高效，并接受相关监督。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "5W2H、RACI分工、清单化管理",
+                  note: "用于快速拆解临时会务任务，明确事项、责任人、时限、资源和应急方案。"
+                }
+              ],
+              pitfalls: [
+                "只答布置会场，忽略材料、车辆、保密、会后交办。",
+                "没有应急预案。",
+                "不明确分工，方案缺乏可执行性。"
+              ],
+              review: "背诵句：会务不是摆桌签，而是把议程、人员、场地、设备、交通、材料和应急预案统一到一张执行清单。"
+            },
+            {
+              type: ["综合分析", "理论方法"],
+              title: "请谈谈你对“后勤保障工作也是基层治理能力重要组成部分”的理解。",
+              prompt: "考点：从事务上升到治理，从岗位职责上升到公共管理理论。",
+              answer: [
+                "我赞同这个观点。后勤保障看似是内部事务，实际上直接影响街道机关运行效率、财政资金使用绩效、干部职工工作状态和群众办事体验，是基层治理能力的重要支撑。",
+                "第一，后勤保障关系公共资源配置。政府采购、资产管理、车辆调度、办公场所配置，本质上都是财政资金和国有资产如何高效、规范使用的问题。第二，后勤保障关系行政运行效率。会议保障、食堂服务、物业维护、车辆安排是否顺畅，会影响街道各项重点工作的推进。第三，后勤保障关系风险防控。采购、报销、资产处置、小型工程都存在廉政、财务、安全和合同风险，必须通过制度和流程加以控制。",
+                "因此，做好这个岗位不能停留在被动服务，而要向精细化管理转变。具体来说，要用制度明确边界，用台账掌握情况，用数据发现问题，用考核推动外包服务改进，用复盘形成长效机制。后勤保障越规范，机关运行越稳定；内部治理越精细，外部服务越有质量。"
+              ],
+              explanation: [
+                "这道题是综合分析题，关键是把“后勤”从低层次事务提升到公共管理和基层治理。",
+                "答题要避免空泛口号，必须点出采购、资产、财务、车辆、会务、小型工程等具体场景。"
+              ],
+              knowledge: [
+                "公共管理关注公共资源配置、公共价值、效率、公平和责任。",
+                "后勤保障的公共价值：低成本、高效率、可监督、可持续。",
+                "基层治理能力可以落到内部治理能力：制度、流程、数据、协同、风险防控。"
+              ],
+              references: [
+                {
+                  kind: "岗位依据",
+                  title: "深圳市龙岗区事业单位2026年公开招聘高层次人才公告",
+                  url: "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html",
+                  note: "用于支撑本题必须紧扣岗位职责，而不是泛泛谈基层治理。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关事务管理与机关运行经费、资产和服务保障有关，是内部治理的重要组成。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "公共价值理论、公共资源配置、责任治理",
+                  note: "用于把后勤保障从事务服务上升到财政资金绩效、国有资产安全、行政效率和廉政风险防控。"
+                }
+              ],
+              pitfalls: [
+                "只说后勤很重要，没有分析为什么重要。",
+                "只讲服务态度，没有讲资金、资产和廉政风险。",
+                "没有联系岗位职责，答案容易变成泛泛而谈。"
+              ],
+              review: "背诵句：后勤保障越规范，机关运行越稳定；内部治理越精细，外部服务越有质量。"
+            }
+          ]
+        }
+      ],
+      sources: [
+        ["深圳市龙岗区事业单位2026年公开招聘高层次人才公告", "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html"],
+        ["中华人民共和国政府采购法", "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm"],
+        ["中华人民共和国政府采购法实施条例", "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm"],
+        ["政府采购需求管理办法", "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm"],
+        ["行政事业性国有资产管理条例", "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm"],
+        ["行政事业单位内部控制规范（试行）", "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm"],
+        ["深圳市行政事业单位国有资产处置办法", "https://szfb.sz.gov.cn/gkmlpt/content/11/11073/post_11073202.html"],
+        ["中华人民共和国食品安全法", "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817ab22e0c017abd8d85a205f1&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8%E6%B3%95&type="],
+        ["党政机关公务用车管理办法", "https://www.gov.cn/gongbao/content/2018/content_5254302.htm"],
+        ["党政机关办公用房管理办法", "https://www.gov.cn/gongbao/content/2018/content_5254301.htm"],
+        ["机关事务管理条例", "https://www.gov.cn/gongbao/content/2012/content_2182742.htm"],
+        ["深圳市限额以下小型工程和零星作业安全生产纳管办法", "https://www.sz.gov.cn/szsrmzfxxgk/zc/gfxwj/szfgfxwj/content/post_12360862.html"],
+        ["中华人民共和国安全生产法", "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817a66b816017a7956b7db0ad4&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E6%B3%95&type="],
+        ["政府投资条例", "https://www.gov.cn/zhengce/zhengceku/2019-05/05/content_5388798.htm"]
+      ]
+    };
+
+    const app = document.querySelector("#app");
+
+    function esc(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    const highlightTerms = [
+      {
+        className: "policy",
+        terms: [
+          "中华人民共和国政府采购法实施条例", "政府采购需求管理办法", "中华人民共和国政府采购法",
+          "行政事业性国有资产管理条例", "深圳市行政事业单位国有资产处置办法",
+          "行政事业单位内部控制规范", "中华人民共和国食品安全法", "党政机关公务用车管理办法",
+          "党政机关办公用房管理办法", "机关事务管理条例", "深圳市限额以下小型工程和零星作业安全生产纳管办法",
+          "中华人民共和国安全生产法", "政府投资条例", "政府采购法实施条例", "政府采购法", "食品安全法",
+          "安全生产法", "内控规范", "公务用车管理办法", "办公用房管理办法",
+          "法律法规", "政策", "制度要求", "制度", "程序", "审批", "合同", "发票",
+          "权限", "公开透明", "公平竞争", "公正", "诚实信用", "依法合规"
+        ]
+      },
+      {
+        className: "risk",
+        terms: [
+          "廉政风险", "食品安全", "安全生产", "国有资产流失", "公车私用", "私车公养",
+          "先报后补", "先供货后补手续", "直接指定", "不能", "不得", "不突破程序底线",
+          "底线", "风险", "隐患", "违规", "超预算", "虚假报销", "账实不符", "责任倒查",
+          "责任认定", "触电", "滑倒", "资料损毁"
+        ]
+      },
+      {
+        className: "logic",
+        terms: [
+          "首先", "其次", "最后", "第一", "第二", "第三", "第四", "第五",
+          "一是", "二是", "三是", "四是", "五是", "具体推进上", "具体处理上",
+          "在管理推进上", "处理过程中", "同时", "事后", "因此", "如果", "一方面", "另一方面",
+          "先控安全风险", "再保障机关运行", "同步记录责任", "复盘整改", "整改闭环",
+          "形成整改闭环", "按制度", "按程序", "一次性告知", "清单化", "闭环", "复盘", "台账"
+        ]
+      },
+      {
+        className: "key",
+        terms: [
+          "综合管理岗", "机关运行保障", "内部治理", "公共资源配置", "政府采购", "固定资产",
+          "国有资产", "机关饭堂", "公务用车", "政府物业", "办公场所", "会务保障", "会务服务",
+          "日常财务", "小型市政工程", "小型工程", "后勤保障", "基层治理", "预算", "采购需求",
+          "采购程序", "合同履约", "验收", "资产台账", "满意度", "外包服务", "合同绩效",
+          "服务型政府", "整体性治理", "PDCA", "5W2H", "RACI", "全生命周期管理",
+          "项目管理三角", "公共价值", "岗位职责", "政策学习", "系统分析", "数据处理", "制度建设"
+        ]
+      }
+    ];
+
+    const flatHighlightTerms = highlightTerms
+      .flatMap(group => group.terms.map(term => ({ term, className: group.className })))
+      .sort((a, b) => b.term.length - a.term.length);
+
+    function rich(value) {
+      const text = esc(value);
+      const ranges = [];
+      for (const { term, className } of flatHighlightTerms) {
+        let start = 0;
+        while (start < text.length) {
+          const index = text.indexOf(term, start);
+          if (index === -1) break;
+          const end = index + term.length;
+          const overlaps = ranges.some(range => index < range.end && end > range.start);
+          if (!overlaps) ranges.push({ start: index, end, className });
+          start = end;
+        }
+      }
+      ranges.sort((a, b) => a.start - b.start);
+      let output = "";
+      let cursor = 0;
+      for (const range of ranges) {
+        output += text.slice(cursor, range.start);
+        output += `<span class="hl ${range.className}">${text.slice(range.start, range.end)}</span>`;
+        cursor = range.end;
+      }
+      output += text.slice(cursor);
+      return output;
+    }
+
+    function list(items, ordered = false) {
+      const tag = ordered ? "ol" : "ul";
+      return `<${tag}>${items.map(item => `<li>${rich(item)}</li>`).join("")}</${tag}>`;
+    }
+
+    function paragraphs(items) {
+      return items.map(item => `<p>${rich(item)}</p>`).join("");
+    }
+
+    function referenceList(items) {
+      if (!items || !items.length) {
+        return `<p>本题未单独引用外部文件，主要依据岗位职责和通用面试答题方法。</p>`;
+      }
+      return `<div class="ref-list">${items.map(ref => {
+        const title = ref.url
+          ? `<a href="${esc(ref.url)}" target="_blank" rel="noopener">${esc(ref.title)}</a>`
+          : `<span class="ref-title">${esc(ref.title)}</span>`;
+        return `
+          <div class="ref-item">
+            <span class="ref-kind">${esc(ref.kind)}</span>
+            <div>${title}</div>
+            <p>${esc(ref.note)}</p>
+          </div>
+        `;
+      }).join("")}</div>`;
+    }
+
+    function chips(items) {
+      return items.map((item, index) => `<span class="chip ${index % 2 ? "teal" : ""}">${esc(item)}</span>`).join("");
+    }
+
+    function dayById(dayId) {
+      return appData.days.find(day => day.id === Number(dayId));
+    }
+
+    function renderHome() {
+      const day = appData.days[0];
+      app.innerHTML = `
+        <div class="view">
+          <section class="hero">
+            <p class="eyebrow">清爽版 · 单题练习系统</p>
+            <h2>每天点进练习，每个页面只看一道题。</h2>
+            <p class="lead">${esc(appData.job.name)}围绕政府采购、固定资产、政府物业、机关饭堂、公务车辆、办公场所、会务服务、日常财务和小型市政工程协助管理展开。页面已改成“总览 - 每日入口 - 单题 - 当日总结 - 总复盘”的结构。</p>
+            <div class="meta-grid">
+              <div class="meta"><b>岗位代码</b><span>${esc(appData.job.code)}</span></div>
+              <div class="meta"><b>报考单位</b><span>${esc(appData.job.unit)}</span></div>
+              <div class="meta"><b>今日内容</b><span>Day 1 · 10题</span></div>
+              <div class="meta"><b>页面结构</b><span>一题一页 · 答案讲解完整</span></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>每日练习入口</h2>
+                <p>以后新增 Day 2、Day 3 时，会继续在这里出现。每一天结束后都有单独总结页，并汇入总复盘。</p>
+              </div>
+              <span class="status">已生成 1 天</span>
+            </div>
+            <div class="card-grid">
+              <article class="card">
+                <span class="status">Day 1 已完成</span>
+                <h3>${esc(day.title)}</h3>
+                <p>${esc(day.subtitle)}</p>
+                <div class="button-row">
+                  <a class="btn primary" href="#day-1">进入 Day 1</a>
+                  <a class="btn" href="#day-1-q-1">直接做第 1 题</a>
+                  <a class="btn ghost" href="#day-1-summary">看今日总结</a>
+                </div>
+              </article>
+              <article class="card">
+                <span class="status pending">Day 2 待新增</span>
+                <h3>政府采购法基础</h3>
+                <p>下一次你让我新增10题时，会按这个主题追加，并自动进入总复盘。</p>
+              </article>
+              <article class="card">
+                <span class="status pending">总复盘</span>
+                <h3>每天结束后的整体回顾</h3>
+                <p>按职责模块整理所有已完成天数的知识点，便于考前快速回看。</p>
+                <div class="button-row"><a class="btn" href="#overall">进入总复盘</a></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>30天计划</h2>
+                <p>清爽展示，不在首页塞题目。题目只在单题页展示。</p>
+              </div>
+            </div>
+            <div class="day-roadmap">
+              ${appData.roadmap.map((topic, index) => `
+                <div class="roadmap-item ${index === 0 ? "current" : ""}">
+                  <b>Day ${String(index + 1).padStart(2, "0")}</b>
+                  <span>${esc(topic)}</span>
+                </div>
+              `).join("")}
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderDay(dayId) {
+      const day = dayById(dayId);
+      if (!day) return renderNotFound();
+      app.innerHTML = `
+        <div class="view">
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Day ${day.id}：${esc(day.title)}</h2>
+                <p>${esc(day.subtitle)}</p>
+              </div>
+              <span class="status">${esc(day.date)}</span>
+            </div>
+            <div class="button-row">
+              <a class="btn primary" href="#day-${day.id}-q-1">开始第 1 题</a>
+              <a class="btn" href="#day-${day.id}-summary">查看本日知识点总结</a>
+              <a class="btn ghost" href="#home">返回总览</a>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>题目目录</h2>
+                <p>点开后进入单题页面；单题页只展示一道题、完整答案和讲解。</p>
+              </div>
+              <span class="status warn">10题</span>
+            </div>
+            <div class="question-list">
+              ${day.questions.map((question, index) => `
+                <a class="question-link" href="#day-${day.id}-q-${index + 1}">
+                  <span class="q-index">${String(index + 1).padStart(2, "0")}</span>
+                  <span>
+                    <strong>${esc(question.title)}</strong>
+                    <span>${esc(question.type.join(" / "))}</span>
+                  </span>
+                  <span class="status pending">进入</span>
+                </a>
+              `).join("")}
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderQuestion(dayId, questionNo) {
+      const day = dayById(dayId);
+      const index = Number(questionNo) - 1;
+      const question = day && day.questions[index];
+      if (!question) return renderNotFound();
+      const total = day.questions.length;
+      const previous = index > 0 ? `#day-${day.id}-q-${index}` : `#day-${day.id}`;
+      const next = index + 1 < total ? `#day-${day.id}-q-${index + 2}` : `#day-${day.id}-summary`;
+      const nextText = index + 1 < total ? "下一题" : "查看本日总结";
+      const percent = Math.round(((index + 1) / total) * 100);
+
+      app.innerHTML = `
+        <article class="question-panel">
+          <div class="question-shell">
+            <section class="question-main">
+              <div class="crumbs">
+                <a href="#home">总览</a>
+                <span>/</span>
+                <a href="#day-${day.id}">Day ${day.id}</a>
+                <span>/</span>
+                <span>第 ${index + 1} 题</span>
+              </div>
+              <div class="question-type">${chips(question.type)}</div>
+              <h2 class="question-title">${esc(question.title)}</h2>
+              <p class="prompt">${esc(question.prompt)}</p>
+
+              <div class="answer-block">
+                <h3>参考答案</h3>
+                ${paragraphs(question.answer)}
+              </div>
+
+              <div class="answer-block">
+                <h3>讲解</h3>
+                ${paragraphs(question.explanation)}
+              </div>
+
+              <div class="answer-block">
+                <h3>本题知识点</h3>
+                ${list(question.knowledge)}
+              </div>
+
+              <div class="answer-block">
+                <h3>引用依据 / 相关理论政策</h3>
+                ${referenceList(question.references)}
+              </div>
+
+              <div class="note teal">
+                <h4>复习卡片</h4>
+                <p>${rich(question.review)}</p>
+              </div>
+
+              <div class="button-row">
+                <a class="btn" href="${previous}">上一页</a>
+                <a class="btn primary" href="${next}">${nextText}</a>
+                <a class="btn ghost" href="#day-${day.id}">回到题目目录</a>
+              </div>
+            </section>
+
+            <aside class="question-aside">
+              <div class="side-box">
+                <h3>进度</h3>
+                <p>Day ${day.id} · 第 ${index + 1} / ${total} 题</p>
+                <div class="progress" aria-label="练习进度"><div style="width:${percent}%"></div></div>
+              </div>
+              <div class="side-box">
+                <h3>答题提醒</h3>
+                <ul>
+                  <li>先讲原则，再讲步骤。</li>
+                  <li>每题至少点出一个制度或风险。</li>
+                  <li>最后一定说闭环改进。</li>
+                </ul>
+              </div>
+              <div class="side-box">
+                <h3>易失分点</h3>
+                ${list(question.pitfalls)}
+              </div>
+            </aside>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderDaySummary(dayId) {
+      const day = dayById(dayId);
+      if (!day) return renderNotFound();
+      const allKnowledge = day.questions.map((question, index) => ({
+        title: `第 ${index + 1} 题：${question.type.join(" / ")}`,
+        text: question.knowledge[0]
+      }));
+
+      app.innerHTML = `
+        <div class="view">
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Day ${day.id} 本日知识点总结</h2>
+                <p>这是10道题结束后的复习页。考前可以只看这一页快速回忆今日重点。</p>
+              </div>
+              <span class="status">10题已归纳</span>
+            </div>
+            <div class="button-row">
+              <a class="btn" href="#day-${day.id}-q-10">回看第 10 题</a>
+              <a class="btn primary" href="#overall">进入总复盘</a>
+              <a class="btn ghost" href="#day-${day.id}">返回 Day ${day.id}</a>
+            </div>
+          </section>
+
+          <section class="summary-grid">
+            <div class="panel">
+              <div class="panel-head"><div><h2>今日核心结论</h2></div></div>
+              <div class="summary-list">
+                ${day.summary.core.map(item => `<div class="mini-card"><p>${rich(item)}</p></div>`).join("")}
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-head"><div><h2>今日答题框架</h2></div></div>
+              <div class="summary-list">
+                ${day.summary.frameworks.map(item => `<div class="mini-card"><p>${rich(item)}</p></div>`).join("")}
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>10题知识点回看</h2>
+                <p>每题抓一个最重要的知识点，形成复习索引。</p>
+              </div>
+            </div>
+            <div class="summary-list">
+              ${allKnowledge.map(item => `
+                <div class="mini-card">
+                  <h3>${esc(item.title)}</h3>
+                  <p>${rich(item.text)}</p>
+                </div>
+              `).join("")}
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head"><div><h2>今日复习清单</h2></div></div>
+            ${list(day.summary.review)}
+          </section>
+        </div>
+      `;
+    }
+
+    function renderOverall() {
+      const generatedDays = appData.days;
+      app.innerHTML = `
+        <div class="view">
+          <section class="hero">
+            <p class="eyebrow">总复盘 · 每天结束后更新</p>
+            <h2>把已完成的每日知识点，汇总成考前回顾页。</h2>
+            <p class="lead">目前已完成 Day 1。后续新增 Day 2、Day 3 后，这里会继续汇总每一天的核心结论、答题框架和易错点。</p>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>岗位总框架</h2>
+                <p>${rich(appData.job.duties)}</p>
+              </div>
+            </div>
+            <div class="summary-grid">
+              <div class="mini-card"><h3>一条主线</h3><p>${rich("机关运行保障，本质是公共资源管理、内部治理和风险防控。")}</p></div>
+              <div class="mini-card"><h3>四个底线</h3><p>${rich("财政资金安全、国有资产安全、工程和食品安全、廉政纪律安全。")}</p></div>
+              <div class="mini-card"><h3>五个动作</h3><p>${rich("核实依据、按程序办、过程留痕、验收评价、复盘建制。")}</p></div>
+              <div class="mini-card"><h3>高分表达</h3><p>${rich("从事务处理上升到制度化、清单化、数据化、闭环化管理。")}</p></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>已完成天数回顾</h2>
+                <p>每一天结束后会在这里留下总括，避免复习材料越堆越散。</p>
+              </div>
+              <span class="status">${generatedDays.length} 天</span>
+            </div>
+            <div class="summary-list">
+              ${generatedDays.map(day => `
+                <div class="mini-card">
+                  <h3>Day ${day.id}：${esc(day.title)}</h3>
+                  <p>${rich(day.summary.core.join(" "))}</p>
+                  <div class="button-row">
+                    <a class="btn" href="#day-${day.id}">回到当天</a>
+                    <a class="btn ghost" href="#day-${day.id}-summary">当天总结</a>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>依据来源</h2>
+                <p>页面内容依据官方公告、岗位职责和相关制度整理；公告明确不指定考试教材。</p>
+              </div>
+            </div>
+            <ul class="source-list">
+              ${appData.sources.map(source => `<li><a href="${esc(source[1])}" target="_blank" rel="noopener">${esc(source[0])}</a></li>`).join("")}
+            </ul>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderNotFound() {
+      app.innerHTML = `
+        <section class="panel empty">
+          <h2>没有找到这个页面</h2>
+          <p>可能是题号或天数还没有生成。</p>
+          <div class="button-row" style="justify-content:center">
+            <a class="btn primary" href="#home">返回总览</a>
+          </div>
+        </section>
+      `;
+    }
+
+    function render() {
+      const route = location.hash.replace(/^#/, "") || "home";
+      const questionMatch = route.match(/^day-(\d+)-q-(\d+)$/);
+      const summaryMatch = route.match(/^day-(\d+)-summary$/);
+      const dayMatch = route.match(/^day-(\d+)$/);
+
+      if (route === "home") renderHome();
+      else if (route === "overall") renderOverall();
+      else if (questionMatch) renderQuestion(questionMatch[1], questionMatch[2]);
+      else if (summaryMatch) renderDaySummary(summaryMatch[1]);
+      else if (dayMatch) renderDay(dayMatch[1]);
+      else renderNotFound();
+
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+
+    window.addEventListener("hashchange", render);
+    render();
+  </script>
+</body>
+</html>
