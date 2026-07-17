@@ -1,0 +1,4946 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LG2026005C0004 综合管理岗直接业务考核备考指南</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #657386;
+      --line: #dfe6ef;
+      --blue: #1d4ed8;
+      --teal: #0f766e;
+      --green: #15803d;
+      --amber: #b45309;
+      --red: #b91c1c;
+      --soft-blue: #eff6ff;
+      --soft-teal: #ecfdf5;
+      --soft-amber: #fffbeb;
+      --soft-red: #fef2f2;
+      --radius: 8px;
+      --shadow: 0 10px 26px rgba(23, 32, 51, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.68;
+      background: var(--bg);
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand *,
+    .brand:hover * {
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      background: var(--blue);
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .brand p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: #334155;
+      font: inherit;
+      font-size: 14px;
+      line-height: 1.2;
+      text-decoration: none;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .nav a:hover,
+    .btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .btn.primary {
+      border-color: var(--blue);
+      color: #fff;
+      background: var(--blue);
+    }
+
+    .btn.primary:hover {
+      color: #fff;
+      background: #1e40af;
+    }
+
+    .btn.ghost {
+      background: transparent;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 26px 20px 64px;
+    }
+
+    .view {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero,
+    .panel,
+    .question-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .hero h2,
+    .panel h2,
+    .question-title {
+      margin: 0;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .hero h2 {
+      max-width: 760px;
+      font-size: clamp(28px, 5vw, 44px);
+    }
+
+    .lead {
+      max-width: 840px;
+      margin: 14px 0 0;
+      color: #334155;
+      font-size: 17px;
+    }
+
+    .meta-grid,
+    .card-grid,
+    .summary-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 22px;
+    }
+
+    .card-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .summary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .meta,
+    .card,
+    .note,
+    .mini-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .meta {
+      padding: 12px;
+    }
+
+    .meta b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .meta span {
+      display: block;
+      font-weight: 800;
+      line-height: 1.38;
+    }
+
+    .panel {
+      padding: 22px;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .panel-head p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .panel h2 {
+      font-size: 23px;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 26px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+      background: var(--soft-teal);
+      border: 1px solid rgba(15, 118, 110, .2);
+    }
+
+    .status.pending {
+      color: var(--muted);
+      background: #f8fafc;
+      border-color: var(--line);
+    }
+
+    .status.warn {
+      color: var(--amber);
+      background: var(--soft-amber);
+      border-color: rgba(180, 83, 9, .22);
+    }
+
+    .card {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 4px;
+    }
+
+    .question-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .question-link {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: inherit;
+      text-decoration: none;
+      background: #fff;
+    }
+
+    .question-link:hover {
+      border-color: var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .q-index {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 800;
+      background: var(--ink);
+    }
+
+    .question-link strong {
+      display: block;
+      line-height: 1.42;
+    }
+
+    .question-link span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .question-panel {
+      overflow: hidden;
+    }
+
+    .question-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 0;
+    }
+
+    .question-main {
+      padding: 28px;
+      border-right: 1px solid var(--line);
+    }
+
+    .question-aside {
+      padding: 24px;
+      background: #fbfdff;
+    }
+
+    .crumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .crumbs a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .question-type {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 12px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--soft-blue);
+      border: 1px solid rgba(29, 78, 216, .18);
+    }
+
+    .chip.teal {
+      color: var(--teal);
+      background: var(--soft-teal);
+      border-color: rgba(15, 118, 110, .18);
+    }
+
+    .chip.amber {
+      color: var(--amber);
+      background: var(--soft-amber);
+      border-color: rgba(180, 83, 9, .2);
+    }
+
+    .question-title {
+      font-size: clamp(24px, 4vw, 34px);
+    }
+
+    .prompt {
+      margin: 14px 0 0;
+      color: #334155;
+      font-size: 16px;
+    }
+
+    .answer-block {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .answer-block h3,
+    .question-aside h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .answer-block p {
+      margin: 0 0 10px;
+      color: #263244;
+    }
+
+    .answer-block p:last-child { margin-bottom: 0; }
+
+    .answer-block ol,
+    .answer-block ul,
+    .question-aside ul,
+    .question-aside ol,
+    .note ul,
+    .note ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .answer-block li,
+    .question-aside li,
+    .note li {
+      margin: 5px 0;
+    }
+
+    .note {
+      margin-top: 14px;
+      padding: 14px;
+    }
+
+    .note.blue { background: var(--soft-blue); border-color: rgba(29, 78, 216, .2); }
+    .note.teal { background: var(--soft-teal); border-color: rgba(15, 118, 110, .2); }
+    .note.amber { background: var(--soft-amber); border-color: rgba(180, 83, 9, .2); }
+    .note.red { background: var(--soft-red); border-color: rgba(185, 28, 28, .2); }
+
+    .note h4 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    .note p {
+      margin: 0;
+      color: #334155;
+      font-size: 14px;
+    }
+
+    .hl {
+      padding: 1px 4px;
+      border-radius: 5px;
+      font-weight: 800;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .hl.logic {
+      color: var(--blue);
+      background: rgba(29, 78, 216, .09);
+    }
+
+    .hl.key {
+      color: var(--teal);
+      background: rgba(15, 118, 110, .09);
+    }
+
+    .hl.policy {
+      color: var(--amber);
+      background: rgba(180, 83, 9, .11);
+    }
+
+    .hl.risk {
+      color: var(--red);
+      background: rgba(185, 28, 28, .09);
+    }
+
+    .ref-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .ref-item {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfdff;
+    }
+
+    .ref-kind {
+      display: inline-flex;
+      margin-bottom: 6px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--soft-teal);
+    }
+
+    .ref-item a,
+    .ref-title {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .ref-item a:hover {
+      text-decoration: underline;
+    }
+
+    .ref-item p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .side-box {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .side-box:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .progress {
+      height: 8px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e5eaf1;
+    }
+
+    .progress div {
+      height: 100%;
+      background: var(--blue);
+    }
+
+    .summary-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mini-card {
+      padding: 14px;
+    }
+
+    .mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: #3b4658;
+      font-size: 14px;
+    }
+
+    .day-roadmap {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    .roadmap-item {
+      min-height: 94px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .roadmap-item b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--teal);
+      font-size: 13px;
+    }
+
+    .roadmap-item span {
+      display: block;
+      color: #334155;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .roadmap-item.current {
+      border-color: rgba(29, 78, 216, .4);
+      background: var(--soft-blue);
+    }
+
+    .source-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .source-list li {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .source-list a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .source-list a:hover { text-decoration: underline; }
+
+    .empty {
+      padding: 26px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav { justify-content: flex-start; }
+      .meta-grid,
+      .card-grid,
+      .summary-grid,
+      .question-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .question-main {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .day-roadmap {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar-inner,
+      .page {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .hero,
+      .panel,
+      .question-main,
+      .question-aside {
+        padding: 18px;
+      }
+
+      .question-link {
+        grid-template-columns: auto 1fr;
+      }
+
+      .question-link .status {
+        grid-column: 1 / -1;
+        width: fit-content;
+      }
+
+      .day-roadmap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="页面标题">
+        <span class="brand-mark">LG</span>
+        <div>
+          <h1>综合管理岗直接业务考核备考</h1>
+          <p>LG2026005C0004 · 每日10题 · 单题练习</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#home">总览</a>
+        <a href="#day-1">Day 1</a>
+        <a href="#day-2">Day 2</a>
+        <a href="#day-3">Day 3</a>
+        <a href="#day-4">Day 4</a>
+        <a href="#day-5">Day 5</a>
+        <a href="#day-6">Day 6</a>
+        <a href="#day-10">Day 10</a>
+        <a href="#day-20">Day 20</a>
+        <a href="#day-30">Day 30</a>
+        <a href="#day-30-summary">最新总结</a>
+        <a href="#overall">总复盘</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="app" aria-live="polite"></main>
+
+  <script>
+    const appData = {
+      job: {
+        code: "LG2026005C0004",
+        name: "综合管理岗",
+        unit: "深圳市龙岗区坪地街道综合事务中心",
+        duties: "从事政府采购、固定资产管理、政府物业管理、机关饭堂管理、公务车辆管理、办公场所管理、会务服务等后勤保障工作，承担街道日常财务管理工作，协助做好小型市政工程建设管理相关工作。"
+      },
+      roadmap: [
+        "岗位画像、通用框架、核心职责初诊",
+        "政府采购法基础、采购方式与预算约束",
+        "采购需求管理、招标文件、评审风险",
+        "合同履约、验收、质疑投诉与档案",
+        "固定资产全生命周期与盘点整改",
+        "政府物业、办公用房与物业服务监管",
+        "机关食堂：食品安全、成本与满意度",
+        "公务车辆：调度、维修、油耗与安全",
+        "会务服务、接待保障与突发事件",
+        "预算执行、报销审核、政府会计基础",
+        "行政事业单位内控与廉政风险防控",
+        "小型工程立项、采购衔接与合同管理",
+        "限额以下小型工程安全生产纳管",
+        "项目管理：进度、质量、成本、风险",
+        "街道综合协调、应急响应、部门联动",
+        "公文写作：请示、报告、通知、纪要",
+        "数据分析、统计思维与绩效评价",
+        "外包服务监管、考核扣分与整改闭环",
+        "档案、保密、信息公开与群众沟通",
+        "机关运行降本增效与绿色低碳机关",
+        "多方冲突协调：社区、科室、供应商",
+        "公共管理理论与基层治理综合分析",
+        "博士应届生优势、研究能力转化表达",
+        "团队协作、执行力、服务意识与边界",
+        "压力追问：原则底线与灵活处理",
+        "材料分析：从材料提炼问题和对策",
+        "方案策划：专项整治、制度建设、培训",
+        "综合案例：大型会议与后勤保障联动",
+        "综合案例：采购、资产、财务、工程一体化",
+        "全真模拟、个性化答题模板、复盘清单"
+      ],
+      days: [
+        {
+          id: 1,
+          date: "2026-06-09",
+          title: "岗位画像与核心业务初诊",
+          subtitle: "先建立岗位语言体系，掌握直接业务考核的答题骨架。",
+          summary: {
+            core: [
+              "这个岗位的核心不是单一后勤，而是机关运行保障和内部治理。",
+              "所有业务题都要同时答出：程序合规、资源节约、风险防控、服务保障、闭环改进。",
+              "博士优势不要停留在学历，要转化为政策学习、流程优化、数据分析和制度建设能力。"
+            ],
+            frameworks: [
+              "结构化四步：表态定性、分析风险、提出措施、复盘建制。",
+              "业务五要素：预算依据、程序合规、权责清晰、过程留痕、结果验收。",
+              "应急四动作：先控风险、再保运转、同步报告、事后复盘。"
+            ],
+            review: [
+              "政府采购题不能答成简单比价，要说需求、预算、方式、合同、验收。",
+              "固定资产题要强调账实相符、处置审批和责任可追。",
+              "食堂、车辆、物业、会务题要从服务满意度上升到制度化监管。",
+              "小型工程题要把安全生产、居民沟通、质量进度和台账闭环放在一起。"
+            ]
+          },
+          questions: [
+            {
+              type: ["结构化", "岗位匹配"],
+              title: "请结合坪地街道综合事务中心职责，谈谈你为什么适合综合管理岗。",
+              prompt: "追问方向：博士学历如何转化为街道后勤、财务、采购、工程等具体执行能力？",
+              answer: [
+                "我理解这个岗位不是单纯的事务性后勤岗位，而是街道机关运行保障和内部治理的综合管理岗位。岗位职责覆盖政府采购、资产物业、机关食堂、公务车辆、会务保障、日常财务和小型市政工程协助管理，背后共同指向的是公共资源配置、行政运行效率和廉政风险防控。",
+                "我的匹配度主要体现在三个方面。第一，博士阶段训练形成了较强的政策学习和系统分析能力，能够较快理解政府采购、行政事业单位资产管理、内部控制、工程管理等制度要求，并转化为可执行的流程和清单。第二，我习惯用数据和证据处理问题，例如对食堂满意度、车辆使用率、资产盘点差异、物业服务考核等事项，可以建立台账、发现异常、提出改进。第三，我重视规范和协同，能在科室、社区、供应商和财务之间做好沟通，把工作推进到闭环。",
+                "如果进入岗位，我会先熟悉现有制度、合同、资产台账和预算执行情况，梳理高频事项流程；再围绕采购、报销、资产、物业、食堂、车辆、会务等重点环节建立风险清单；最后通过月度复盘和数据化台账，推动后勤保障从被动响应转向主动管理。"
+              ],
+              explanation: [
+                "这道题不是普通自我介绍，考官重点看你是否真正理解岗位。答题要把“综合管理岗”解释成机关运行保障岗位，而不是把它说成杂务岗位。",
+                "高分答案要完成一次能力迁移：博士能力不是“学历高”，而是政策吸收、系统分析、数据处理、制度建设和跨部门沟通能力。"
+              ],
+              knowledge: [
+                "服务型政府：内部后勤保障最终服务于机关高效运转和群众办事体验。",
+                "整体性治理：采购、资产、财务、物业、工程不是孤立事项，要统一到流程、预算和风险控制中。",
+                "岗位表达关键词：合规、效率、节约、协同、留痕、复盘。"
+              ],
+              references: [
+                {
+                  kind: "岗位依据",
+                  title: "深圳市龙岗区事业单位2026年公开招聘高层次人才公告",
+                  url: "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html",
+                  note: "公告和岗位表明确本岗位从事政府采购、固定资产、政府物业、食堂、车辆、办公场所、会务、财务和小型市政工程协助管理等工作。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "服务型政府、整体性治理、公共资源管理",
+                  note: "用于把岗位职责从后勤事务上升到机关运行保障、内部治理和公共资源配置能力。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "PDCA闭环管理、台账管理、风险清单",
+                  note: "用于说明博士阶段的系统分析能力如何转化为制度梳理、流程优化和风险预判。"
+                }
+              ],
+              pitfalls: [
+                "只谈个人学历和学习能力，不谈岗位职责。",
+                "把后勤保障说成简单服务，没有上升到公共资源管理。",
+                "只说愿意吃苦，不说明如何处理采购、财务、资产等具体问题。"
+              ],
+              review: "背诵句：我会把研究训练形成的系统分析能力，用在制度梳理、流程优化、风险预判和台账管理上，把事务性工作做成可追踪、可复盘的管理工作。"
+            },
+            {
+              type: ["业务案例", "政府采购"],
+              title: "街道会议室投影设备老化，科室希望尽快采购，某熟悉供应商表示可以低价现货供应。你如何推进？",
+              prompt: "考点：紧急需求与采购合规冲突，是否能直接指定供应商。",
+              answer: [
+                "我会先明确态度：设备老化影响会议保障，应当尽快解决，但政府采购必须坚持依法合规，不能因为供应商熟悉、报价低或者供货快就直接指定。",
+                "具体推进上，第一步核实需求，确认设备老化程度、使用频率、是否维修优先、是否确需采购新设备。第二步核实预算，查看是否有相应预算指标，采购金额是否达到政府采购目录或限额标准。第三步规范采购需求，明确必要技术参数和验收标准，避免设置具有品牌指向性或排他性的参数。第四步按制度选择采购方式，开展询价、比选或其他规定程序，形成审批和过程记录。第五步签订合同并组织验收，确保型号、数量、安装调试、售后服务与合同一致。",
+                "如果确实存在会议保障的时间压力，我会优化内部流转，提前同步财务、采购和使用科室，压缩非必要等待时间；同时可以采取临时借用、调剂其他会议室设备等过渡措施，但不能先供货后补手续，更不能绕开采购程序。"
+              ],
+              explanation: [
+                "这道题的陷阱是“低价现货”和“熟悉供应商”。直接业务考核会看你是否有程序意识和廉政风险意识。",
+                "答题不要停留在“比价采购”，要把采购全链条答出来：需求、预算、方式、合同、验收、档案。"
+              ],
+              knowledge: [
+                "政府采购基本原则：公开透明、公平竞争、公正、诚实信用。",
+                "采购需求管理：参数应服务于实际需要，不能以不合理条件限制或排斥潜在供应商。",
+                "采购闭环：预算依据、采购程序、合同履约、验收付款、资料归档。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购应遵循公开透明、公平竞争、公正和诚实信用原则，不能因熟悉供应商而直接指定。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例（国务院令第658号）",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购需求、采购程序、合同履约和验收等全流程合规要求。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑采购需求应当合法合规、完整明确，技术参数和验收标准要前置设计。"
+                }
+              ],
+              pitfalls: [
+                "答成“找三家报价，谁低买谁”，忽略预算和采购方式。",
+                "认可熟人供应商，容易触碰廉政和公平竞争风险。",
+                "说“先买了再补流程”，这是明显失分点。"
+              ],
+              review: "背诵句：紧急事项可以优化流转，不能突破程序；服务效率要建立在采购合规、需求清晰和过程留痕基础上。"
+            },
+            {
+              type: ["业务案例", "固定资产"],
+              title: "年度固定资产盘点发现账实不符：一批电脑系统有账但现场找不到。你如何处理？",
+              prompt: "考点：资产安全、盘点整改、处置审批、责任追溯。",
+              answer: [
+                "我会把这类问题作为国有资产管理风险处理，不能简单认定为报废或丢失。首先封存盘点结果，列出差异清单，逐项核对资产编号、购置时间、领用人、使用科室、调拨记录、维修记录和报废处置记录。",
+                "其次组织复核。对登记错误、科室调拨未更新、维修外送未登记、报废未销账、人员变动未交接等情形分类处理。能找回实物的，及时补充使用地点和责任人；属于手续缺失的，补齐调拨、领用、归还或维修资料；确属遗失毁损的，要按制度开展原因核查、责任认定和审批处理。",
+                "最后形成整改闭环。一方面按审批结果调整资产台账和会计处理，确保账账相符、账实相符；另一方面完善制度，推行资产标签管理、领用交回签字、人员离岗资产交接、定期抽盘和盘点差异整改台账，防止同类问题再次发生。"
+              ],
+              explanation: [
+                "资产题要体现“国有资产不能随意处置”。找不到实物只是问题现象，背后可能是台账、调拨、报废、交接、责任管理任何一环出问题。",
+                "高分答案要从盘点差异处理上升到资产全生命周期管理。"
+              ],
+              knowledge: [
+                "固定资产管理链条：配置、登记、领用、使用、维护、盘点、处置、核销。",
+                "资产处置原则：先查明原因，再按权限审批，最后进行台账和会计处理。",
+                "关键目标：账账相符、账卡相符、账实相符、责任可追。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "行政事业性国有资产管理条例（国务院令第738号）",
+                  url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+                  note: "用于支撑行政事业单位国有资产应加强管理监督、维护资产安全完整。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "深圳市行政事业单位国有资产处置办法",
+                  url: "https://szfb.sz.gov.cn/gkmlpt/content/11/11073/post_11073202.html",
+                  note: "用于支撑资产报废、损失核销等处置事项应查明原因、按权限审批、及时核销台账和进行账务处理。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "固定资产全生命周期管理",
+                  note: "用于组织配置、登记、领用、盘点、处置、核销等步骤，防止只处理单个盘点差异。"
+                }
+              ],
+              pitfalls: [
+                "一上来就说报废或核销，没有查明原因。",
+                "只找实物，不处理台账和制度漏洞。",
+                "忽视人员调动、科室调拨、维修外送等常见原因。"
+              ],
+              review: "背诵句：盘点不是为了找数字，而是通过账实差异倒查流程漏洞，最终实现资产安全和责任闭环。"
+            },
+            {
+              type: ["应急处置", "机关饭堂"],
+              title: "机关饭堂近期收到多名干部反映菜品质量下降、价格不透明。你作为综合事务中心工作人员怎么处理？",
+              prompt: "考点：服务保障、食品安全、供应商监管、满意度提升。",
+              answer: [
+                "我会先把问题分成两类处理：一类是食品安全和卫生底线问题，必须立即检查；另一类是菜品质量、价格透明和服务满意度问题，需要调查、整改和长期监管。",
+                "第一，及时收集反映情况，了解具体问题集中在哪些菜品、时段、窗口和价格项目。第二，组织现场检查，重点查看后厨卫生、食品留样、采购进货台账、原材料质量、价格公示、成本核算和人员健康管理。第三，约谈食堂服务单位，对照合同、考核办法和食品安全要求提出整改清单，明确整改时限和复查要求；涉及严重食品安全隐患的，立即报告并按规定处置。第四，建立长期机制，例如月度菜单评审、价格和成本公示、满意度调查、随机抽查、扣分考核和问题通报。",
+                "处理过程中，我会注意沟通方式。一方面向干部职工说明已启动调查和整改，及时回应合理诉求；另一方面要求服务单位把质量、价格和安全责任落实到具体岗位，避免问题反复。"
+              ],
+              explanation: [
+                "食堂题不能只答“改善菜品”。机关饭堂管理既是后勤服务，也是食品安全、外包合同监管和成本控制。",
+                "答案要体现从投诉处理到服务监管的转化：有调查、有检查、有整改、有复查、有制度。"
+              ],
+              knowledge: [
+                "机关食堂监管重点：食品安全、成本控制、价格透明、服务满意度、合同履约。",
+                "PDCA适用：计划菜单和标准、执行供餐、检查满意度和安全、改进供应和考核。",
+                "外包服务监管：合同条款、服务标准、考核扣分、整改闭环。"
+              ],
+              references: [
+                {
+                  kind: "法律法规",
+                  title: "中华人民共和国食品安全法",
+                  url: "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817ab22e0c017abd8d85a205f1&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8%E6%B3%95&type=",
+                  note: "用于支撑食品安全是机关饭堂管理底线，应关注食品经营、贮存、运输和食品安全管理。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关运行经费、资产和服务管理应接受监督检查，机关后勤服务不能只看满意度。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "PDCA质量改进、外包服务合同绩效管理",
+                  note: "用于把投诉处理扩展为检查、整改、考核和复查的常态化监管机制。"
+                }
+              ],
+              pitfalls: [
+                "只说换厨师或增加菜品，没有食品安全和合同监管意识。",
+                "对价格不透明只做口头提醒，没有公示和成本核查。",
+                "忽视留样、进货台账、卫生检查等底线事项。"
+              ],
+              review: "背诵句：机关饭堂管理要把干部职工满意度建立在食品安全、价格透明、合同履约和常态化考核之上。"
+            },
+            {
+              type: ["组织协调", "公务车辆"],
+              title: "同一时间有两个科室申请公务用车，一个是临时检查，一个是重要会议，你如何调度？",
+              prompt: "考点：资源有限时的优先级、制度规则、沟通协调。",
+              answer: [
+                "我会先核实两个用车申请的任务性质、紧急程度、出行人数、路线距离、出发时间、是否有替代交通方式以及是否已经履行审批。公务用车调度不能只看谁先申请，更要按制度和任务轻重缓急处理。",
+                "如果临时检查涉及安全生产、民生保障或上级交办的紧急事项，应优先保障；如果重要会议时间不可调整且代表街道参加，也要优先保障。我会根据实际情况协调合并路线、调整出发时间、调剂车辆、使用社会化交通或向相关部门申请支持，尽量兼顾两个任务。",
+                "沟通上，我会向两个科室说明调度依据和替代方案，避免产生人情派车或随意派车的印象。调度完成后，做好派车单、审批记录、驾驶员安排、里程油耗、归还时间等登记，确保用车规范、节约、安全。"
+              ],
+              explanation: [
+                "这道题考的是原则和协调。车辆资源有限时，不能把矛盾简单上交，也不能凭关系安排。",
+                "答案要体现公务用车管理的三个关键词：规范、节约、安全。"
+              ],
+              knowledge: [
+                "公务用车调度要素：审批手续、任务性质、紧急程度、路线时间、替代方案、使用登记。",
+                "协调类题通用逻辑：核实信息、明确规则、排序优先级、提出替代方案、解释沟通、留痕复盘。",
+                "风险点：私车公用、公车私用、人情派车、油耗维修异常。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "党政机关公务用车管理办法",
+                  url: "https://www.gov.cn/gongbao/content/2018/content_5254302.htm",
+                  note: "用于支撑公务用车实行统一制度规范、分级分类管理，防范公车私用、私车公养等违规风险。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关事务管理中的经费、资产和服务管理监督要求。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "优先级排序与资源调度",
+                  note: "用于说明资源有限时应按任务紧急性、重要性、制度审批和替代方案综合调度。"
+                }
+              ],
+              pitfalls: [
+                "直接说谁级别高给谁用，缺乏制度意识。",
+                "只说请领导决定，没有主动协调方案。",
+                "忽略派车记录和后续油耗里程管理。"
+              ],
+              review: "背诵句：车辆调度要坚持制度优先、任务导向、过程透明，既保障重点工作，也避免随意派车和人情派车。"
+            },
+            {
+              type: ["应急处置", "政府物业"],
+              title: "街道办公楼突发漏水，影响下午会议和部分窗口办公。你如何组织处置？",
+              prompt: "考点：办公场所保障、物业单位管理、风险控制、会务调整。",
+              answer: [
+                "我会按照先安全、再运行、后追因的顺序处理。第一时间到现场查看漏水范围，提醒人员避开湿滑区域，必要时切断相关区域电源，转移电脑、档案和会议材料，防止触电、滑倒和资料损毁。",
+                "同时通知物业服务单位、维修人员和相关科室到场排查，判断是管道、空调、屋面还是外部施工导致。对受影响窗口，临时调整工位或设置引导标识，确保群众办事不断档；对下午会议，立即协调备用会议室、检查音视频设备、通知参会人员地点变化。",
+                "事后要形成记录，包括现场照片、维修过程、影响范围、损失情况、物业响应时间和整改结果。如果属于物业巡检不到位或合同履约问题，要按合同和考核办法处理。最后组织办公楼同类隐患排查，建立雨季、管线、空调和屋面巡检清单。"
+              ],
+              explanation: [
+                "漏水题表面是维修，实质是机关连续运行保障。你要同时想到安全、电力、设备、档案、窗口、会议和物业合同。",
+                "应急题高分结构是：控制风险、保障运转、协调资源、记录追责、复盘整改。"
+              ],
+              knowledge: [
+                "办公场所管理重点：安全、秩序、设施维护、空间调配、节能和应急保障。",
+                "物业监管重点：服务响应、巡检台账、维修质量、隐患整改、合同考核。",
+                "应急处置优先级：人身安全高于财产安全，机关运行保障高于一般事务。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "党政机关办公用房管理办法",
+                  url: "https://www.gov.cn/gongbao/content/2018/content_5254301.htm",
+                  note: "用于支撑办公用房规划、权属、配置、使用、维修、处置等管理应依法合规、有效利用。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关事务主管部门对机关运行经费、资产和服务管理进行监督检查。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "应急处置四步法",
+                  note: "先控安全风险，再保障机关运转，同步协调和记录，事后复盘整改。"
+                }
+              ],
+              pitfalls: [
+                "只说联系物业维修，答案过薄。",
+                "忽略窗口办公和群众办事影响。",
+                "没有后续考核物业和隐患排查。"
+              ],
+              review: "背诵句：办公场所突发问题要先控安全风险，再保障机关运行，同步记录责任，最后用巡检制度防止复发。"
+            },
+            {
+              type: ["压力追问", "财务内控"],
+              title: "某科室报销材料不完整，但项目负责人说经费马上要结转，请你“先报后补”。你怎么办？",
+              prompt: "考点：原则底线、服务意识、内控流程、沟通表达。",
+              answer: [
+                "我会先表明态度：理解项目负责人担心经费结转和工作进度，但财务报销必须以真实、完整、合规的材料为基础，不能先报后补，更不能因为时间紧而突破内部控制要求。",
+                "具体处理上，我会一次性告知缺失材料清单，例如合同、验收单、审批表、发票、会议或活动佐证、预算指标等，并说明每项材料的审核目的。对于可以立即补齐的材料，主动协助对方联系相关经办人、验收人或供应商，加快补正；对于确有特殊情况的，按制度向财务负责人或分管领导报告，由有权限主体依法依规处理。",
+                "同时我会核对预算、合同、发票、验收、付款对象和审批链条是否一致，防止虚假报销、超预算支出、合同履约不清等风险。事后可以梳理高频缺件问题，制作报销材料清单或开展小范围培训，让科室在项目执行前就知道凭证要求。"
+              ],
+              explanation: [
+                "这道题最容易被追问“领导很急怎么办”。正确方向是：态度上服务，程序上不突破，路径上帮对方最快合规。",
+                "财务内控不是刁难科室，而是保护财政资金安全、保护经办人和单位。"
+              ],
+              knowledge: [
+                "行政事业单位内控范围：预算、收支、采购、资产、建设项目、合同等经济活动。",
+                "报销审核常见一致性：预算一致、合同一致、验收一致、发票一致、审批一致、付款对象一致。",
+                "原则表达：服务不等于放松审核，效率不等于跳过程序。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑行政事业单位应围绕预算、收支、采购、资产、建设项目、合同等经济活动建立内控机制。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关运行经费管理和监督检查要求，说明报销审核不是形式主义。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "授权审批、岗位制衡、凭证链一致性",
+                  note: "用于解释为什么不能“先报后补”，而要把服务意识体现在一次性告知和快速补正。"
+                }
+              ],
+              pitfalls: [
+                "答“领导同意就可以报”，内控意识不足。",
+                "只说不行，没有提供补正路径，显得服务意识弱。",
+                "忽略预算指标和合同验收。"
+              ],
+              review: "背诵句：服务不是放松审核，而是把规则讲清、把路径压缩、把风险挡住。"
+            },
+            {
+              type: ["业务案例", "小型市政工程"],
+              title: "社区微改造工程工期紧，居民投诉噪音，现场还发现个别工人未规范佩戴安全帽。你会如何协助管理？",
+              prompt: "考点：小型工程安全、居民沟通、质量进度成本平衡。",
+              answer: [
+                "我会把安全作为第一优先。发现工人未规范佩戴安全帽，应立即要求施工单位现场整改，必要时暂停相关危险作业，并通知项目负责人、安全管理人员到场核查。小型工程虽然规模不大，但安全生产责任不能降低。",
+                "在管理推进上，我会核对该项目的立项、采购、合同、施工方案、现场负责人、安全交底、作业人员信息和监管台账，确认是否按照限额以下小型工程和零星作业安全生产要求纳管。对于居民噪音投诉，要协调社区、施工单位和物业，明确施工时段、降噪措施、公告范围、联系人和投诉反馈渠道。",
+                "同时兼顾进度和质量。可以把剩余工序列成进度表，明确每天完成量、安全检查点和质量验收节点；对扰民工序尽量避开休息时间，对确需连续施工的事项提前公告解释。最后形成整改记录和复查记录，把安全、噪音、进度和质量纳入同一张台账。"
+              ],
+              explanation: [
+                "小型工程题不要只答工程进度。岗位职责是“协助做好”，所以要体现协助监管、协调沟通、资料台账和安全底线。",
+                "这类题的高分点是把居民诉求、施工安全、质量进度和合同管理统一起来。"
+              ],
+              knowledge: [
+                "小型工程管理关键词：安全生产、合同履约、质量验收、进度控制、居民沟通、资料归档。",
+                "深圳限额以下小型工程和零星作业强调纳管，工程小不代表责任小。",
+                "项目管理三角：质量、进度、成本；基层场景还要加上安全和民意。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "深圳市限额以下小型工程和零星作业安全生产纳管办法",
+                  url: "https://www.sz.gov.cn/szsrmzfxxgk/zc/gfxwj/szfgfxwj/content/post_12360862.html",
+                  note: "用于支撑限额以下小型工程和零星作业应纳入安全生产管理，开展巡查、隐患处置和全过程信息化闭环监管。"
+                },
+                {
+                  kind: "法律法规",
+                  title: "中华人民共和国安全生产法",
+                  url: "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817a66b816017a7956b7db0ad4&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E6%B3%95&type=",
+                  note: "用于支撑生产经营活动中的安全生产责任和隐患治理要求。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府投资条例（国务院令第712号）",
+                  url: "https://www.gov.cn/zhengce/zhengceku/2019-05/05/content_5388798.htm",
+                  note: "用于支撑使用预算资金开展固定资产投资建设活动时，应规范政府投资行为、加强项目实施和档案管理。"
+                }
+              ],
+              pitfalls: [
+                "为了赶工忽视安全帽等现场隐患。",
+                "只安抚居民，不要求施工单位整改。",
+                "没有资料台账和复查闭环。"
+              ],
+              review: "背诵句：安全是底线，进度是目标，沟通是保障，台账是闭环。"
+            },
+            {
+              type: ["组织协调", "会务服务"],
+              title: "区领导临时到坪地街道调研，要求半天内完成会务保障方案。你会列哪些重点？",
+              prompt: "考点：会务服务的流程化、细节意识和综合协调。",
+              answer: [
+                "我会先快速确认调研主题、时间地点、参会人员、会议规格、议程安排、路线安排和材料要求，形成简明任务清单。半天内完成方案，关键是用清单化方式并行推进。",
+                "方案重点包括：一是会场保障，落实会议室、座次、桌签、音视频、话筒、投屏、茶水和备用设备；二是材料保障，准备汇报材料、议程、签到表、参会名单和必要背景资料；三是人员保障，明确签到引导、会场服务、车辆衔接、摄影记录、纪要整理等分工；四是秩序保障，做好安保、停车、路线、候会和保密材料管理；五是应急预案，准备设备故障、人员变动、交通延误、天气变化等替代方案。",
+                "会前要进行一次快速彩排和设备测试，会中安排专人盯关键环节，会后及时整理会议纪要、领导交办事项和资料归档。这样才能把临时任务做得有序、规范、可追踪。"
+              ],
+              explanation: [
+                "会务题看细节，也看整体统筹。不要只说桌椅茶水，要覆盖人、会、车、材料、设备、秩序、保密和会后交办。",
+                "半天内完成方案，最好用5W2H和清单化表达，展示执行力。"
+              ],
+              knowledge: [
+                "5W2H：为什么、谁、何时、何地、做什么、怎么做、成本多少。",
+                "会务闭环：会前准备、会中保障、会后纪要、交办跟踪、资料归档。",
+                "会务风险点：设备故障、座次错误、材料泄密、车辆衔接失误、议程变动。"
+              ],
+              references: [
+                {
+                  kind: "岗位依据",
+                  title: "深圳市龙岗区事业单位2026年公开招聘高层次人才公告",
+                  url: "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html",
+                  note: "岗位职责明确包含会务服务等后勤保障工作。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关事务服务保障应当规范、节约、高效，并接受相关监督。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "5W2H、RACI分工、清单化管理",
+                  note: "用于快速拆解临时会务任务，明确事项、责任人、时限、资源和应急方案。"
+                }
+              ],
+              pitfalls: [
+                "只答布置会场，忽略材料、车辆、保密、会后交办。",
+                "没有应急预案。",
+                "不明确分工，方案缺乏可执行性。"
+              ],
+              review: "背诵句：会务不是摆桌签，而是把议程、人员、场地、设备、交通、材料和应急预案统一到一张执行清单。"
+            },
+            {
+              type: ["综合分析", "理论方法"],
+              title: "请谈谈你对“后勤保障工作也是基层治理能力重要组成部分”的理解。",
+              prompt: "考点：从事务上升到治理，从岗位职责上升到公共管理理论。",
+              answer: [
+                "我赞同这个观点。后勤保障看似是内部事务，实际上直接影响街道机关运行效率、财政资金使用绩效、干部职工工作状态和群众办事体验，是基层治理能力的重要支撑。",
+                "第一，后勤保障关系公共资源配置。政府采购、资产管理、车辆调度、办公场所配置，本质上都是财政资金和国有资产如何高效、规范使用的问题。第二，后勤保障关系行政运行效率。会议保障、食堂服务、物业维护、车辆安排是否顺畅，会影响街道各项重点工作的推进。第三，后勤保障关系风险防控。采购、报销、资产处置、小型工程都存在廉政、财务、安全和合同风险，必须通过制度和流程加以控制。",
+                "因此，做好这个岗位不能停留在被动服务，而要向精细化管理转变。具体来说，要用制度明确边界，用台账掌握情况，用数据发现问题，用考核推动外包服务改进，用复盘形成长效机制。后勤保障越规范，机关运行越稳定；内部治理越精细，外部服务越有质量。"
+              ],
+              explanation: [
+                "这道题是综合分析题，关键是把“后勤”从低层次事务提升到公共管理和基层治理。",
+                "答题要避免空泛口号，必须点出采购、资产、财务、车辆、会务、小型工程等具体场景。"
+              ],
+              knowledge: [
+                "公共管理关注公共资源配置、公共价值、效率、公平和责任。",
+                "后勤保障的公共价值：低成本、高效率、可监督、可持续。",
+                "基层治理能力可以落到内部治理能力：制度、流程、数据、协同、风险防控。"
+              ],
+              references: [
+                {
+                  kind: "岗位依据",
+                  title: "深圳市龙岗区事业单位2026年公开招聘高层次人才公告",
+                  url: "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html",
+                  note: "用于支撑本题必须紧扣岗位职责，而不是泛泛谈基层治理。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例（国务院令第621号）",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关事务管理与机关运行经费、资产和服务保障有关，是内部治理的重要组成。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "公共价值理论、公共资源配置、责任治理",
+                  note: "用于把后勤保障从事务服务上升到财政资金绩效、国有资产安全、行政效率和廉政风险防控。"
+                }
+              ],
+              pitfalls: [
+                "只说后勤很重要，没有分析为什么重要。",
+                "只讲服务态度，没有讲资金、资产和廉政风险。",
+                "没有联系岗位职责，答案容易变成泛泛而谈。"
+              ],
+              review: "背诵句：后勤保障越规范，机关运行越稳定；内部治理越精细，外部服务越有质量。"
+            }
+          ]
+        },
+        {
+          id: 2,
+          date: "2026-06-10",
+          title: "政府采购法基础、采购方式与预算约束",
+          subtitle: "把政府采购题从“怎么买”提升到“依法、按预算、按方式、可验收、可留痕”。",
+          summary: {
+            core: [
+              "政府采购不是普通买东西，而是国家机关、事业单位等使用财政性资金采购目录内或限额标准以上货物、工程和服务的制度化活动。",
+              "政府采购题的第一反应应当是核对预算、目录和限额标准，再判断采购方式、采购需求和审批流程。",
+              "采购合规的底线包括不得指定品牌、不得拆分规避公开招标、不得超预算采购、不得先采购后补手续。"
+            ],
+            frameworks: [
+              "判断是否适用政府采购：主体、资金、对象、目录或限额四要素。",
+              "采购方式判断：公开招标为主要方式，其他方式要看法定适用条件和审批要求。",
+              "采购闭环：需求论证、预算确认、方式选择、文件编制、评审成交、合同签订、履约验收、档案归档。"
+            ],
+            review: [
+              "看到品牌型号题，先想到采购需求不能有排他性、歧视性条件。",
+              "看到超预算题，先想到政府采购应严格按批准预算执行。",
+              "看到拆分采购题，先想到不得化整为零规避公开招标。",
+              "看到验收差异题，先想到合同、采购文件、验收标准和付款条件必须一致。"
+            ]
+          },
+          questions: [
+            {
+              type: ["专业问答", "政府采购基础"],
+              title: "请解释什么是政府采购，它与一般市场采购有什么不同？",
+              prompt: "考点：政府采购的主体、资金、对象、目录限额和公共属性。",
+              answer: [
+                "政府采购是指国家机关、事业单位和团体组织，使用财政性资金，采购依法制定的集中采购目录以内或者采购限额标准以上的货物、工程和服务的行为。它与一般市场采购的最大区别，不只是资金来源不同，而是采购行为承担公共责任，必须受到预算、程序、公开、公平和监督约束。",
+                "具体来看，第一，资金属性不同。政府采购使用财政性资金，必须严格按照批准的预算执行。第二，目标不同。一般采购主要追求交易效率和性价比，政府采购还要维护国家利益、社会公共利益，促进廉政建设，并落实节能环保、扶持中小企业等政策目标。第三，程序不同。政府采购要按照法定方式组织，采购文件、评审过程、合同、验收和档案都要留痕。第四，监督不同。供应商可以依法询问、质疑、投诉，财政部门依法监督。",
+                "所以，在街道综合事务中心岗位上，处理采购事项不能简单理解为“买到东西”，而要理解为“用财政资金依法取得满足公共需要的货物、工程或服务”。答题时要体现预算意识、程序意识、公开公平意识和风险防控意识。"
+              ],
+              explanation: [
+                "这道题是政府采购基础题。考官可能不要求你背法条，但会看你能否抓住四个要素：采购主体、财政性资金、采购对象、目录或限额标准。",
+                "高分答案要说出政府采购的公共属性：它不只是交易行为，也是财政资金管理和廉政风险防控行为。"
+              ],
+              knowledge: [
+                "判断政府采购的四要素：主体是国家机关、事业单位或团体组织；资金是财政性资金；对象是货物、工程或服务；范围是集中采购目录以内或采购限额标准以上。",
+                "政府采购原则：公开透明、公平竞争、公正、诚实信用。",
+                "岗位迁移：街道后勤采购要同时考虑使用需求、预算约束、程序合规和结果验收。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购定义、采购对象、采购原则和预算执行要求。"
+                },
+                {
+                  kind: "岗位依据",
+                  title: "深圳市龙岗区事业单位2026年公开招聘高层次人才公告",
+                  url: "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html",
+                  note: "岗位职责明确包含政府采购工作，本题直接对应岗位专业基础。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "公共资源配置与责任治理",
+                  note: "用于解释为什么政府采购不能只按普通市场采购思维处理。"
+                }
+              ],
+              pitfalls: [
+                "只答“政府花钱买东西”，没有讲主体、资金、对象、目录限额。",
+                "只强调低价，忽视公开公平和财政资金绩效。",
+                "把政府采购理解为使用科室自行比价，缺乏程序意识。"
+              ],
+              review: "背诵句：政府采购不是普通买东西，而是使用财政性资金依法取得货物、工程或服务，必须同时满足预算、程序、公开、公平和监督要求。"
+            },
+            {
+              type: ["业务判断", "目录限额"],
+              title: "某科室想采购一批办公家具，你如何判断是否应纳入政府采购管理？",
+              prompt: "考点：目录、限额、预算、集中采购和分散采购判断。",
+              answer: [
+                "我会先从四个方面判断。第一看采购主体和资金来源，如果是街道或下属事业单位使用财政性资金采购，就要进入政府采购判断。第二看采购对象，办公家具属于货物类采购。第三看是否属于当年度集中采购目录范围，若在目录内，应按集中采购相关要求执行。第四看采购金额是否达到采购限额标准，未纳入目录但达到限额标准的，也应按政府采购规定执行。",
+                "在实际办理中，我不会只听使用科室口头说“金额不大”就处理，而会核对预算批复、采购计划、采购品目、资金来源、采购金额、配置标准和是否存在同类采购合并计算问题。如果属于集中采购目录内项目，要按规定委托集中采购机构或通过规定平台办理；如果未达到目录和限额，也要遵守单位内部控制、预算管理和资产配置管理要求。",
+                "最后要形成判断记录，把是否适用政府采购、采用何种采购路径、依据是什么写清楚，避免事后出现规避政府采购或拆分采购的风险。"
+              ],
+              explanation: [
+                "这道题考的是“先判断，再采购”。直接业务考核里，看到具体物品时不要急着说怎么比价，要先判断是否进入政府采购制度范围。",
+                "答题要避免写死限额数值，因为集中采购目录和采购限额标准会按年度或地区调整，应以当年深圳市或广东省适用文件为准。"
+              ],
+              knowledge: [
+                "目录限额判断：集中采购目录以内，或者采购限额标准以上，通常进入政府采购管理范围。",
+                "集中采购与分散采购：纳入集中采购目录的项目应按集中采购要求办理；目录外达到限额的项目也不能随意采购。",
+                "内控要求：即使未达到政府采购限额，也要有预算、审批、验收和资产登记。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑集中采购目录、采购限额标准和政府采购范围判断。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购人、采购代理、集中采购和采购程序相关要求。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑即使小额采购也要纳入预算、收支、采购和资产内控流程。"
+                }
+              ],
+              pitfalls: [
+                "只看单次金额，不核对集中采购目录。",
+                "把同类采购拆开看，忽略合并判断和规避风险。",
+                "认为未达限额就可以不审批、不验收、不入账。"
+              ],
+              review: "背诵句：判断是否政府采购，要先看主体、资金、对象，再看集中采购目录和采购限额标准，最后落实预算审批和内控留痕。"
+            },
+            {
+              type: ["业务案例", "采购需求"],
+              title: "使用科室提出采购设备时写明“必须购买某品牌某型号”，你如何处理？",
+              prompt: "考点：采购需求合理性、品牌指向、排他性条件和需求论证。",
+              answer: [
+                "我会先与使用科室沟通，了解其指定品牌型号背后的真实功能需求，例如兼容性、性能指标、售后服务、使用场景和安全要求。然后提醒科室，政府采购需求应当围绕功能、性能、质量、服务和安全标准编制，原则上不能以品牌、型号、产地等方式限制或排斥潜在供应商。",
+                "具体处理上，第一，把品牌型号转化为非指向性的技术参数，例如接口标准、处理能力、兼容协议、质保年限、服务响应时间等。第二，对确有兼容性或延续性要求的事项，要求使用科室提供说明材料和依据，必要时组织需求论证。第三，审查参数是否过高、过窄或与实际使用脱节，避免以需求名义排斥竞争。第四，在采购文件中同步写明验收标准，防止采购时要求模糊、验收时争议较大。",
+                "如果确实只有唯一供应商能够满足需求，也不能直接口头指定，而应当按单一来源采购适用条件、论证和审批要求依法办理。"
+              ],
+              explanation: [
+                "采购需求题是政府采购高频题。考点不在于你是否懂某个设备，而在于你是否知道需求不能带有不合理限制条件。",
+                "高分答案要把“品牌型号”转化为“功能参数和验收标准”，同时保留特殊需求的论证路径。"
+              ],
+              knowledge: [
+                "采购需求应当完整、明确，符合法律法规、政府采购政策和国家有关规定。",
+                "技术参数应服务于实际需要，不得通过特定品牌、型号、供应商条件排斥竞争。",
+                "需求管理要前置验收标准，避免采购和验收脱节。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑采购需求应合法合规、完整明确，不能以不合理条件限制竞争。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购应遵循公开透明、公平竞争、公正和诚实信用原则。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "需求转译法",
+                  note: "把品牌型号转译为功能、性能、兼容性、服务和验收标准，是采购实务中的关键能力。"
+                }
+              ],
+              pitfalls: [
+                "直接照抄使用科室品牌型号。",
+                "完全否定使用科室需求，不做功能转译和需求论证。",
+                "只写采购参数，不写验收标准。"
+              ],
+              review: "背诵句：采购需求不能写成品牌偏好，要写成功能、性能、质量、服务和验收标准。"
+            },
+            {
+              type: ["压力追问", "预算约束"],
+              title: "采购预算已批复10万元，使用科室临时想提高配置到15万元，你怎么办？",
+              prompt: "考点：严格按预算执行、需求变更、预算调整和审批边界。",
+              answer: [
+                "我会先表明原则：政府采购应当严格按照批准的预算执行，不能因为使用科室临时提出更高配置，就直接超预算采购或先采购后补预算。",
+                "具体处理上，第一，核实原预算、采购计划和批复内容，明确10万元预算对应的采购数量、配置标准和功能需求。第二，与使用科室沟通，区分“必要需求”和“优化需求”。如果原配置已经满足工作需要，应按原预算和采购计划执行；如果确因工作任务变化导致原预算无法满足基本需求，应由使用科室提出书面说明和依据。第三，按预算管理和单位内控程序申请调整预算或变更采购计划，在未完成审批前不得擅自扩大采购范围或提高标准。第四，必要时优化采购方案，例如调整数量、分期实施、优先保障核心功能，避免超预算和资产配置浪费。",
+                "处理过程中，我会把服务意识体现在帮助科室梳理需求和最快完成合规审批，而不是突破预算底线。"
+              ],
+              explanation: [
+                "这道题的核心不是10万元或15万元，而是预算约束。政府采购法明确政府采购应当严格按照批准预算执行。",
+                "答题要兼顾原则和服务：不能直接说不行，也不能无原则配合超预算，而要给出预算调整和需求优化路径。"
+              ],
+              knowledge: [
+                "政府采购预算是采购执行的前置约束，预算未批或调整未批，不能擅自采购。",
+                "需求变更要有书面依据、审批流程和预算支撑。",
+                "预算约束类题的答题顺序：核预算、核需求、看必要性、走审批、再执行。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购应严格按照批准预算执行。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑预算、采购、资产等经济活动应进行风险控制和审批管理。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "必要性审查与成本效益分析",
+                  note: "用于判断高配置是否确属必要，还是超标准配置和资源浪费。"
+                }
+              ],
+              pitfalls: [
+                "直接答“可以买，后面补预算”。",
+                "只坚持预算，不帮使用科室提出替代方案。",
+                "忽略资产配置标准和后续运维成本。"
+              ],
+              review: "背诵句：预算约束不是不服务，而是在批准预算和内控程序内帮助科室实现必要功能。"
+            },
+            {
+              type: ["专业问答", "采购方式"],
+              title: "公开招标、竞争性谈判、询价、单一来源采购分别适用于什么情形？",
+              prompt: "考点：采购方式选择和法定适用条件。",
+              answer: [
+                "政府采购方式选择要以法律规定和项目特点为依据。公开招标是政府采购的主要采购方式，适用于达到公开招标数额标准、需求明确、竞争充分的货物和服务项目。",
+                "竞争性谈判通常适用于招标后没有供应商投标或没有合格标的、技术复杂或性质特殊不能确定详细规格、招标所需时间不能满足紧急需要、不能事先计算出价格总额等情形。询价适用于货物规格标准统一、现货货源充足、价格变化幅度较小的项目。单一来源采购适用于只能从唯一供应商处采购、发生不可预见紧急情况无法从其他供应商采购、或者为保证原有项目一致性和配套需要继续添购且符合法定比例等情形。",
+                "在岗位实际工作中，我会先核对目录限额、预算和采购需求，再依据项目特点提出采购方式建议。对于公开招标以外的采购方式，不能由经办人自行决定，应当按照规定履行审批或论证程序，并在采购活动记录中载明采用该方式的原因。"
+              ],
+              explanation: [
+                "这道题是采购方式基础题。答题时不要把采购方式理解成“哪种快就用哪种”，而要讲法定适用条件。",
+                "高分点是补充一句：公开招标以外方式通常需要有充分理由、审批或论证，并在采购档案中留痕。"
+              ],
+              knowledge: [
+                "公开招标是主要采购方式。",
+                "竞争性谈判适合技术复杂、需求难以一次确定或法定紧急等情形。",
+                "询价适合规格标准统一、现货充足、价格变化小的货物。",
+                "单一来源必须严格论证唯一性或法定特殊情形。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购方式种类、公开招标主要地位以及竞争性谈判、单一来源、询价适用条件。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购方式、采购程序和采购活动记录要求。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "项目特征匹配法",
+                  note: "按需求清晰度、竞争充分性、紧急性、价格可比性和唯一性匹配采购方式。"
+                }
+              ],
+              pitfalls: [
+                "把单一来源当成最快采购方式。",
+                "把询价用于复杂服务或技术方案不明确项目。",
+                "公开招标以外方式不说明理由和审批路径。"
+              ],
+              review: "背诵句：采购方式不是经办人自由选择，而是由项目特征、法定条件和审批程序共同决定。"
+            },
+            {
+              type: ["业务案例", "拆分采购"],
+              title: "为了加快进度，有人建议把一个采购项目拆成三次采购，避免走公开招标，你怎么看？",
+              prompt: "考点：化整为零规避公开招标、同类采购合并判断和廉政风险。",
+              answer: [
+                "我会明确表示不能这样做。政府采购法规定，采购人不得将应当以公开招标方式采购的货物或者服务化整为零，或者以其他任何方式规避公开招标采购。把一个完整采购项目拆成三次采购，如果目的就是规避公开招标，属于明显的合规风险和廉政风险。",
+                "具体处理上，第一，核实项目是否属于同一预算项目、同一品目、同一需求、同一实施周期和同一供应范围。如果本质上是一个整体项目，应合并编制采购计划。第二，向提出建议的人员说明法律风险和责任后果，不能以效率为由突破程序。第三，如果确实存在分期实施的客观需要，应当说明分期理由、预算安排、采购边界和验收节点，确保不是人为拆分规避采购方式。第四，优化进度应从提前需求论证、并行内部审批、规范采购文件等方面入手，而不是规避公开招标。",
+                "我会把这个事项记录在采购论证或经办说明中，必要时向财务、采购管理部门或分管领导报告，确保处理有依据、有留痕。"
+              ],
+              explanation: [
+                "拆分采购题是典型红线题。答题必须鲜明表态，不能为了显得灵活而接受规避公开招标。",
+                "高分答案要区分“合理分期实施”和“人为拆分规避”。前者有客观业务原因和清晰边界，后者以规避采购方式为目的。"
+              ],
+              knowledge: [
+                "不得化整为零规避公开招标。",
+                "同类采购判断要看预算项目、采购品目、需求内容、时间安排和实施边界。",
+                "提高效率的正确方式是前置需求、压缩内部流转、清单化材料，而不是绕程序。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑不得将应公开招标项目化整为零或以其他方式规避公开招标。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购程序、采购活动记录和监督管理要求。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "廉政风险识别",
+                  note: "用于识别拆分采购背后的规避程序、利益输送和责任倒查风险。"
+                }
+              ],
+              pitfalls: [
+                "为了体现效率，同意拆分采购。",
+                "只说不行，没有说明如何合规加快进度。",
+                "没有区分合理分期和规避公开招标。"
+              ],
+              review: "背诵句：效率不能建立在规避公开招标之上，真正的加快进度应靠前置需求、同步审批和规范文件。"
+            },
+            {
+              type: ["业务处置", "废标超预算"],
+              title: "招标中出现供应商不足三家或投标报价全部超过采购预算，你如何处理？",
+              prompt: "考点：废标情形、重新组织采购、预算和采购需求复核。",
+              answer: [
+                "我会先依法依规确认是否构成废标情形。政府采购法规定，符合专业条件的供应商或者对招标文件作实质响应的供应商不足三家，或者投标人的报价均超过采购预算、采购人不能支付的，应予废标。处理时不能随意从现有供应商中挑一家，也不能擅自提高预算继续评标。",
+                "废标后，第一，要将废标理由依法通知所有投标人，并做好采购活动记录。第二，组织复盘原因，判断是采购需求过窄、资格条件过高、预算测算不合理、市场调研不足，还是公告时间、采购文件表述等问题导致。第三，根据原因修改采购需求或预算测算，按程序重新组织招标。第四，如果确需改用其他采购方式，也应按照规定履行审批或批准程序。",
+                "如果是报价全部超过预算，我会重点核对预算编制是否脱离市场价格，必要时开展市场调查和需求调整；如果预算确需调整，应按预算管理程序办理，而不是现场突破预算。"
+              ],
+              explanation: [
+                "这道题考的是异常情形处置。重点是不能在供应商不足或超预算情况下硬推进。",
+                "高分答案要包含三个动作：依法废标、查明原因、重新组织或依法变更采购方式。"
+              ],
+              knowledge: [
+                "供应商不足三家或全部报价超预算且采购人不能支付，是招标采购中的典型废标情形。",
+                "废标后原则上重新组织招标；改用其他方式要按规定批准。",
+                "超预算问题要回到预算测算、市场调研和需求合理性复核。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑废标情形、废标后重新组织招标和采购方式变更要求。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑废标后应复核采购需求、市场调查和预算测算合理性。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "问题复盘法",
+                  note: "把废标原因拆成需求、预算、资格、市场、文件和公告等维度复盘。"
+                }
+              ],
+              pitfalls: [
+                "供应商不足仍强行评审。",
+                "报价超预算就临时加预算。",
+                "废标后不复盘原因，导致反复废标。"
+              ],
+              review: "背诵句：废标不是结束，而是依法终止本次异常采购，并通过需求和预算复盘提高下一轮采购成功率。"
+            },
+            {
+              type: ["角色认知", "采购人责任"],
+              title: "采购代理机构推荐某供应商，说效率高、价格低。作为采购经办人员，你如何把关采购人责任？",
+              prompt: "考点：采购人主体责任、代理边界、供应商推荐风险。",
+              answer: [
+                "我会先明确采购人责任不能外包。采购代理机构可以受委托办理采购事宜，但采购人仍应对采购需求、采购方式、采购文件确认、履约验收和内部审批承担主体责任。代理机构推荐供应商，即使理由是效率高、价格低，也不能替代公开公平的采购程序。",
+                "具体把关上，第一，核对委托代理协议，明确代理范围和双方权责。第二，要求代理机构按照采购文件和法定程序组织采购，不能私下推荐或指定供应商。第三，审查采购文件是否存在倾向性条款、资格条件是否合理、评审方法是否与采购需求匹配。第四，对代理机构提出的建议，只作为程序和市场信息参考，不作为定向选择供应商依据。第五，对采购过程、评审结果、合同签订和验收资料进行归档，确保采购人能够说明决策依据。",
+                "如果发现代理机构与供应商存在异常关系或可能影响公正，应及时提醒、纠正，必要时向主管部门或财政监管部门报告。"
+              ],
+              explanation: [
+                "这道题容易答成“代理机构专业，听它的”。事实上，采购代理不等于采购人卸责。",
+                "岗位上要把握边界：代理机构办程序，采购人负主体责任；供应商选择必须来自合规竞争和评审结果。"
+              ],
+              knowledge: [
+                "采购人可以委托代理机构办理采购事宜，但要通过委托代理协议明确事项和权利义务。",
+                "采购人不能让代理机构指定供应商，也不能以效率和低价替代公平竞争。",
+                "采购人责任贯穿需求、方式、文件、评审、合同、验收和档案。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑采购人、采购代理机构、委托代理协议和不得指定采购代理机构等规定。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购人和采购代理机构在采购活动中的程序责任。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "委托代理关系与主体责任",
+                  note: "用于区分代理机构的专业服务和采购人的最终管理责任。"
+                }
+              ],
+              pitfalls: [
+                "认为代理机构推荐就可以采纳。",
+                "把低价当成唯一选择标准。",
+                "只管委托出去，不审采购需求和文件。"
+              ],
+              review: "背诵句：采购可以委托代理，主体责任不能委托；代理机构提供专业服务，采购人必须守住需求、程序和验收关。"
+            },
+            {
+              type: ["业务案例", "履约验收"],
+              title: "采购验收时发现货物参数与合同有差异，但使用科室觉得“能用就行”。你怎么办？",
+              prompt: "考点：合同履约、验收责任、付款条件和风险处置。",
+              answer: [
+                "我会先明确，政府采购验收不能以“能用就行”为标准，而应以采购文件、合同约定和验收标准为依据。如果货物参数与合同有差异，应暂停通过验收和付款，查明差异性质。",
+                "具体处理上，第一，对照采购文件、投标响应文件、合同、到货清单和验收标准，确认差异是型号、数量、性能、配件、服务还是质保问题。第二，组织使用科室、经办人员、供应商和必要的技术人员共同复核，形成书面验收记录。第三，如果属于轻微偏差且不影响实质功能，也要看合同是否允许变更或补救，不能自行降低验收标准；如果属于实质性不符合，应要求供应商更换、补足、整改，必要时按合同追究违约责任。第四，在验收合格前不得办理付款。",
+                "事后要复盘差异产生原因，是采购需求不清、合同条款不细、供应商履约不严，还是验收标准前置不足，并完善下一次采购文件和验收清单。"
+              ],
+              explanation: [
+                "验收题的核心是合同约束。使用科室满意不等于法定验收合格。",
+                "高分答案要把验收、付款、违约责任和复盘改进连起来，体现采购闭环。"
+              ],
+              knowledge: [
+                "采购验收应依据采购文件、合同约定和验收标准。",
+                "验收成员应签署验收意见并承担相应责任。",
+                "合同差异处理要区分轻微偏差和实质性不符合，不能擅自降低标准。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑采购人或代理机构应组织履约验收，验收文件应归档保存。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑政府采购合同履约、验收和法律责任相关要求。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "合同管理闭环",
+                  note: "用于把采购文件、合同、验收、付款和违约处理统一起来。"
+                }
+              ],
+              pitfalls: [
+                "使用科室觉得能用就直接验收。",
+                "验收不留书面记录。",
+                "未验收合格就付款。",
+                "只处理本次差异，不复盘采购需求和合同条款。"
+              ],
+              review: "背诵句：政府采购验收看合同和标准，不看主观满意；验收不合格，付款就不能合规发生。"
+            },
+            {
+              type: ["方案设计", "采购台账"],
+              title: "如果让你设计街道后勤采购年度管理台账，你会设置哪些字段和预警点？",
+              prompt: "考点：数据化管理、采购全流程、风险预警和岗位执行力。",
+              answer: [
+                "我会把采购台账设计成“全过程管理表”，既能服务经办，也能服务监督和复盘。基础字段包括项目名称、采购品目、使用科室、经办人、预算金额、资金来源、是否纳入集中采购目录、是否达到限额标准、采购方式、采购需求确认时间、采购计划审批时间、代理机构、公告时间、评审时间、中标或成交供应商、合同金额、合同签订时间、履约期限、验收时间、付款时间、档案编号等。",
+                "风险预警字段包括：是否超预算、是否接近公开招标数额标准、是否同类项目短期内多次采购、是否使用单一来源或公开招标以外方式、是否存在品牌指向性参数、是否供应商不足三家、是否废标、是否延期签约、是否验收不合格、是否付款滞后、是否存在质疑投诉。",
+                "管理上，我会按月更新台账，形成红黄绿预警。红色预警如超预算、拆分采购、验收不合格、质疑投诉；黄色预警如材料缺失、临近合同期限、采购进度滞后；绿色为正常推进。年底可以用台账做复盘，分析高频采购品目、预算执行率、废标原因、供应商履约情况和制度改进点。"
+              ],
+              explanation: [
+                "这道题考岗位执行力。你不能只说“建台账”，要说清楚台账字段、预警点和怎么用。",
+                "采购台账是把政府采购法、内控规范和后勤保障实务连接起来的工具，也是博士数据分析能力的落点。"
+              ],
+              knowledge: [
+                "采购台账要覆盖需求、预算、方式、评审、合同、验收、付款、档案全过程。",
+                "预警点要围绕超预算、拆分采购、单一来源、品牌指向、废标、验收异常、质疑投诉。",
+                "台账价值：过程可追、风险可控、绩效可评、经验可复用。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑采购文件、采购活动记录、合同、验收证明等资料应妥善保存。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑采购、预算、收支、合同等经济活动应建立风险控制和过程记录。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "数据化台账与风险矩阵",
+                  note: "用于把采购事项转化为可跟踪、可预警、可复盘的管理工具。"
+                }
+              ],
+              pitfalls: [
+                "只列项目名称和金额，不能覆盖全流程。",
+                "没有风险预警字段。",
+                "台账只用于登记，不用于月度复盘和制度改进。",
+                "忽略档案编号和验收付款信息。"
+              ],
+              review: "背诵句：好的采购台账不是流水账，而是把预算、方式、合同、验收、付款和风险预警统一起来的管理工具。"
+            }
+          ]
+        },
+        {
+          id: 3,
+          date: "2026-06-13",
+          title: "采购需求管理、招标文件与评审风险",
+          subtitle: "把采购题从“按流程办”提升到“需求清楚、文件公平、评审可经得起监督”。",
+          summary: {
+            core: [
+              "采购需求是政府采购的源头，需求不清会导致废标、履约争议和验收困难。",
+              "招标文件要把需求、资格条件、评审方法、合同条款和验收标准对齐，不能设置倾向性或排他性条件。",
+              "评审风险的重点是公平竞争、专家独立评审、过程留痕和采购人不得干预评审结果。"
+            ],
+            frameworks: [
+              "需求六问：是否必要、预算是否匹配、市场是否充分、标准是否清楚、风险是否可控、验收是否可操作。",
+              "文件四对齐：采购需求对齐预算，资格条件对齐履约能力，评审方法对齐采购目标，合同验收对齐服务结果。",
+              "评审三底线：不得倾向排斥、不得暗示干预、不得事后改变实质性条件。"
+            ],
+            review: [
+              "遇到指定品牌、指定供应商、限制本地化、主观分过高，要主动识别公平竞争风险。",
+              "采购需求不能只写名称和数量，要写功能目标、技术或服务标准、商务要求、验收标准和风险约束。",
+              "评审异常要先稳住程序，形成记录，再按采购文件和制度处理，不能现场拍脑袋。"
+            ]
+          },
+          questions: [
+            {
+              type: ["结构化", "采购需求"],
+              title: "你如何理解政府采购中的“采购需求管理”？为什么它对街道后勤岗位很重要？",
+              prompt: "考点：采购源头管理、预算约束、履约验收和风险防控。",
+              answer: [
+                "我理解采购需求管理不是简单写一份采购清单，而是在采购活动启动前，把为什么买、买什么、标准是什么、预算是否匹配、如何验收和风险如何控制说清楚。对于街道综合事务中心，采购对象可能包括办公设备、物业服务、食堂服务、车辆维修、会务保障和小型工程相关服务，需求一旦前期不清，后续就容易出现招标文件争议、供应商报价偏差、履约不到位和验收困难。",
+                "具体工作中，我会从六个方面把关：第一，看采购事项是否必要，是否可以调剂、维修或共享；第二，看预算来源和金额是否明确；第三，开展必要的市场调查，了解价格、供应能力和常见标准；第四，把功能、质量、服务、时限、售后和验收要求写清；第五，排查是否有品牌指向、排他条件或过高资格；第六，将需求确认、内部审核和风险意见留痕。",
+                "这样做的意义在于把风险前移。需求管理做扎实，可以减少废标和质疑投诉，提高采购效率，也能让后续合同履约和验收有依据。"
+              ],
+              explanation: [
+                "这道题考的是政府采购的源头思维。不能把采购需求理解成使用科室随手报一个型号。",
+                "高分答案要把需求管理和岗位职责连接起来：后勤保障事项多、频率高、供应商多，最怕前端需求不清导致后端纠纷。"
+              ],
+              knowledge: [
+                "采购需求应当符合法律法规、政府采购政策、国家强制性标准和预算约束。",
+                "采购需求要能够支撑合同履约和验收，不能只描述采购名称和数量。",
+                "源头治理思路：前端需求清楚，后端评审、合同、验收才有依据。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑采购需求应当完整、明确，并与预算、采购政策、合同和验收衔接。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购需求、采购文件、合同履约和验收等采购全过程管理。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "源头治理、全过程风险管理",
+                  note: "用于把采购风险从评审和验收环节前移到需求形成阶段。"
+                }
+              ],
+              pitfalls: [
+                "把采购需求等同于采购清单。",
+                "只听使用科室，不做预算、市场和公平竞争审查。",
+                "没有把需求和后续合同、验收联系起来。"
+              ],
+              review: "背诵句：采购需求管理就是把采购风险前移，在采购启动前把必要性、预算、标准、市场、合同和验收一次说清。"
+            },
+            {
+              type: ["业务案例", "参数设置"],
+              title: "使用科室提交采购需求，写明必须采购某品牌会议屏，并列出该品牌独有参数。你怎么处理？",
+              prompt: "考点：品牌指向、排他性参数、功能需求表达。",
+              answer: [
+                "我会先肯定使用科室希望保障会议效果的合理性，但提醒政府采购需求不能以特定品牌或特定供应商为导向，也不能用独有参数限制或排斥潜在供应商。除非有充分合法依据，否则不能直接写必须采购某品牌。",
+                "处理上，第一，要求使用科室说明真实使用场景，例如会议室面积、使用人数、视频会议频率、兼容系统、安装环境和售后要求。第二，将品牌型号转化为功能性、性能性和服务性指标，比如屏幕尺寸区间、分辨率、亮度、接口兼容、远程会议适配、安装调试、质保期等。第三，对技术参数进行市场调查，看是否有多家供应商能够满足，避免唯一性或过窄参数。第四，组织需求审核，将可能引发质疑的品牌指向性表述删改为“满足功能目标”的中性表述。第五，在验收标准中写清到货配置、安装效果、功能测试和售后响应。",
+                "如果使用科室确实认为某些参数不可替代，我会要求其提供必要性说明和市场论证材料，并按规定履行内部审核，而不是直接采纳。"
+              ],
+              explanation: [
+                "这道题是常见陷阱。很多采购风险不是出在评审现场，而是出在需求参数已经锁定某一品牌。",
+                "答题要体现转换能力：把品牌语言转换成功能语言，把主观偏好转换成可竞争、可验收的客观标准。"
+              ],
+              knowledge: [
+                "不得以不合理条件对供应商实行差别待遇或者歧视待遇。",
+                "技术参数应围绕功能目标和履约结果设置，不能用独有参数变相指定品牌。",
+                "市场调查可用于检验需求是否具有竞争性和可实现性。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购应遵循公平竞争原则，不得以不合理条件限制或排斥供应商。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑需求应当明确采购标的功能和质量要求，并进行必要的调查论证。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "功能需求法",
+                  note: "将品牌型号转换为功能、性能、服务、验收等中性指标。"
+                }
+              ],
+              pitfalls: [
+                "直接照抄使用科室品牌型号。",
+                "只把品牌名删除，但保留独有参数。",
+                "没有进行市场调查，导致竞争性不足。"
+              ],
+              review: "背诵句：需求审核的关键不是删掉品牌两个字，而是把独有参数改成可竞争、可履约、可验收的功能标准。"
+            },
+            {
+              type: ["专业问答", "市场调查"],
+              title: "编制采购需求前，市场调查应重点调查哪些内容？",
+              prompt: "考点：预算测算、需求合理性、供应能力和竞争性。",
+              answer: [
+                "市场调查应服务于采购需求和预算测算，不能只是简单问几家供应商报价。我会重点调查六类内容：一是采购标的的常见功能、技术标准、服务标准和行业做法；二是市场供应主体数量、资质能力、履约经验和竞争充分性；三是价格水平、成本构成、售后服务和付款条件；四是类似项目的采购结果、废标原因和履约问题；五是国家强制性标准、节能环保、安全保密等政策要求；六是可能存在的履约风险，例如交付周期、人员稳定性、备件供应、服务响应等。",
+                "调查方式上，可以通过公开信息查询、历史采购项目分析、供应商咨询、专家咨询、同类单位经验和必要的现场踏勘等方式进行。调查过程要注意公平性，不能只接触拟定供应商，更不能让供应商代写需求文件。",
+                "调查结果应转化为三项成果：合理预算测算、清晰采购需求和风险提示。这样招标文件才更接近市场实际，也更能减少废标和履约争议。"
+              ],
+              explanation: [
+                "市场调查不是走形式。直接业务考核中，市场调查常和预算超标、供应商不足三家、参数排他、履约失败联系在一起。",
+                "高分答案要说出调查内容、调查方式和调查成果。"
+              ],
+              knowledge: [
+                "市场调查用于判断采购需求是否合理、预算是否匹配、竞争是否充分。",
+                "调查不能让单一供应商主导需求，避免形成利益绑定。",
+                "调查成果应进入需求文件、预算测算和风险清单。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑采购需求确定前可以通过咨询、论证、问卷、市场调查等方式了解相关情况。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑采购经济活动应进行风险评估和内部控制。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "三角验证法",
+                  note: "用公开信息、历史项目和多方询价交叉验证价格与需求合理性。"
+                }
+              ],
+              pitfalls: [
+                "市场调查只问价格，不问供应能力和风险。",
+                "只问一家熟悉供应商。",
+                "调查结果没有进入预算、需求和验收标准。"
+              ],
+              review: "背诵句：市场调查的成果不是几张报价单，而是预算测算、需求标准和风险预警。"
+            },
+            {
+              type: ["文件审查", "资格条件"],
+              title: "招标文件要求供应商必须在深圳本地注册、必须有本区服务案例。你如何审查？",
+              prompt: "考点：资格条件合理性、公平竞争、本地保护风险。",
+              answer: [
+                "我会重点审查这些条件是否与采购项目的实际履约需要相适应，是否构成不合理限制。一般而言，要求供应商必须在深圳本地注册、必须有本区案例，容易形成地域限制或本地保护，可能排斥外地但具备履约能力的供应商。",
+                "处理时，我会先分析采购标的是否确实需要本地快速响应。如果是物业、设备维保、食堂配送等需要及时服务的项目，可以把要求改成服务响应时间、驻场人员配置、应急保障能力、服务网点或承诺响应机制，而不是限定注册地。对于案例经验，也应表述为同类项目经验、类似规模服务经验或履约评价，而不是限定本区案例。",
+                "同时，我会核查资格条件和评审因素是否重复设置、是否过高、是否与合同履行无关。修改后应保留公平竞争空间，让更多合格供应商参与，真正通过评审比较质量、价格和履约能力。"
+              ],
+              explanation: [
+                "考官会看你是否能识别“看似合理、实则限制竞争”的条件。本地注册、本区案例是典型风险点。",
+                "高分答案不是简单说删除，而是把地域条件转换成履约能力要求。"
+              ],
+              knowledge: [
+                "资格条件应与采购项目的具体特点和实际需要相适应。",
+                "不能用注册地、所有制、特定区域案例等不合理条件限制竞争。",
+                "可以用响应时间、人员配置、服务能力等履约指标替代地域限制。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑不得以不合理条件对供应商实行差别待遇或者歧视待遇。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购货物和服务招标投标管理办法（财政部令第87号）",
+                  note: "用于支撑招标文件资格条件、评审因素应当与采购需求和合同履行相关。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "公平竞争审查思维",
+                  note: "用于识别地域限制、特定案例、过高资质等限制竞争风险。"
+                }
+              ],
+              pitfalls: [
+                "认为本地注册更方便，就直接保留。",
+                "把本区案例作为硬门槛。",
+                "只删条件，不提出替代性的履约能力指标。"
+              ],
+              review: "背诵句：采购文件不能用地域条件锁定供应商，真正需要的是可量化的响应能力和履约保障。"
+            },
+            {
+              type: ["文件审查", "评分标准"],
+              title: "某服务采购评分办法中技术方案占70分，且大量为“方案优、良、一般”主观评价。你怎么看？",
+              prompt: "考点：评审方法、主观分风险、可量化标准。",
+              answer: [
+                "我会认为这种评分办法存在较高评审风险。服务类采购确实可以重视技术方案和服务能力，但如果技术分过高且多数指标只有“优、良、一般”等笼统表述，容易扩大评审自由裁量，导致评分差异难以解释，也容易引发供应商质疑。",
+                "优化上，第一，评审因素应与采购需求和履约结果直接相关，例如人员配置、服务流程、响应时限、质量控制、应急预案、类似经验、考核机制等。第二，评分标准要尽量细化量化，明确每档分值对应的具体条件，减少空泛主观评价。第三，价格分、商务分和技术分比例要与项目特点匹配，不能用技术分掩盖倾向性。第四，对于确需主观判断的方案类内容，也要设置清晰评价维度和证据要求。",
+                "我会建议组织采购需求和采购文件复核，确保评分办法既能选出履约能力强的供应商，又能经得起质疑和监督。"
+              ],
+              explanation: [
+                "这道题考评审规则设计。主观分不是不能有，而是不能空泛、不能过度、不能与需求脱节。",
+                "答题要落到“可解释、可比较、可追溯”。"
+              ],
+              knowledge: [
+                "评审因素应细化量化，并与采购需求、商务条件和合同履行相关。",
+                "主观评分越多，越需要明确评价标准和证据材料。",
+                "评分标准的风险点：权重失衡、表述空泛、倾向性指标、重复加分。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "政府采购货物和服务招标投标管理办法（财政部令第87号）",
+                  note: "用于支撑评审因素应当细化量化，并与采购需求和合同履行相关。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑采购需求、评审因素和合同文本应当相互衔接。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "可解释性评审设计",
+                  note: "把评分指标设计为可比较、可举证、可复核的标准。"
+                }
+              ],
+              pitfalls: [
+                "简单认为服务类采购技术分越高越好。",
+                "忽视“优良中差”空泛表述的争议风险。",
+                "没有把评分指标和验收、考核联系起来。"
+              ],
+              review: "背诵句：评分办法的核心不是把分数写出来，而是让每一分都能说明依据、对应需求、支撑履约。"
+            },
+            {
+              type: ["情景处置", "评审现场"],
+              title: "评审现场专家认为招标文件某项标准表述不清，可能影响评分，你作为采购经办人员怎么办？",
+              prompt: "考点：评审纪律、澄清边界、程序留痕。",
+              answer: [
+                "我会首先稳住评审程序，不能让经办人员现场随意解释或改变实质性标准。招标文件是评审依据，评审现场发现表述不清，要区分是一般理解问题还是影响供应商响应和评分的实质性问题。",
+                "如果只是文字理解或材料位置问题，可以依据招标文件原文和已发布的澄清答疑材料，由评审委员会独立判断，并形成记录。如果该标准确实存在歧义，可能影响公平评分或改变供应商响应预期，我会建议暂停相关评审，按规定报告采购人和代理机构，研究是否需要终止或重新组织采购，不能在评审现场临时补规则。",
+                "全过程要做好评审记录，包括专家提出的问题、处理意见、依据和签字确认。事后要复盘招标文件编制问题，完善文件审查清单，避免同类歧义重复出现。"
+              ],
+              explanation: [
+                "评审现场最怕经办人越位。你可以维护程序和提供文件依据，但不能替专家评分，也不能临时改规则。",
+                "高分答案要体现程序稳定性和公平性。"
+              ],
+              knowledge: [
+                "评审应以采购文件为依据，采购人和代理机构不得非法干预评审。",
+                "实质性标准不能在评审现场临时修改。",
+                "评审异常要记录在案，必要时暂停并按程序处理。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑评审活动应依法进行，采购人、代理机构不得非法干预评审。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购货物和服务招标投标管理办法（财政部令第87号）",
+                  note: "用于支撑评标委员会按招标文件规定的评标方法和标准进行评标。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "程序正义",
+                  note: "在规则不清时优先维护公平程序，而不是追求现场快速出结果。"
+                }
+              ],
+              pitfalls: [
+                "经办人员现场解释成自己想要的方向。",
+                "为了不废标，临时修改评分标准。",
+                "没有形成评审异常记录。"
+              ],
+              review: "背诵句：评审现场只能依据已发布文件，不能临时补规则；规则不清要按程序处理并完整留痕。"
+            },
+            {
+              type: ["业务案例", "质疑预防"],
+              title: "采购公告发布后，有供应商反映资格条件过高、评分标准偏向特定企业。你如何处理？",
+              prompt: "考点：公告期异议处理、文件复核、质疑风险前置化解。",
+              answer: [
+                "我会高度重视，因为公告期反馈往往是质疑投诉的前置信号。首先登记供应商反映内容，核对其指向的是资格条件、技术参数、评分标准还是合同条款，并保存沟通记录。",
+                "第二，组织采购人、使用科室和代理机构对采购文件进行复核，重点看条件是否与采购需求和合同履行相关，是否有品牌指向、地域限制、特定案例、过高资质或重复加分。第三，如果反馈属实，应按程序发布更正公告或澄清文件，并视情况顺延提交投标文件截止时间，保障所有潜在供应商公平获取信息。第四，如果复核认为条件合理，也要形成书面说明，说明必要性、市场竞争情况和制度依据。",
+                "处理原则是把争议尽量化解在开标评审前。该改的及时改，该说明的及时说明，不能因为怕麻烦而带病评审。"
+              ],
+              explanation: [
+                "这道题体现风险预防能力。供应商反馈不是麻烦，而是提前发现采购文件风险的机会。",
+                "高分答案要包括登记、复核、澄清更正、顺延时间和书面说明。"
+              ],
+              knowledge: [
+                "采购文件存在不清或不合理内容时，应依法澄清、修改或更正。",
+                "澄清更正可能影响投标文件编制的，应合理顺延截止时间。",
+                "质疑预防优于事后投诉处理。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑供应商认为采购文件、采购过程和中标成交结果使权益受损时可依法提出质疑。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购质疑和投诉办法（财政部令第94号）",
+                  note: "用于支撑质疑投诉处理应依法登记、答复和保存相关材料。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "风险前置化解",
+                  note: "把公告期反馈作为采购文件纠偏和减少投诉的机会。"
+                }
+              ],
+              pitfalls: [
+                "认为还没开标就不用处理。",
+                "口头解释后不留记录。",
+                "明知条件有问题仍继续评审。"
+              ],
+              review: "背诵句：公告期反馈要当成风险预警，及时复核文件、依法澄清更正，把质疑投诉化解在评审前。"
+            },
+            {
+              type: ["综合分析", "低价中标"],
+              title: "有人说政府采购就是谁报价最低谁中标，你怎么看？",
+              prompt: "考点：价格与质量、最低评标价法和综合评分法。",
+              answer: [
+                "我认为这个说法不准确。政府采购强调节约财政资金，但不是简单低价采购。不同采购项目应根据采购标的特点选择合适的评审方法。对标准统一、技术服务要求明确的货物，可以更多体现价格竞争；对物业、食堂、维修、会务等后勤服务，除了价格，还要看服务方案、人员配置、质量控制、响应能力、履约经验和风险保障。",
+                "如果只看最低价，可能带来低价恶性竞争，供应商中标后通过降低服务质量、减少人员投入、拖延履约等方式转嫁成本，最终影响机关运行保障。正确做法是前期把采购需求和验收标准写清，评审时让价格、技术、商务和履约能力合理匹配，合同中设置服务标准、考核扣分和违约责任。",
+                "因此，我会把“节约资金”理解为全生命周期成本最优，而不是单次报价最低。"
+              ],
+              explanation: [
+                "这是典型观点题。答题不能否定价格因素，也不能把低价等同于高性价比。",
+                "岗位相关性很强：后勤服务如果只追低价，常常会在履约质量上出问题。"
+              ],
+              knowledge: [
+                "政府采购应兼顾价格、质量、效率和政策功能。",
+                "采购方式和评审方法要与采购标的特点匹配。",
+                "全生命周期成本包括采购价格、履约质量、维护成本和管理风险。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购应提高采购资金使用效益、维护国家利益和社会公共利益。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑采购需求应与采购项目目标、质量和履约风险相匹配。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "全生命周期成本",
+                  note: "用于说明最低报价不等于综合成本最低。"
+                }
+              ],
+              pitfalls: [
+                "完全否定低价，显得不重视财政资金节约。",
+                "只说综合评分法，不说明后勤服务质量风险。",
+                "没有提出合同考核和验收约束。"
+              ],
+              review: "背诵句：政府采购追求的是资金使用效益，不是单纯最低价；后勤服务更要看全生命周期成本和履约质量。"
+            },
+            {
+              type: ["方案设计", "文件审查"],
+              title: "如果让你审查一份物业服务采购文件，你会重点看哪些内容？",
+              prompt: "考点：采购需求、资格条件、评分办法、合同和验收。",
+              answer: [
+                "我会按“需求、资格、评分、合同、验收、风险”六个模块审查。第一看采购需求，是否写清服务区域、面积、岗位配置、工作时间、保洁安保维修绿化等服务内容、响应时限和质量标准。第二看资格条件，是否与物业服务履约能力相关，是否存在本地注册、特定企业案例等限制。第三看评分办法，是否将人员配置、服务方案、应急响应、质量控制、履约经验等指标细化量化，主观分是否过宽。",
+                "第四看合同条款，是否明确服务期限、人员到岗、考核扣分、违约责任、价格调整和退出机制。第五看验收与考核，是否有月度考核表、问题整改时限、复查和付款挂钩机制。第六看廉政和安全风险，例如分包转包、人员背景管理、消防安全、资料保密和投诉处理。",
+                "审查后，我会形成问题清单，逐项反馈使用科室和代理机构，确保采购文件既公平竞争，又能选出真正能履约的服务单位。"
+              ],
+              explanation: [
+                "物业服务和岗位高度相关。答题重点不是泛泛说采购文件，而是要能讲出物业服务的履约场景。",
+                "高分答案要体现“文件审查服务于后续监管”。"
+              ],
+              knowledge: [
+                "服务类采购文件要把服务内容、服务标准、人员配置、考核扣分和付款条件连起来。",
+                "资格条件不能替代合同履约管理。",
+                "采购文件审查的结果应形成问题清单和修改闭环。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑采购需求、合同文本和验收标准应当相互衔接。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关后勤服务管理应规范、节约、高效并接受监督。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "服务质量差距模型、合同绩效管理",
+                  note: "用于把服务承诺转化为可考核、可扣分、可整改的合同条款。"
+                }
+              ],
+              pitfalls: [
+                "只审预算金额，不审服务标准。",
+                "把供应商资质看得很重，却没有月度考核和扣分机制。",
+                "忽视安全、保密和投诉处理条款。"
+              ],
+              review: "背诵句：服务采购文件要从一开始就为后续监管服务，把服务标准、考核扣分、整改复查和付款条件写进同一套规则。"
+            },
+            {
+              type: ["方案设计", "需求审查清单"],
+              title: "请设计一份街道后勤采购需求审查清单。",
+              prompt: "考点：清单化管理、内控思维、岗位实操。",
+              answer: [
+                "我会把需求审查清单分为七类。第一是必要性审查：是否属于岗位职责范围，是否可以通过调剂、维修、共享或存量合同解决。第二是预算审查：预算来源、金额、科目和支付安排是否明确。第三是合规审查：是否属于政府采购目录或限额标准范围，采购方式初步判断是否合理。第四是需求内容审查：采购标的、数量、质量、技术或服务标准、交付时间、售后服务是否清楚。",
+                "第五是公平竞争审查：是否存在指定品牌、独有参数、地域限制、特定案例、过高资质、重复加分等问题。第六是合同验收审查：是否能够转化为合同条款、验收标准、考核扣分和付款条件。第七是风险留痕审查：是否完成市场调查、使用科室确认、经办复核、内部审批和资料归档。",
+                "清单使用上，我会要求每个采购项目启动前完成一次勾选和问题反馈。重大或复杂项目可以组织需求论证，形成会议纪要和修改记录，确保采购从源头合规。"
+              ],
+              explanation: [
+                "这道题很适合展示岗位能力。清单化不是空话，必须列出可操作字段。",
+                "答案要体现综合管理岗的特点：采购、预算、合同、验收和档案都要管到。"
+              ],
+              knowledge: [
+                "需求审查清单是内部控制工具。",
+                "清单应覆盖必要性、预算、合规、需求、竞争、合同验收和留痕。",
+                "清单价值在于前置发现问题，减少后续废标、质疑和履约争议。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑采购需求确定、需求审查和风险控制要求。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑通过流程、岗位分离、授权审批和记录控制防范经济活动风险。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "清单化管理、风险矩阵",
+                  note: "用于把抽象合规要求转化为可执行的审查项目。"
+                }
+              ],
+              pitfalls: [
+                "清单只列文件名称，没有审查问题。",
+                "不审公平竞争和验收标准。",
+                "没有说明清单如何使用、谁确认、如何留痕。"
+              ],
+              review: "背诵句：需求审查清单要把必要性、预算、合规、公平竞争、合同验收和过程留痕一次性前置审清。"
+            }
+          ]
+        },
+        {
+          id: 4,
+          date: "2026-06-13",
+          title: "合同履约、验收、质疑投诉与档案",
+          subtitle: "把采购结果落到合同、验收、付款和证据链，防止“采购结束就没人管”。",
+          summary: {
+            core: [
+              "中标成交不是采购结束，合同履约和验收才决定财政资金是否真正形成有效服务。",
+              "政府采购合同不得背离采购文件和中标成交结果，关键条款不能随意变更。",
+              "质疑投诉和采购档案管理，本质上都是对采购过程能否经得起监督的检验。"
+            ],
+            frameworks: [
+              "履约四线：合同条款、进度节点、质量标准、资金支付。",
+              "验收六看：主体是否合规、标准是否明确、数量是否一致、质量是否达标、资料是否完整、签字是否齐全。",
+              "争议四步：登记诉求、核查证据、依法答复、整改归档。"
+            ],
+            review: [
+              "供应商要求改合同，要先看是否背离采购文件和中标成交结果。",
+              "使用科室催付款时，必须回到合同、验收、发票、审批和预算指标。",
+              "质疑投诉处理不能情绪化，要讲期限、主体、事实、依据和书面答复。"
+            ]
+          },
+          questions: [
+            {
+              type: ["业务案例", "合同签订"],
+              title: "供应商中标后提出修改合同关键条款，例如降低服务人员数量、延长交付期限。你怎么办？",
+              prompt: "考点：采购文件、中标结果、合同实质性条款。",
+              answer: [
+                "我会先明确，中标成交后签订的政府采购合同应当以采购文件和中标成交供应商的响应文件为基础，不能随意改变实质性条款。降低服务人员数量、延长交付期限，可能直接影响履约质量和评审结果，不能因为供应商提出困难就直接同意。",
+                "处理上，第一，核对采购文件、投标响应文件、中标通知书和拟签合同，判断供应商提出的修改是否属于实质性内容。第二，要求供应商书面说明原因和依据，但说明不等于可以修改。第三，若属于实质性变更，应坚持按原采购结果签约；供应商拒不签约的，按采购文件和合同规则处理，并报告有关情况。第四，若只是非实质性文字完善，也要经内部审批并留痕，不能改变采购结果。",
+                "同时，我会提醒使用科室，合同签订不是再次谈判，不能通过合同阶段改变评审形成的权利义务，否则容易损害公平竞争并引发质疑投诉。"
+              ],
+              explanation: [
+                "这道题的核心是“合同不能推翻采购结果”。中标后再改关键条件，相当于让其他供应商失去公平竞争机会。",
+                "高分答案要把采购文件、响应文件、中标通知书和合同四者连起来。"
+              ],
+              knowledge: [
+                "政府采购合同应当与采购文件和中标成交结果一致。",
+                "人员数量、交付期限、服务标准、价格等通常属于关键履约条款。",
+                "非实质性文字调整也应审批留痕，防止责任不清。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑采购人与中标成交供应商应依法签订政府采购合同。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑政府采购合同不得擅自变更、中止或者终止等履约管理要求。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "契约约束与公平竞争",
+                  note: "用于说明合同阶段不能改变采购竞争形成的权利义务。"
+                }
+              ],
+              pitfalls: [
+                "把中标后修改合同当成正常协商。",
+                "只听供应商困难，不看其他供应商公平机会。",
+                "没有区分实质性变更和文字性完善。"
+              ],
+              review: "背诵句：中标后不是重新谈判，合同必须承接采购文件、响应文件和中标结果，关键条款不能随意让步。"
+            },
+            {
+              type: ["业务案例", "履约延期"],
+              title: "供应商因人员不足导致服务进场延期，但承诺后续补上。你如何处理？",
+              prompt: "考点：进度控制、违约责任、临时保障。",
+              answer: [
+                "我会先判断延期是否已经影响机关运行保障。服务进场延期不能简单接受口头承诺，应回到合同约定处理。第一，核对合同中的进场时间、人员配置、违约责任、整改期限和应急保障条款。第二，要求供应商提交书面说明、补救计划和具体到岗时间，并保留沟通记录。第三，根据影响程度发出整改通知，必要时按合同扣罚、追究违约责任或启动替代保障。",
+                "同时，要保障机关运转不断档。如果涉及物业、食堂、车辆维修、会务服务等关键事项，可以协调临时保障措施，但临时措施也要合规、留痕、控制成本，不能用临时需求绕开采购和合同约束。",
+                "事后要复盘供应商履约能力评审是否充分、合同进场条件是否写清、履约保证和考核扣分是否有效，并将延期情况纳入供应商履约评价和下一轮采购需求。"
+              ],
+              explanation: [
+                "这道题既考合同执行，也考后勤保障连续性。不能只讲处罚，也不能只讲协调。",
+                "高分答案要同时做到：依合同追责、保障运转、记录证据、后续复盘。"
+              ],
+              knowledge: [
+                "履约管理要关注进度、质量、人员、风险和违约责任。",
+                "供应商口头承诺不能替代合同约定和书面整改。",
+                "后勤服务要有应急替代方案，防止机关运行受影响。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购合同履行、违约责任和依法监督管理要求。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关事务服务保障应规范、高效、节约。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "合同绩效管理、应急保障",
+                  note: "用于兼顾合同约束和机关运行连续性。"
+                }
+              ],
+              pitfalls: [
+                "只口头催促，不发书面整改。",
+                "为了保障运行完全放弃追责。",
+                "临时补救措施不留痕、不控成本。"
+              ],
+              review: "背诵句：履约延期要一手按合同整改追责，一手做好临时保障，既守合同底线，也保机关运转。"
+            },
+            {
+              type: ["专业问答", "验收组织"],
+              title: "政府采购项目验收应如何组织？以办公设备或物业服务为例说明。",
+              prompt: "考点：验收主体、验收标准、书面记录。",
+              answer: [
+                "政府采购验收应以采购文件、响应文件、合同和验收标准为依据，不能只凭使用科室一句“能用”或“满意”。一般应由采购人组织使用科室、经办人员、技术人员或第三方专业力量参与，按照合同约定逐项核验，并形成书面验收意见。",
+                "以办公设备为例，要核对品牌型号或等效参数、数量、配置、安装调试、系统兼容、随机资料、质保期限和售后响应；必要时进行功能测试。以物业服务为例，不能只在合同结束时验收，而应建立月度或季度考核，检查人员到岗、保洁安保维修响应、投诉处理、问题整改、服务记录和满意度。",
+                "验收结论要明确合格、不合格或限期整改，参与人员签字确认。验收资料应作为付款和档案归集的重要依据。对不合格项目，应要求供应商整改、重验或按合同追责，不能先付款再慢慢补材料。"
+              ],
+              explanation: [
+                "验收题要体现“标准化”和“证据化”。不同采购标的验收重点不同，但依据都是采购文件和合同。",
+                "服务类采购要强调持续考核，不是最后一天盖章。"
+              ],
+              knowledge: [
+                "验收依据：采购文件、响应文件、合同、验收标准。",
+                "验收结果应书面化，并作为付款依据。",
+                "服务项目应重视过程考核和整改复查。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑采购人或代理机构应组织履约验收，验收文件应归档保存。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购需求管理办法（财库〔2021〕22号）",
+                  url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+                  note: "用于支撑需求、合同和验收标准应相互衔接。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "结果验收与过程考核结合",
+                  note: "用于区分货物一次性验收和服务类持续考核。"
+                }
+              ],
+              pitfalls: [
+                "只让使用科室口头确认。",
+                "货物不做功能测试，服务不做过程考核。",
+                "验收资料不完整就付款。"
+              ],
+              review: "背诵句：验收不是签字走流程，而是用合同标准证明财政资金买到了约定的货物和服务。"
+            },
+            {
+              type: ["情景处置", "验收不合格"],
+              title: "验收发现会务服务质量不达标，但会议已经结束，供应商要求全额付款。你怎么办？",
+              prompt: "考点：服务验收、证据收集、扣款和违约责任。",
+              answer: [
+                "我会坚持按合同和服务考核标准处理。会议已经结束不等于服务自然合格，更不等于必须全额付款。首先收集证据，包括会务服务合同、服务清单、现场照片、签到和设备记录、使用科室反馈、问题记录和供应商整改沟通情况。",
+                "其次组织验收复核，对照合同约定判断哪些事项未达标，例如场地布置、设备调试、人员到岗、茶歇安排、引导服务、突发问题响应等。根据合同中的考核扣分、违约责任或付款条件，形成书面验收意见和付款建议。对可补救事项要求供应商补救；对无法补救但已造成服务质量影响的，按合同扣减费用或追究违约责任。",
+                "同时要复盘管理问题。会务服务属于即时性强的服务，事后追责不如过程控制。以后应在会前明确清单、会中现场巡查、会后即时评价，把服务节点做成可记录、可扣分、可复盘的闭环。"
+              ],
+              explanation: [
+                "这道题容易被供应商“服务已完成”带节奏。服务完成不等于服务合格。",
+                "高分答案要有证据意识，尤其是服务类项目不能等到最后才发现问题。"
+              ],
+              knowledge: [
+                "服务类项目验收要重视过程记录和现场证据。",
+                "付款应与合同约定、验收结果和考核结果挂钩。",
+                "即时性服务要建立节点检查机制。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑政府采购合同履约、验收和违约责任处理。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑合同控制、验收控制和付款控制应相互衔接。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "证据链管理",
+                  note: "用于把现场问题、验收意见和付款建议连接起来。"
+                }
+              ],
+              pitfalls: [
+                "因为会议结束就全额付款。",
+                "只凭主观不满意扣款，没有证据和合同依据。",
+                "只事后追责，没有建立会前会中控制。"
+              ],
+              review: "背诵句：服务已经发生不等于验收合格，付款要看合同标准、现场证据和书面验收结论。"
+            },
+            {
+              type: ["业务案例", "质疑处理"],
+              title: "未中标供应商提出质疑，要求查看所有评审专家姓名和其他供应商商业报价明细。你如何处理？",
+              prompt: "考点：质疑答复、信息边界、商业秘密和评审纪律。",
+              answer: [
+                "我会先依法登记质疑材料，核查其是否在法定期限内提出、质疑事项是否具体、是否与自身权益受损有关。对符合受理条件的，应按规定组织核查并书面答复；对材料不完整或主体不符合要求的，也要按程序告知。",
+                "对于供应商要求查看全部评审专家姓名和其他供应商商业报价明细，我会把握信息公开边界。可以依法说明采购文件、评审标准、本人得分情况、相关事实依据和中标成交结果，但不能随意公开评审专家个人信息、其他供应商商业秘密或依法不应公开的信息。答复应当针对质疑事项讲事实、讲依据、讲处理意见，而不是情绪化解释。",
+                "如果质疑反映评审确有错误，应依法纠正；如果质疑不成立，也要用采购文件、评审记录和法律依据说明理由，并将质疑材料、核查过程和答复文件归档。"
+              ],
+              explanation: [
+                "质疑处理既要尊重供应商救济权，也要保护评审秩序和商业秘密。",
+                "答题要体现法定程序：登记、审查、核查、答复、归档。"
+              ],
+              knowledge: [
+                "供应商可以依法对采购文件、采购过程和中标成交结果提出质疑。",
+                "质疑答复应书面、针对、依法、有证据。",
+                "信息提供有边界，不能泄露专家信息和商业秘密。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑供应商依法质疑和投诉的权利。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "政府采购质疑和投诉办法（财政部令第94号）",
+                  note: "用于支撑质疑受理、答复、投诉衔接和材料归档要求。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "程序性回应",
+                  note: "用主体、期限、事项、证据、依据、结论组织质疑答复。"
+                }
+              ],
+              pitfalls: [
+                "对质疑置之不理或口头回复。",
+                "为了透明随意公开专家信息和商业秘密。",
+                "答复只讲态度，不讲事实和依据。"
+              ],
+              review: "背诵句：质疑处理既要保护供应商救济权，也要守住专家信息、商业秘密和评审纪律边界。"
+            },
+            {
+              type: ["情景处置", "投诉配合"],
+              title: "供应商向财政部门投诉，财政部门要求采购人提交相关材料。你如何配合？",
+              prompt: "考点：投诉处理、证据链、档案调取。",
+              answer: [
+                "我会把投诉配合作为依法接受监督的事项处理。第一，立即登记财政部门要求，明确提交材料范围、期限和联系人。第二，快速调取采购档案，包括采购需求、预算审批、采购文件、澄清更正、投标响应文件、评审报告、中标成交结果公告、质疑函、质疑答复、合同及相关沟通记录。第三，按要求形成情况说明，客观说明采购过程、争议焦点、处理依据和已采取措施。",
+                "提交材料时要保证真实、完整、及时，不能选择性提供，也不能事后补造材料。涉及商业秘密、个人信息或专家信息的，按规定进行标注和保护。内部还要同步提醒相关经办人员不得私下接触投诉供应商或评审专家，不得影响监督调查。",
+                "投诉处理后，无论结果如何，都要复盘采购文件、评审程序、质疑答复和档案管理中的薄弱环节，形成整改清单。"
+              ],
+              explanation: [
+                "投诉处理考的是证据链。平时档案不完整，投诉时就很被动。",
+                "高分答案要体现接受监督、材料完整、信息保护和整改复盘。"
+              ],
+              knowledge: [
+                "投诉处理需要采购人提供采购文件、评审资料、质疑答复等证据材料。",
+                "材料提交应真实、完整、及时。",
+                "投诉结果应反向推动制度改进。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "政府采购质疑和投诉办法（财政部令第94号）",
+                  note: "用于支撑财政部门投诉处理、采购人协助调查和材料提交要求。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购活动接受监督以及供应商投诉救济。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "证据链和审计追踪",
+                  note: "用于说明采购档案完整性直接影响投诉处理和责任认定。"
+                }
+              ],
+              pitfalls: [
+                "只提交对自己有利的材料。",
+                "事后补材料、补签字。",
+                "忽视专家信息和商业秘密保护。",
+                "投诉结束后不整改。"
+              ],
+              review: "背诵句：投诉配合的关键是真实完整提交证据链，既接受监督，也通过监督倒逼采购文件和档案管理改进。"
+            },
+            {
+              type: ["方案设计", "采购档案"],
+              title: "一个政府采购项目归档时，你认为应包括哪些核心材料？",
+              prompt: "考点：档案完整性、全过程留痕、审计追踪。",
+              answer: [
+                "我会按采购全过程归集档案。前期材料包括采购需求、市场调查记录、预算指标或资金来源、内部审批、采购计划、需求审查意见。采购实施材料包括采购公告或邀请文件、采购文件、澄清更正公告、供应商响应文件、开评标记录、评审报告、中标成交结果公告和通知书。",
+                "合同履约材料包括政府采购合同、履约过程记录、变更或补充协议审批材料、供应商服务记录、问题整改通知、验收方案、验收报告、考核表、发票、付款审批和资金支付凭证。争议监督材料包括质疑函、质疑答复、投诉处理材料、监督检查意见和整改材料。",
+                "归档管理上，要做到项目编号清楚、电子和纸质资料对应、关键节点签字齐全、材料按时间顺序排列，保存期限符合规定。档案不是事后装订，而是全过程随办随归。"
+              ],
+              explanation: [
+                "采购档案题很实务。答题要按流程分层，不要只说“合同、发票、验收单”。",
+                "档案完整性就是以后审计、投诉、复盘和责任认定的基础。"
+              ],
+              knowledge: [
+                "采购档案覆盖需求、预算、采购、评审、合同、验收、付款、质疑投诉和整改。",
+                "档案应真实、完整、可追溯。",
+                "随办随归比事后补档更可靠。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑采购文件应妥善保存，采购文件包括采购活动记录、采购预算、招标文件、投标文件、评标标准、评估报告、定标文件、合同文本、验收证明、质疑答复、投诉处理决定等。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑经济活动资料记录和内部控制留痕。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "全过程档案管理",
+                  note: "用于把档案从事后装订转为过程证据链管理。"
+                }
+              ],
+              pitfalls: [
+                "只归档合同和发票。",
+                "评审、质疑、验收、付款材料分散缺失。",
+                "事后补签，证据效力弱。"
+              ],
+              review: "背诵句：采购档案不是材料堆积，而是从需求到付款再到争议处理的完整证据链。"
+            },
+            {
+              type: ["业务案例", "付款控制"],
+              title: "使用科室催促尽快付款，但验收报告、发票和合同附件还不完整。你怎么办？",
+              prompt: "考点：付款条件、内控控制、沟通协调。",
+              answer: [
+                "我会理解使用科室希望及时付款、维护供应商合作的考虑，但财政资金支付必须以合同、验收和票据资料完整为前提。资料不完整时，不能为了人情或效率先付款后补材料。",
+                "具体处理上，第一，核对合同约定的付款条件、付款比例、验收要求和发票要求。第二，列出缺失材料清单，明确责任人和补齐时限，例如验收报告、验收人员签字、服务考核表、合同附件、发票、付款审批单等。第三，与使用科室和供应商沟通，说明缺材料付款的内控风险和审计风险，协助其尽快补齐。第四，资料完整、验收合格、预算指标可用并完成审批后，再按流程办理支付。",
+                "如果涉及合同约定的付款时限，我会同步提示相关科室加快补齐材料，避免因内部流转慢导致违约或影响政府信用。"
+              ],
+              explanation: [
+                "付款题要同时讲原则和效率。不能机械拖延，也不能突破资料和验收底线。",
+                "高分答案是“列清单、催补齐、守条件、提效率”。"
+              ],
+              knowledge: [
+                "付款应以合同约定、验收合格、发票合法、审批完整和预算指标为基础。",
+                "先付款后补材料是典型内控风险。",
+                "支付效率可以通过清单化补正和并联沟通提升。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑收支、采购、合同和资产等经济活动应建立授权审批和凭证控制。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购合同履行和验收后支付相关要求。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "付款前置条件清单",
+                  note: "用于把验收、发票、审批、预算和合同附件逐项核清。"
+                }
+              ],
+              pitfalls: [
+                "为了关系维护先付款。",
+                "只说不能付，不协助补齐材料。",
+                "忽视合同付款时限导致政府信用风险。"
+              ],
+              review: "背诵句：付款控制不是拖慢效率，而是把验收、票据、审批和预算条件一次核清后合规支付。"
+            },
+            {
+              type: ["业务案例", "服务监管"],
+              title: "物业服务合同履行中，干部反映保洁不到位、维修响应慢。你如何监管和整改？",
+              prompt: "考点：服务合同履约、考核扣分、整改闭环。",
+              answer: [
+                "我会把干部反映的问题纳入合同履约监管，而不是简单转告物业公司。第一，收集问题事实，明确发生时间、地点、事项、影响和证据。第二，对照物业服务合同、服务标准和考核办法，判断是否构成服务不到位。第三，约谈物业项目负责人，发出整改通知，明确整改事项、责任人、时限和复查方式。第四，根据合同约定进行考核扣分、费用扣减或违约处理。",
+                "同时，要建立常态监管机制。可以设置日常巡查表、报修响应台账、投诉处理台账、月度考核会和满意度反馈。对高频问题，例如卫生死角、维修超时、人员不到岗，要分析根因，是人员配置不足、排班不合理、耗材不足还是管理不到位，并要求物业提交整改方案。",
+                "整改完成后要复查并归档。如果同类问题反复发生，应启动合同约谈、扣款、限期整改甚至后续采购履约评价约束。"
+              ],
+              explanation: [
+                "服务监管题和岗位高度匹配。要体现你不是只传话，而是用合同和考核工具管服务。",
+                "高分答案要有台账和闭环，而不是一次性处理。"
+              ],
+              knowledge: [
+                "外包服务监管要依据合同、服务标准和考核办法。",
+                "投诉处理要形成事实记录、整改通知、复查结果和考核处理。",
+                "高频问题要做根因分析。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "机关事务管理条例",
+                  url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+                  note: "用于支撑机关后勤服务保障应加强管理和监督。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法实施条例",
+                  url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+                  note: "用于支撑采购合同履约和验收监管。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "SLA服务水平协议、PDCA闭环管理",
+                  note: "用于把服务承诺转化为响应时限、考核扣分和持续改进。"
+                }
+              ],
+              pitfalls: [
+                "只向物业公司口头转告。",
+                "没有合同依据和考核扣分。",
+                "问题整改后不复查、不归档。"
+              ],
+              review: "背诵句：外包服务监管要用合同说话、用台账取证、用考核约束、用复查闭环。"
+            },
+            {
+              type: ["方案设计", "全流程闭环"],
+              title: "请设计一个“采购合同履约到档案归档”的闭环管理流程。",
+              prompt: "考点：综合流程设计、合同验收付款档案一体化。",
+              answer: [
+                "我会设计为八个环节。第一，合同签订前核对采购文件、中标成交结果和合同文本一致性。第二，合同签订后建立履约台账，登记供应商、金额、服务期限、关键节点、验收标准和付款条件。第三，履约过程中按节点跟踪进度、人员、质量、问题和整改。第四，出现延期、质量不达标或投诉时，发出书面整改并记录处理。",
+                "第五，到货或服务完成后组织验收，依据合同和验收标准形成验收报告。第六，验收合格后核对发票、付款申请、预算指标和审批材料；验收不合格则整改重验或追责。第七，完成付款后更新台账，记录支付时间、金额和凭证。第八，将需求、预算、采购、评审、合同、履约、验收、付款、质疑投诉和整改材料统一归档。",
+                "流程管理上，我会设置红黄绿预警：红色为合同关键条款变更、验收不合格、投诉、超期未整改；黄色为临近履约节点、资料缺失、付款时限将到；绿色为正常推进。通过月度复盘发现高频问题，反向优化下一轮采购需求和合同条款。"
+              ],
+              explanation: [
+                "这道题是 Day 4 的综合题。要把合同、验收、付款、档案串成一个闭环。",
+                "高分答案体现岗位全局观：采购不是完成中标公告，而是直到服务形成、资金支付、资料归档、经验复盘。"
+              ],
+              knowledge: [
+                "合同履约闭环包括签约核对、履约台账、过程监管、验收、付款、归档和复盘。",
+                "台账预警能把被动处理变成主动管理。",
+                "归档是闭环终点，也是下一次采购需求改进的起点。"
+              ],
+              references: [
+                {
+                  kind: "政策文件",
+                  title: "中华人民共和国政府采购法",
+                  url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+                  note: "用于支撑政府采购合同、验收证明、质疑答复和投诉处理决定等采购文件应妥善保存。"
+                },
+                {
+                  kind: "政策文件",
+                  title: "行政事业单位内部控制规范（试行）",
+                  url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+                  note: "用于支撑采购、合同、收支等经济活动的内控闭环。"
+                },
+                {
+                  kind: "理论方法",
+                  title: "PDCA闭环、风险预警台账",
+                  note: "用于把履约异常和档案问题转化为下一轮需求和合同优化。"
+                }
+              ],
+              pitfalls: [
+                "只讲合同签订，不讲过程监管。",
+                "只讲验收付款，不讲质疑投诉和档案。",
+                "没有预警和复盘机制。"
+              ],
+              review: "背诵句：采购闭环的终点不是付款，而是资料归档和复盘改进；下一次采购质量取决于这一次履约证据链是否完整。"
+            }
+          ]
+        }
+      ],
+      sources: [
+        ["深圳市龙岗区事业单位2026年公开招聘高层次人才公告", "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html"],
+        ["中华人民共和国政府采购法", "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm"],
+        ["中华人民共和国政府采购法实施条例", "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm"],
+        ["政府采购需求管理办法", "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm"],
+        ["行政事业性国有资产管理条例", "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm"],
+        ["行政事业单位内部控制规范（试行）", "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm"],
+        ["深圳市行政事业单位国有资产处置办法", "https://szfb.sz.gov.cn/gkmlpt/content/11/11073/post_11073202.html"],
+        ["中华人民共和国食品安全法", "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817ab22e0c017abd8d85a205f1&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8%E6%B3%95&type="],
+        ["党政机关公务用车管理办法", "https://www.gov.cn/gongbao/content/2018/content_5254302.htm"],
+        ["党政机关办公用房管理办法", "https://www.gov.cn/gongbao/content/2018/content_5254301.htm"],
+        ["机关事务管理条例", "https://www.gov.cn/gongbao/content/2012/content_2182742.htm"],
+        ["深圳市限额以下小型工程和零星作业安全生产纳管办法", "https://www.sz.gov.cn/szsrmzfxxgk/zc/gfxwj/szfgfxwj/content/post_12360862.html"],
+        ["中华人民共和国安全生产法", "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817a66b816017a7956b7db0ad4&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E6%B3%95&type="],
+        ["政府投资条例", "https://www.gov.cn/zhengce/zhengceku/2019-05/05/content_5388798.htm"]
+      ]
+    };
+
+    appData.days.push({
+      id: 5,
+      date: "2026-06-14",
+      title: "固定资产全生命周期与盘点整改",
+      subtitle: "把固定资产从“买了登记”提升到“配置有依据、使用有责任、处置有审批、差异有整改”。",
+      summary: {
+        core: [
+          "固定资产管理的主线是安全完整、配置合理、使用高效、处置规范。",
+          "资产管理不能只看台账数字，必须做到资产配置、采购验收、入账登记、领用交接、盘点整改、报废处置全流程闭环。",
+          "盘点差异不是简单改账，而是倒查采购、领用、调拨、维修、报废和人员交接中的管理漏洞。"
+        ],
+        frameworks: [
+          "生命周期七环节：配置、采购、验收、登记、使用、盘点、处置。",
+          "盘点整改四步：核实差异、查明原因、分类处理、建制防复发。",
+          "资产管理三相符：账账相符、账卡相符、账实相符。"
+        ],
+        review: [
+          "新增资产先看存量和配置标准，能调剂优先调剂，确需购置再走预算和采购。",
+          "资产处置不能口头报废，必须按权限审批、实物交接、数据清除、账务核销。",
+          "人员调动、科室调整、维修外送、临时借用，都是固定资产流失和账实不符高发点。"
+        ]
+      },
+      questions: [
+        {
+          type: ["结构化", "资产管理"],
+          title: "你如何理解固定资产全生命周期管理？它和综合管理岗有什么关系？",
+          prompt: "考点：资产配置、使用、盘点、处置和岗位职责认知。",
+          answer: [
+            "我理解固定资产全生命周期管理，是对资产从配置申请、预算采购、验收入账、登记贴标、领用使用、维修调拨、盘点清查到报废处置的全过程管理。它不是简单登记资产台账，而是确保国有资产安全完整、配置合理、使用高效、处置规范。",
+            "这个岗位承担固定资产管理、政府采购、办公场所和日常财务等职责，固定资产正好处在这些职责的交叉点。比如购置电脑涉及采购和预算，验收入账涉及财务和资产台账，领用交接涉及科室责任，报废处置涉及审批和国有资产安全。如果任一环节不闭合，就可能造成闲置浪费、账实不符、国有资产流失或审计风险。",
+            "如果我负责这项工作，会建立一套全流程台账和责任链：购置前先查存量和配置标准，购置后及时验收、入账、贴标，使用中明确领用人和保管责任，定期盘点并整改差异，处置时严格审批和资料归档，最终实现账账相符、账卡相符、账实相符。"
+          ],
+          explanation: [
+            "这道题先考岗位认知。不要把固定资产说成仓库管理，而要上升到国有资产安全、财政资金绩效和机关运行保障。",
+            "高分答案要体现全生命周期，不要只讲盘点或报废某一个环节。"
+          ],
+          knowledge: [
+            "固定资产全生命周期包括配置、采购、验收、登记、使用、维护、盘点、处置。",
+            "行政事业性国有资产属于国家所有，单位要维护资产安全完整并提高使用效益。",
+            "资产管理目标是账账相符、账卡相符、账实相符、责任可追。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "行政事业性国有资产管理条例",
+              url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+              note: "用于支撑行政事业性国有资产管理应维护资产安全完整、提高使用效益。"
+            },
+            {
+              kind: "政策文件",
+              title: "行政事业单位内部控制规范（试行）",
+              url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+              note: "用于支撑资产管理、采购、收支和合同等经济活动应建立内控流程。"
+            },
+            {
+              kind: "理论方法",
+              title: "全生命周期管理",
+              note: "用于把资产从购置到处置串成可追踪、可评价、可整改的闭环。"
+            }
+          ],
+          pitfalls: [
+            "只说登记台账，没有讲配置、使用、处置。",
+            "只从方便办公角度回答，没有国有资产安全意识。",
+            "没有把固定资产与采购、财务、内控联系起来。"
+          ],
+          review: "背诵句：固定资产管理不是资产登记，而是从配置到处置的国有资产安全闭环。"
+        },
+        {
+          type: ["业务流程", "新购资产"],
+          title: "街道新购一批办公电脑，从采购完成到投入使用，你会如何办理资产管理手续？",
+          prompt: "考点：验收、入账、贴标、领用、责任登记。",
+          answer: [
+            "采购完成后，我不会把电脑直接发给使用科室，而是先完成验收和资产登记。第一，对照采购合同、供货清单和技术参数进行验收，核对数量、型号、配置、序列号、随机资料、质保和售后服务。第二，验收合格后办理入库和资产登记，将资产名称、规格型号、数量、金额、购置日期、资金来源、供应商、使用年限、保管部门等录入资产台账。",
+            "第三，给每台电脑粘贴资产标签，做到一物一码，并将资产编号与设备序列号对应。第四，办理领用手续，由使用科室和具体使用人签字确认，明确保管责任和使用地点。第五，同步将验收报告、发票、合同、付款资料和领用单归入项目档案，确保资产账、财务账和实物管理一致。",
+            "如果涉及涉密或敏感业务电脑，还要按照信息安全和保密要求配置、交接和后续维护，防止资产管理和信息安全脱节。"
+          ],
+          explanation: [
+            "这道题考实操流程。资产购置结束不等于资产管理结束，验收、入账、贴标、领用缺一不可。",
+            "回答要体现资产实物管理与财务入账、政府采购档案之间的衔接。"
+          ],
+          knowledge: [
+            "新购资产应先验收，后登记入账，再贴标领用。",
+            "资产编号应与实物、台账、财务凭证和领用责任对应。",
+            "资产档案应包括合同、验收、发票、付款、入账和领用资料。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "行政事业性国有资产管理条例",
+              url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+              note: "用于支撑单位应加强资产配置、使用和处置管理，维护资产安全完整。"
+            },
+            {
+              kind: "政策文件",
+              title: "中华人民共和国政府采购法",
+              url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+              note: "用于支撑采购人应组织履约验收，验收文件属于采购文件归档内容。"
+            },
+            {
+              kind: "理论方法",
+              title: "一物一码、责任到人",
+              note: "用于把资产编号、实物状态、领用人和保管地点关联起来。"
+            }
+          ],
+          pitfalls: [
+            "电脑到货后直接发放，不做验收入账。",
+            "只录总数，不记录序列号和具体领用人。",
+            "资产台账和财务凭证、采购档案脱节。"
+          ],
+          review: "背诵句：新购资产要先验收、再入账、再贴标、再领用，最终让每一台设备都有编号、地点和责任人。"
+        },
+        {
+          type: ["业务案例", "资产配置"],
+          title: "某科室申请新增打印机，但你发现仓库和其他科室有闲置打印机。你怎么处理？",
+          prompt: "考点：配置标准、存量优先、调剂共享、节约财政资金。",
+          answer: [
+            "我会先核实申请的必要性，但不会直接进入采购。资产配置应当结合存量资产、配置标准、实际需求和财政承受能力综合判断。既然已有闲置打印机，就应优先考虑调剂共享，而不是新增购置。",
+            "具体处理上，第一，核对申请科室的业务需求、打印量、设备位置和使用频次，判断是否确需单独配置。第二，盘点闲置打印机的型号、状态、维修成本、耗材兼容性和可用年限。第三，如果闲置设备可正常使用或维修后能满足需要，应办理内部调剂手续，更新资产台账、使用地点和保管责任人。第四，如果闲置设备不能满足需要，再结合配置标准、预算和采购程序提出购置意见。",
+            "同时，我会建立闲置资产清单，定期向各科室发布可调剂资产信息，减少重复购置，提高财政资金使用效益。"
+          ],
+          explanation: [
+            "这道题的关键词是“先看存量”。固定资产配置不能只按科室申请办，要体现资源统筹。",
+            "高分答案要说出调剂手续和台账更新，否则只是口头借用。"
+          ],
+          knowledge: [
+            "新增资产配置应坚持必要、节约、适用原则。",
+            "有可用存量资产时，应优先调剂共享，减少重复购置。",
+            "资产调剂后必须更新台账、使用地点和保管责任。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "行政事业性国有资产管理条例",
+              url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+              note: "用于支撑资产配置应厉行节约、讲求绩效，合理配置资产。"
+            },
+            {
+              kind: "政策文件",
+              title: "中央行政单位通用办公设备家具配置标准",
+              url: "https://m.mof.gov.cn/czxw/201606/t20160617_2329749.htm",
+              note: "用于参考办公设备家具配置数量、价格和最低使用年限等标准化管理思路。"
+            },
+            {
+              kind: "理论方法",
+              title: "存量优先、资源共享",
+              note: "用于把资产配置从单个科室需求转向机关整体资源统筹。"
+            }
+          ],
+          pitfalls: [
+            "只看科室申请，不查存量资产。",
+            "调剂后不改台账，导致账实不符。",
+            "把闲置资产长期放在仓库，不做盘活。"
+          ],
+          review: "背诵句：新增资产前先查存量，能调剂不采购，能共享不重复配置。"
+        },
+        {
+          type: ["业务案例", "资产标签"],
+          title: "盘点中发现部分资产标签脱落，台账型号与实物型号也不完全一致，你如何处理？",
+          prompt: "考点：账卡实一致、复核校正、盘点留痕。",
+          answer: [
+            "我会把这类问题作为资产基础信息不准确处理，不能简单重新贴一个标签了事。第一，逐项核对资产名称、规格型号、序列号、购置时间、金额、使用地点、领用人和保管部门，确认实物与原始采购验收资料是否一致。第二，对标签脱落但实物可确认的资产，重新制作并粘贴标签，同时更新盘点记录。第三，对台账型号与实物型号不一致的，要查明是登记错误、采购验收录入错误、调拨未更新，还是实物被替换。",
+            "处理结果要分类记录。属于登记错误的，按审批流程更正资产卡片；属于调拨、维修或替换未登记的，补齐相关手续；如果存在资产被私自替换、损毁或遗失迹象，应进一步调查并报告。",
+            "事后要完善资产标签管理和盘点机制，例如要求资产移动、维修外送、人员交接时同步核对标签和台账，避免基础数据长期失真。"
+          ],
+          explanation: [
+            "标签问题看似小，实质是资产身份识别问题。资产编号、实物和台账对不上，后续盘点和责任追溯都会失效。",
+            "答案要体现核实原始资料、分类更正和制度改进。"
+          ],
+          knowledge: [
+            "资产标签是连接实物、台账和责任人的关键标识。",
+            "型号不一致要查原因，不能直接按现状改台账。",
+            "台账更正应有依据、有审批、有记录。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "行政事业单位资产清查核实管理办法",
+              url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2016/wg201604/201608/t20160812_2387074.htm",
+              note: "用于支撑资产清查应进行账务清理、财产清查，真实反映资产占有使用状况。"
+            },
+            {
+              kind: "政策文件",
+              title: "行政事业单位内部控制规范（试行）",
+              url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+              note: "用于支撑资产管理应通过记录控制、实物控制和定期盘点防范风险。"
+            },
+            {
+              kind: "理论方法",
+              title: "资产主数据治理",
+              note: "用于提升资产名称、型号、编号、责任人等基础信息准确性。"
+            }
+          ],
+          pitfalls: [
+            "看到标签掉了就直接补贴，不核对实物身份。",
+            "台账与实物不一致就按实物随意改账。",
+            "不查调拨、维修、替换等原因。"
+          ],
+          review: "背诵句：标签脱落是表象，核心是确认资产身份，做到编号、实物、台账、责任人一致。"
+        },
+        {
+          type: ["业务案例", "盘点整改"],
+          title: "年度盘点发现“账有物无”和“物有账无”同时存在，你如何组织整改？",
+          prompt: "考点：资产清查、差异分类、责任追溯、账务处理。",
+          answer: [
+            "我会先封存盘点差异清单，组织资产管理、财务、使用科室共同复核，避免盘点结果未经核实就直接改账。对“账有物无”，重点核查是否存在调拨未登记、维修外送、人员离岗未交接、报废未核销、借用未归还或遗失损毁。对“物有账无”，重点核查是否是采购未入账、捐赠未登记、调拨接收未办理、历史遗留或低值资产误列。",
+            "整改上，第一，逐项查明原因并取得证据材料。第二，能找回实物的，补充使用地点和责任人；手续缺失的，补办调拨、领用、维修、接收等手续；确属遗失、毁损、报废或损失的，按权限报批后处置或核销。第三，涉及财务账调整的，要与财务部门协同处理，确保资产账和财务账一致。第四，对责任问题进行提醒、整改或追责。",
+            "最后形成盘点整改报告，列明差异金额、原因、整改措施、责任部门和完成时限，并完善人员交接、资产移动、维修外送和报废审批流程。"
+          ],
+          explanation: [
+            "盘点差异不能简单理解为“找不到就核销、有实物就补账”。每一类差异背后都有不同原因和处理路径。",
+            "高分答案要体现资产、财务、使用科室协同。"
+          ],
+          knowledge: [
+            "账有物无常见原因：调拨未登记、维修外送、报废未核销、人员交接缺失、遗失毁损。",
+            "物有账无常见原因：采购未入账、接收未登记、捐赠未确认、历史遗留。",
+            "盘点整改要查因、取证、审批、调账、追责、建制。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "行政事业单位资产清查核实管理办法",
+              url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2016/wg201604/201608/t20160812_2387074.htm",
+              note: "用于支撑资产清查核实应真实反映资产状况，并依法认定资产损溢。"
+            },
+            {
+              kind: "政策文件",
+              title: "深圳市行政事业单位国有资产处置办法",
+              url: "https://szfb.sz.gov.cn/gkmlpt/content/11/11073/post_11073202.html",
+              note: "用于支撑资产损失核销、报废等处置事项应按程序办理。"
+            },
+            {
+              kind: "理论方法",
+              title: "差异分类整改法",
+              note: "把盘点差异按原因分类处理，而不是一刀切改账。"
+            }
+          ],
+          pitfalls: [
+            "未复核原因就直接调整台账。",
+            "只要求资产管理员整改，不让使用科室和财务参与。",
+            "没有形成整改报告和制度改进。"
+          ],
+          review: "背诵句：盘点差异处理的顺序是先核实、再分类、再审批、再调账，最后追责和建制。"
+        },
+        {
+          type: ["情景处置", "人员交接"],
+          title: "某工作人员调离岗位后，原领用的笔记本电脑没有及时交回，科室说一时联系不上。你怎么办？",
+          prompt: "考点：领用责任、离岗交接、资产追收。",
+          answer: [
+            "我会先核实该笔记本电脑的资产编号、领用记录、使用人、科室负责人和当前状态，不能因为人员调离就让资产处于失管状态。第一，联系原使用人和原科室，要求按领用责任及时交回或办理移交。第二，向科室负责人发出资产交接提醒，明确科室对本部门资产保管和交接负有管理责任。第三，如果电脑确因工作需要继续由新岗位使用，应按程序办理调拨或重新领用，不得私下带走。",
+            "如果多次催收仍不能交回，应形成书面记录，报告分管领导和相关部门，按制度启动追收、责任认定或损失处理程序。涉及设备中的工作数据、敏感信息或账号权限，还要同步做好信息安全处理，防止资产流失和数据泄露叠加发生。",
+            "事后要把离岗资产交接纳入人员调动流程，做到人事变动、账号注销、资产交回、资料移交同步办理。"
+          ],
+          explanation: [
+            "人员离岗是固定资产流失高发场景。不能只找个人，也要压实科室管理责任。",
+            "高分答案要把资产交接和信息安全一起考虑。"
+          ],
+          knowledge: [
+            "领用资产应明确使用人和保管责任。",
+            "人员调动、离职、退休应办理资产交接。",
+            "笔记本电脑等信息设备还涉及数据、账号和保密风险。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "行政事业性国有资产管理条例",
+              url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+              note: "用于支撑单位应维护行政事业性国有资产安全完整。"
+            },
+            {
+              kind: "政策文件",
+              title: "行政事业单位内部控制规范（试行）",
+              url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+              note: "用于支撑岗位变动、资产保管、授权审批和记录控制等内控要求。"
+            },
+            {
+              kind: "理论方法",
+              title: "离岗交接清单",
+              note: "将资产、资料、账号、权限和工作事项同步纳入交接。"
+            }
+          ],
+          pitfalls: [
+            "只说联系本人，不压实科室责任。",
+            "允许资产随人跨部门使用但不办理调拨。",
+            "忽视笔记本电脑中的数据和账号风险。"
+          ],
+          review: "背诵句：人员变动必须资产跟着交接，不能让国有资产随个人流动而失管。"
+        },
+        {
+          type: ["综合分析", "闲置盘活"],
+          title: "机关有一批长期闲置办公家具和设备，你认为应如何盘活？",
+          prompt: "考点：闲置资产、调剂共享、处置审批、节约绩效。",
+          answer: [
+            "我会先区分“可用闲置”和“确无使用价值”两类资产，不能一闲置就报废，也不能长期堆放。第一，组织清点闲置资产，登记品名、数量、规格、状态、购置时间、账面价值、存放地点和可用情况。第二，对仍可使用的资产，优先在街道内部科室之间调剂；内部暂无需求的，可按上级或区级资产调剂共享机制统筹利用。第三，对需要维修后可用的，比较维修成本和继续使用价值，合理安排维修或调剂。",
+            "对于确实无法使用、无维修价值、达到处置条件的资产，应按规定履行报废、转让、无偿划转或损失核销等处置程序，不能自行丢弃或私自处理。处置前后要做好实物交接、审批资料、处置收入管理、台账调整和财务处理。",
+            "长期看，我会建立闲置资产定期公示和盘活台账，把闲置率、调剂利用率、处置完成率作为资产管理复盘指标，减少重复购置和空间占用。"
+          ],
+          explanation: [
+            "闲置资产题要体现“先盘活、再处置”。资产闲置本身并不等于报废。",
+            "高分答案要讲出分类处理和绩效意识。"
+          ],
+          knowledge: [
+            "闲置资产优先调剂共享，提高资产使用效益。",
+            "达到处置条件的资产，应按权限审批后规范处置。",
+            "资产盘活要有台账指标，防止长期占用空间。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "行政事业性国有资产管理条例",
+              url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+              note: "用于支撑行政事业性国有资产应合理配置、有效使用、规范处置。"
+            },
+            {
+              kind: "政策文件",
+              title: "深圳市行政事业单位国有资产处置办法",
+              url: "https://szfb.sz.gov.cn/gkmlpt/content/11/11073/post_11073202.html",
+              note: "用于支撑闲置资产、无法维修或无维修价值资产等应按规定处置。"
+            },
+            {
+              kind: "理论方法",
+              title: "资产盘活绩效管理",
+              note: "用闲置率、调剂利用率和处置完成率评价盘活效果。"
+            }
+          ],
+          pitfalls: [
+            "闲置资产直接报废。",
+            "长期堆放不盘点、不调剂。",
+            "处置后不调整台账和财务账。"
+          ],
+          review: "背诵句：闲置资产先盘点分类，再调剂共享，最后才是按程序处置。"
+        },
+        {
+          type: ["业务案例", "报废处置"],
+          title: "一批老旧电脑拟报废处置，你会如何办理？特别是如何处理数据安全？",
+          prompt: "考点：报废审批、数据清除、实物处置、账务核销。",
+          answer: [
+            "我会先核实是否符合报废条件。老旧并不必然等于可以报废，需要查看购置时间、最低使用年限、故障情况、维修价值、使用需求和专业鉴定意见。对确需报废的电脑，第一，形成报废申请和清单，列明资产编号、型号、数量、原值、净值、使用部门、现状和报废原因。第二，按规定履行内部审核和资产处置审批程序。",
+            "数据安全是电脑报废的重点。处置前应由信息化或专业人员对硬盘、存储介质进行数据清除、格式化、物理销毁或安全移交，并形成数据清除记录。涉及敏感数据、账号、软件授权的，要同步注销账号、解除绑定和回收授权，防止信息泄露。",
+            "审批完成后，按规定组织实物移交、回收或处置，取得处置凭证；涉及残值收入的，按规定管理。最后由资产和财务部门同步调整资产台账和财务账，并将审批、鉴定、数据清除、实物交接和处置凭证归档。"
+          ],
+          explanation: [
+            "电脑报废题很容易漏掉数据安全。对信息设备来说，资产处置和信息安全必须同步。",
+            "高分答案要讲出报废条件、审批、数据清除、实物交接、账务核销。"
+          ],
+          knowledge: [
+            "资产报废应符合处置条件并按权限审批。",
+            "信息设备处置前必须处理数据、账号、软件授权和存储介质。",
+            "处置完成后要同步调整资产台账和财务账。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "深圳市行政事业单位国有资产处置办法",
+              url: "https://szfb.sz.gov.cn/gkmlpt/content/11/11073/post_11073202.html",
+              note: "用于支撑报废、损失核销等国有资产处置应符合条件并按程序办理。"
+            },
+            {
+              kind: "政策文件",
+              title: "行政事业性国有资产管理条例",
+              url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+              note: "用于支撑国有资产处置应遵循公开、公平、公正和竞争择优等原则。"
+            },
+            {
+              kind: "理论方法",
+              title: "信息资产处置安全",
+              note: "用于把数据清除、账号注销、介质销毁纳入实物报废流程。"
+            }
+          ],
+          pitfalls: [
+            "只看设备老旧，不核实报废条件。",
+            "电脑报废前不清除数据。",
+            "实物处理后没有处置凭证和账务核销。",
+            "残值收入处理不规范。"
+          ],
+          review: "背诵句：电脑报废不是搬走旧设备，而是报废审批、数据清除、实物处置和账务核销同步完成。"
+        },
+        {
+          type: ["业务案例", "捐赠调拨"],
+          title: "上级部门调拨或社会捐赠一批设备给街道使用，是否可以直接发放？你如何管理？",
+          prompt: "考点：资产取得方式、验收入账、权属和用途管理。",
+          answer: [
+            "不能直接发放。调拨或捐赠形成的设备同样属于需要纳入管理的资产，应先核实来源、权属、用途和接收条件，再办理验收、登记和领用手续。",
+            "具体上，第一，取得调拨文件、捐赠协议或接收通知，明确资产名称、数量、规格、价值、权属、用途限制和移交时间。第二，组织验收，核对设备状态、数量、配件和资料；对不符合使用要求或存在安全隐患的，及时反馈。第三，按规定确认资产价值并登记入账，建立资产卡片、粘贴标签，明确使用科室和保管责任。第四，如果捐赠或调拨文件对用途有要求，应按约定用途使用，不得随意改变。第五，将接收、验收、入账、领用资料归档。",
+            "这样既能保证设备尽快发挥作用，也能避免资产来源不清、账外资产和责任不明。"
+          ],
+          explanation: [
+            "资产来源不只有采购，也包括调拨、划转、置换、捐赠等。只要形成单位控制支配的资产，就要纳入台账和内控。",
+            "高分答案要体现权属、价值确认和用途约束。"
+          ],
+          knowledge: [
+            "行政事业性国有资产取得方式包括财政资金形成、调拨划转、置换、捐赠等。",
+            "非采购取得的资产也要验收、登记、入账、贴标、领用。",
+            "有用途限制的资产应按约定用途使用。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "行政事业性国有资产管理条例",
+              url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+              note: "用于支撑调拨、划转、置换、捐赠等方式取得或形成的资产属于行政事业性国有资产。"
+            },
+            {
+              kind: "政策文件",
+              title: "行政事业单位内部控制规范（试行）",
+              url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+              note: "用于支撑资产取得、验收、登记和使用应纳入内部控制。"
+            },
+            {
+              kind: "理论方法",
+              title: "账外资产治理",
+              note: "用于防止非采购来源资产未入账、未贴标、责任不清。"
+            }
+          ],
+          pitfalls: [
+            "调拨或捐赠设备直接发放，不入账。",
+            "不核实权属和用途限制。",
+            "不确认价值，形成账外资产。"
+          ],
+          review: "背诵句：不管资产来自采购、调拨还是捐赠，只要单位控制使用，就要验收、入账、贴标和明确责任。"
+        },
+        {
+          type: ["方案设计", "资产台账"],
+          title: "如果让你设计固定资产管理台账和盘点整改闭环，你会怎么设计？",
+          prompt: "考点：台账字段、风险预警、整改闭环。",
+          answer: [
+            "我会把固定资产台账设计为“基础信息、使用责任、状态变化、盘点整改”四类字段。基础信息包括资产编号、资产名称、分类、规格型号、序列号、取得方式、购置或接收日期、原值、资金来源、供应商或调拨来源、预计使用年限。使用责任包括使用科室、使用人、保管人、存放地点、领用日期、联系方式和科室负责人。状态变化包括调拨、维修、借用、归还、闲置、报废申请、处置审批和账务核销。",
+            "盘点整改字段包括盘点日期、盘点人员、盘点结果、差异类型、差异原因、整改责任人、整改措施、完成时限、复核结果和归档编号。预警点包括未贴标、长期闲置、超年限仍在用、账实不符、人员调离未交接、维修外送超期、报废申请久拖未办、资产处置后未核销。",
+            "闭环上，我会按季度抽盘、年度全盘，形成差异清单；对差异实行红黄绿管理，红色为疑似遗失、账外资产、未审批处置，黄色为标签缺失、地点不准、手续待补，绿色为正常。整改完成后由资产管理和使用科室共同复核，并把问题反向纳入领用、交接、调拨和报废制度。"
+          ],
+          explanation: [
+            "这道题是 Day 5 的综合题。要从字段设计说到预警和整改，不要只列资产名称、金额、使用人。",
+            "高分答案要体现数据化管理能力，也要体现盘点整改不是一次性任务。"
+          ],
+          knowledge: [
+            "资产台账应覆盖身份信息、价值信息、责任信息、状态变化和整改记录。",
+            "盘点闭环包括盘点、差异、整改、复核、归档、制度优化。",
+            "红黄绿预警可以帮助区分重大风险、一般问题和正常资产。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "行政事业单位资产清查核实管理办法",
+              url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2016/wg201604/201608/t20160812_2387074.htm",
+              note: "用于支撑资产清查核实、账务清理、财产清查和损溢认定。"
+            },
+            {
+              kind: "政策文件",
+              title: "行政事业单位内部控制规范（试行）",
+              url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+              note: "用于支撑资产管理应建立定期清查盘点、账实核对和责任追究机制。"
+            },
+            {
+              kind: "理论方法",
+              title: "风险预警台账、PDCA闭环",
+              note: "用于把盘点差异转化为持续整改和制度优化。"
+            }
+          ],
+          pitfalls: [
+            "台账只记录名称、金额、使用部门。",
+            "没有状态变化和盘点整改字段。",
+            "盘点后只改表格，不做复核和制度优化。"
+          ],
+          review: "背诵句：好的资产台账不是静态清单，而是能显示资产身份、使用责任、状态变化和整改进度的管理工具。"
+        }
+      ]
+    });
+
+    appData.sources.push(
+      ["行政事业单位资产清查核实管理办法", "https://www.mof.gov.cn/gkml/caizhengwengao/wg2016/wg201604/201608/t20160812_2387074.htm"],
+      ["中央行政单位通用办公设备家具配置标准", "https://m.mof.gov.cn/czxw/201606/t20160617_2329749.htm"]
+    );
+
+    appData.days.push({
+      id: 6,
+      date: "2026-06-15",
+      title: "政府物业、办公用房与物业服务监管",
+      subtitle: "把办公场所管理从“安排房间、联系物业”提升到权属清楚、面积合规、服务可考核、安全有闭环。",
+      summary: {
+        core: [
+          "办公用房管理的核心是统一规划、权属清楚、配置合规、使用节约、监督到位。",
+          "政府物业和办公场所不是普通场地管理，背后涉及国有资产、机关事务、运行成本和安全责任。",
+          "物业服务监管不能只靠投诉推动，要靠合同标准、巡查台账、考核扣分、整改复查形成闭环。"
+        ],
+        frameworks: [
+          "办公用房五查：权属、面积、用途、闲置、维修安全。",
+          "物业监管五看：人员到岗、服务质量、维修响应、安全巡查、投诉整改。",
+          "整改闭环五步：发现问题、登记派单、限时处理、复查评价、考核归档。"
+        ],
+        review: [
+          "科室申请增加房间，先核定标准和存量，不能谁申请就谁占用。",
+          "超标准、闲置、改变用途、私自借用，是办公用房管理高频风险。",
+          "物业问题要用合同和服务标准处理，不能只做口头协调。"
+        ]
+      },
+      questions: [
+        {
+          type: ["结构化", "岗位认知"],
+          title: "你如何理解政府物业和办公用房管理？它与综合管理岗有什么关系？",
+          prompt: "考点：机关事务、国有资产、办公秩序和服务保障。",
+          answer: [
+            "我理解政府物业和办公用房管理，不是简单分配办公室、联系物业维修，而是对机关办公场所、房屋资产、运行服务和安全秩序进行规范管理。它既涉及党政机关办公用房使用标准，也涉及行政事业性国有资产安全完整，还关系到街道机关日常运转效率。",
+            "综合管理岗承担政府物业管理、办公场所管理、会务服务和后勤保障职责，办公用房和物业服务正是机关运行保障的基础。房屋使用不规范，可能造成超标准占用、闲置浪费、权属不清和安全隐患；物业服务不到位，可能影响办公秩序、干部体验和群众办事环境。",
+            "如果我负责这项工作，会从三条线推进：一是建台账，摸清房屋权属、面积、用途、使用部门和物业合同；二是守标准，严格办公用房配置、调配和调整审批；三是抓监管，对保洁、安保、维修、消防、绿化等物业事项建立巡查、派单、复查和考核闭环。"
+          ],
+          explanation: [
+            "这道题考岗位理解。不要把物业和办公用房答成普通后勤，而要体现国有资产、机关事务和安全运行。",
+            "高分答案要把“房屋空间”和“物业服务”分开讲，再用台账和监管闭环连接。"
+          ],
+          knowledge: [
+            "办公用房管理强调统一规划、统一权属、统一配置、统一处置。",
+            "政府物业属于机关运行保障和国有资产管理交叉领域。",
+            "物业服务监管要以合同、服务标准和考核记录为依据。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "党政机关办公用房管理办法",
+              url: "https://www.gov.cn/gongbao/content/2018/content_5254301.htm",
+              note: "用于支撑办公用房应统一规划、统一权属、统一配置、统一处置等管理要求。"
+            },
+            {
+              kind: "政策文件",
+              title: "机关事务管理条例",
+              url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+              note: "用于支撑机关事务应保障机关正常运行，降低运行成本，建设节约型机关。"
+            },
+            {
+              kind: "理论方法",
+              title: "机关运行保障、资产空间治理",
+              note: "用于把办公用房和物业服务从事务安排上升到资源配置和治理能力。"
+            }
+          ],
+          pitfalls: [
+            "只说修水电、搞卫生，没有讲办公用房标准和国有资产属性。",
+            "只讲空间分配，不讲物业服务质量监管。",
+            "没有提出台账、巡查和考核闭环。"
+          ],
+          review: "背诵句：政府物业和办公用房管理，本质是用制度管空间、用合同管服务、用台账管责任。"
+        },
+        {
+          type: ["业务案例", "办公用房配置"],
+          title: "某科室因人员增加申请新增两间办公室，你如何处理？",
+          prompt: "考点：办公用房配置标准、存量调剂、审批程序。",
+          answer: [
+            "我会先核实申请依据，不能因科室提出需求就直接安排房间。第一，核对该科室现有人数、岗位性质、现有办公面积、已配置房间和实际使用效率，判断是否确有新增需求。第二，对照办公用房配置标准和本单位存量房源，判断是否存在超标准、空置、低效使用或可以共享的会议室、储物间、工位资源。",
+            "如果确需调整，我会优先通过内部调剂解决，形成房间调整方案，明确调整前后面积、使用部门、用途、人员和腾退安排，并按单位内部审批程序办理。若涉及改变用途、重大调整或权属管理事项，应按规定报批或备案。",
+            "同时，我会提醒科室，办公用房配置要坚持从严从紧、节约集约，不能把短期人员增加变成长期占用空间。调整完成后要更新办公用房台账、门牌、平面图和物业服务范围。"
+          ],
+          explanation: [
+            "办公用房题的核心是标准和存量。考官会看你是否有资源统筹意识，而不是被科室需求牵着走。",
+            "高分答案要讲核实、对标、调剂、审批、更新台账。"
+          ],
+          knowledge: [
+            "办公用房配置应符合标准，严禁超标准占用。",
+            "新增需求应先看存量和调剂，不应直接扩大占用。",
+            "房间调整后应同步更新台账、用途和责任信息。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "党政机关办公用房管理办法",
+              url: "https://www.gov.cn/gongbao/content/2018/content_5254301.htm",
+              note: "用于支撑办公用房配置、调剂、使用和监督管理要求。"
+            },
+            {
+              kind: "政策文件",
+              title: "机关事务管理条例",
+              url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+              note: "用于支撑机关运行保障应厉行节约、降低运行成本。"
+            },
+            {
+              kind: "理论方法",
+              title: "存量优先、空间绩效",
+              note: "用于把房间申请转化为办公资源统筹配置问题。"
+            }
+          ],
+          pitfalls: [
+            "科室申请就直接安排房间。",
+            "只看人数，不查现有面积和使用效率。",
+            "调整后不更新台账和物业服务范围。"
+          ],
+          review: "背诵句：办公用房新增需求要先核标准、查存量、做调剂、走审批，不能把空间管理变成先占先得。"
+        },
+        {
+          type: ["业务案例", "超标准整改"],
+          title: "检查发现个别办公室面积偏大、部分房间长期闲置，你如何整改？",
+          prompt: "考点：超标准占用、闲置清理、整改闭环。",
+          answer: [
+            "我会先全面核实情况，不能只看单个房间。第一，依据办公用房台账和平面图，核对各科室实际使用面积、人员数量、房间用途和闲置情况。第二，对疑似超标准或闲置房间进行现场核查，拍照留痕，确认是否存在一人多间、办公用房改作接待室或储物间、会议室长期被科室占用等问题。",
+            "整改上，按照分类处理原则推进。对超标准占用的，提出腾退或合并办公方案；对长期闲置的，纳入统一调剂；对用途改变的，恢复原用途或按程序审批；对确因业务特殊需要保留的，要求提供依据并履行审批。整改过程中要明确责任部门、完成时限和复查要求。",
+            "整改完成后，更新办公用房台账、平面图和物业服务清单，并形成整改报告。后续通过定期巡查、年度核查和动态调整，防止问题反弹。"
+          ],
+          explanation: [
+            "这道题重点在“分类整改”。不能一刀切收回，也不能只做口头提醒。",
+            "高分答案要体现现场核查、证据留痕、腾退调剂和台账更新。"
+          ],
+          knowledge: [
+            "超标准占用和长期闲置都是办公用房管理重点风险。",
+            "整改要分类处理：腾退、调剂、恢复用途、审批说明。",
+            "整改完成后要台账和平面图同步更新。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "党政机关办公用房管理办法",
+              url: "https://www.gov.cn/gongbao/content/2018/content_5254301.htm",
+              note: "用于支撑办公用房使用监督、清理整改和规范配置要求。"
+            },
+            {
+              kind: "政策文件",
+              title: "行政事业性国有资产管理条例",
+              url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+              note: "用于支撑行政事业性国有资产应合理使用、提高效益。"
+            },
+            {
+              kind: "理论方法",
+              title: "问题清单、整改销号",
+              note: "用于把超标准和闲置问题变成可追踪的整改任务。"
+            }
+          ],
+          pitfalls: [
+            "只发通知，不现场核查。",
+            "整改后不更新平面图和台账。",
+            "没有防止反弹的复查机制。"
+          ],
+          review: "背诵句：办公用房整改要用台账摸底、现场核实、分类处置、销号复查，不能只停留在口头清理。"
+        },
+        {
+          type: ["业务流程", "房屋台账"],
+          title: "如果让你建立政府物业和办公用房台账，你会设置哪些字段？",
+          prompt: "考点：权属、面积、用途、使用责任和动态管理。",
+          answer: [
+            "我会把台账分为房屋基础信息、使用信息、管理信息和风险信息四类。基础信息包括房屋名称、地址、权属来源、产权或使用证明、建筑面积、使用面积、楼层房号、平面图编号、取得方式和资产编号。使用信息包括使用科室、实际用途、使用人数、办公面积、会议或仓储面积、负责人、联系电话和使用起止时间。",
+            "管理信息包括物业服务单位、服务范围、合同期限、维修责任、消防责任、能耗账户、钥匙管理、门禁权限、巡查频次和档案编号。风险信息包括是否超标准、是否闲置、是否改变用途、是否存在权属不清、是否有安全隐患、是否有历史维修问题、是否纳入整改清单。",
+            "台账要动态更新。房间调整、人员变化、维修改造、物业合同变更、安全隐患整改后，都要及时更新台账，确保房屋空间、物业服务和安全责任一致。"
+          ],
+          explanation: [
+            "这道题考执行力。办公用房台账不是只写房号和面积，而要支撑调配、监管、安全和维修。",
+            "字段设计越贴近日常管理，越能体现岗位匹配度。"
+          ],
+          knowledge: [
+            "办公用房台账应覆盖权属、面积、用途、使用责任、物业服务和风险状态。",
+            "房屋空间变化和人员变化都应触发台账更新。",
+            "台账是办公用房调配、检查和整改的基础。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "党政机关办公用房管理办法",
+              url: "https://www.gov.cn/gongbao/content/2018/content_5254301.htm",
+              note: "用于支撑办公用房权属、配置、使用、维修和监督等管理要求。"
+            },
+            {
+              kind: "政策文件",
+              title: "行政事业单位内部控制规范（试行）",
+              url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+              note: "用于支撑通过记录控制和定期核查防范资产管理风险。"
+            },
+            {
+              kind: "理论方法",
+              title: "空间资产台账",
+              note: "用于把房屋、人员、用途、物业和风险状态统一到一张管理表。"
+            }
+          ],
+          pitfalls: [
+            "台账只列房号和面积。",
+            "不记录使用科室、用途和安全责任。",
+            "房间调整后不动态更新。"
+          ],
+          review: "背诵句：办公用房台账要能回答四个问题：房子是谁的、谁在用、怎么用、有什么风险。"
+        },
+        {
+          type: ["业务案例", "物业服务监管"],
+          title: "物业公司保洁、安保、维修都在合同里，但干部仍频繁投诉服务不到位。你如何监管？",
+          prompt: "考点：合同监管、服务标准、考核扣分、整改复查。",
+          answer: [
+            "我会把投诉作为履约监管信号，而不是简单转给物业公司。第一，梳理投诉类型和频次，区分保洁质量、安保巡查、维修响应、服务态度、人员不到岗等问题。第二，对照物业服务合同、服务标准和考核办法，核查是否存在违约或服务不到位。第三，建立物业问题派单台账，记录问题时间、地点、责任岗位、整改时限、复查结果和满意度反馈。",
+            "监管措施上，可以开展日常巡查、随机抽查和月度考核。对一般问题要求限期整改；对反复问题约谈物业负责人并扣分扣款；对严重影响机关运行或安全的问题，按合同追究违约责任。整改后必须复查，不能以物业回复“已处理”为结束。",
+            "同时，我会复盘合同条款是否足够清晰，例如维修响应时限、保洁频次、安保巡逻路线、人员配置、考核扣分和退出机制是否明确。下一轮采购或续约时，把投诉高发点转化为更明确的服务标准。"
+          ],
+          explanation: [
+            "物业投诉题要从“协调”上升到“合同监管”。物业服务是外包服务，关键是标准、证据和考核。",
+            "高分答案要讲台账、扣分、复查和合同优化。"
+          ],
+          knowledge: [
+            "物业服务监管应以合同和服务标准为依据。",
+            "投诉处理要形成问题派单、限时整改、复查销号。",
+            "高频问题应反向优化合同条款和下一轮采购需求。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "机关事务管理条例",
+              url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+              note: "用于支撑机关后勤服务保障应加强管理、提高效率。"
+            },
+            {
+              kind: "政策文件",
+              title: "中华人民共和国政府采购法实施条例",
+              url: "https://www.gov.cn/zhengce/2015-02/27/content_2822395.htm",
+              note: "用于支撑政府采购服务合同履约和验收监管。"
+            },
+            {
+              kind: "理论方法",
+              title: "SLA服务水平协议、PDCA闭环",
+              note: "用于把保洁、安保、维修等服务转化为响应时限和考核指标。"
+            }
+          ],
+          pitfalls: [
+            "只把投诉转给物业，不做履约判断。",
+            "物业说已整改就销号，不复查。",
+            "没有把扣分扣款和合同条款结合。"
+          ],
+          review: "背诵句：物业监管要用合同定标准、用台账留证据、用考核促整改、用复查做闭环。"
+        },
+        {
+          type: ["情景处置", "维修响应"],
+          title: "办公楼突发漏水，影响多个科室办公，物业说要等第二天维修。你怎么办？",
+          prompt: "考点：应急处置、物业履约、安全风险和报告机制。",
+          answer: [
+            "我会先把漏水作为办公场所安全和机关运行保障问题处理，不能简单等待。第一，立即到现场核实漏水位置、影响范围和是否存在触电、滑倒、设备损坏风险。第二，采取临时控制措施，如断开相关电源、设置警示、转移人员和设备、安排临时办公区域。第三，要求物业按合同和应急要求立即响应，必要时联系专业维修力量先行抢修。",
+            "同时，我会向分管领导报告现场情况、影响范围和处置措施，协调受影响科室调整办公。对物业响应迟缓，要记录时间节点、沟通记录和现场照片，作为后续考核扣分或违约处理依据。",
+            "事后要查明漏水原因，是管道老化、屋面渗漏、空调排水还是维护不到位；形成维修记录和隐患整改清单，必要时对同类区域开展排查，防止反复发生。"
+          ],
+          explanation: [
+            "这道题考应急处置和物业监管结合。第一优先级是安全和机关运行，而不是合同争论。",
+            "高分答案要有现场控制、报告协调、物业追责和事后隐患排查。"
+          ],
+          knowledge: [
+            "办公场所突发问题先控安全风险，再保障机关运行。",
+            "物业应急响应要有记录和考核依据。",
+            "维修完成后要做原因分析和同类隐患排查。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "机关事务管理条例",
+              url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+              note: "用于支撑机关运行保障和服务管理职责。"
+            },
+            {
+              kind: "法律法规",
+              title: "中华人民共和国安全生产法",
+              url: "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817a66b816017a7956b7db0ad4&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%A8%E7%94%9F%E4%BA%A7%E6%B3%95&type=",
+              note: "用于支撑发现安全隐患时应及时采取措施，防止事故发生。"
+            },
+            {
+              kind: "理论方法",
+              title: "应急处置四步法",
+              note: "先控风险、保障运行、同步报告、事后复盘。"
+            }
+          ],
+          pitfalls: [
+            "完全等待物业安排，缺少现场控制。",
+            "只修漏水，不排查触电和滑倒风险。",
+            "没有记录物业响应迟缓证据。"
+          ],
+          review: "背诵句：办公楼突发故障先保安全和运转，再追合同责任，最后用隐患排查防止复发。"
+        },
+        {
+          type: ["业务案例", "用途管理"],
+          title: "某科室想把一间公共会议室长期改成本部门资料室，你如何处理？",
+          prompt: "考点：用途变更、公共资源、公平使用。",
+          answer: [
+            "我会先核实该会议室的原用途、使用频率、服务对象和科室资料存放需求。公共会议室属于机关共享办公资源，不能由单个科室长期占用并改变用途，否则会影响其他科室会议保障，也可能形成办公用房使用不规范。",
+            "处理上，第一，要求科室说明资料存放的必要性、数量、保密要求和期限。第二，查找是否有专门档案室、储物空间或闲置空间可调剂。第三，若确需临时使用，应明确期限、范围和恢复要求，并履行内部审批；若涉及长期用途变更，应按办公用房管理要求进行审批和台账更新。第四，公共会议室原则上应保持共享属性，避免被部门固化占用。",
+            "同时，我会推动建立会议室和公共空间使用规则，明确预约、临时占用、资料存放、钥匙管理和恢复责任，防止公共资源变成隐性部门资产。"
+          ],
+          explanation: [
+            "这道题考公共空间治理。会议室长期改资料室，看似小事，实质是公共资源被固定占用。",
+            "高分答案要兼顾科室真实需求和整体空间秩序。"
+          ],
+          knowledge: [
+            "办公用房用途应按规定管理，不能随意改变。",
+            "公共会议室等共享空间应保障机关整体使用效率。",
+            "临时占用要有期限、审批和恢复责任。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "党政机关办公用房管理办法",
+              url: "https://www.gov.cn/gongbao/content/2018/content_5254301.htm",
+              note: "用于支撑办公用房使用、调配和用途管理要求。"
+            },
+            {
+              kind: "政策文件",
+              title: "机关事务管理条例",
+              url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+              note: "用于支撑机关事务资源应统一管理、保障运行、厉行节约。"
+            },
+            {
+              kind: "理论方法",
+              title: "公共资源治理",
+              note: "用于防止公共会议室、储物空间被单个部门长期固化占用。"
+            }
+          ],
+          pitfalls: [
+            "为了方便科室直接同意长期占用。",
+            "只拒绝需求，不提供替代存放方案。",
+            "临时使用没有期限和恢复责任。"
+          ],
+          review: "背诵句：公共空间可以临时协调使用，但不能无审批、无期限地变成部门专属空间。"
+        },
+        {
+          type: ["数据分析", "费用能耗"],
+          title: "你发现办公楼水电费和物业维修费用连续三个月明显上升，会如何分析？",
+          prompt: "考点：费用异常、能耗管理、物业履约和节约型机关。",
+          answer: [
+            "我会先把费用上升拆成水、电、空调、公共照明、维修耗材、人工服务等类别，看是季节性因素、用房面积变化、设备故障、计量异常，还是物业维修管理问题。第一，调取近一年同期数据，比较同比和环比变化。第二，核对办公人数、加班频次、会议活动、空调使用、施工维修和新增设备情况。第三，检查水电表、分项计量和物业维修单，判断是否存在跑冒滴漏、设备老化、重复维修或虚报维修。",
+            "如果属于正常季节性或业务增加，要做好说明；如果属于浪费或管理漏洞，应提出整改，如空调温度管理、照明分区控制、漏水排查、维修审批、耗材验收和物业维修台账复核。对于维修费用异常，要抽查工单、现场照片、验收签字和材料清单。",
+            "最后形成费用分析报告，提出节能降耗和物业考核建议，把费用异常从报销问题转化为运行管理问题。"
+          ],
+          explanation: [
+            "这道题考数据意识。后勤管理不是只处理维修，而要能看懂费用异常背后的运行问题。",
+            "高分答案要讲同比环比、原因拆分、现场核查和整改建议。"
+          ],
+          knowledge: [
+            "能耗费用要结合季节、人数、面积、设备和管理因素分析。",
+            "维修费用异常要核查工单、材料、验收和重复维修。",
+            "节约型机关建设要求降低机关运行成本。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "机关事务管理条例",
+              url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+              note: "用于支撑机关事务管理应降低机关运行成本、建设节约型机关。"
+            },
+            {
+              kind: "政策文件",
+              title: "行政事业单位内部控制规范（试行）",
+              url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+              note: "用于支撑费用支出、维修验收和凭证审核应建立内部控制。"
+            },
+            {
+              kind: "理论方法",
+              title: "同比环比分析、异常值分析",
+              note: "用于定位费用上升是正常波动、管理漏洞还是履约问题。"
+            }
+          ],
+          pitfalls: [
+            "只说节约用水用电，没有分析原因。",
+            "只看总金额，不拆分类别和期间。",
+            "维修费用异常不抽查工单和验收。"
+          ],
+          review: "背诵句：费用异常不是简单报销问题，要用数据拆原因、用现场核实找漏洞、用制度整改控成本。"
+        },
+        {
+          type: ["业务案例", "安全巡查"],
+          title: "巡查发现消防通道堆放杂物、配电房门禁管理松散，你如何处理？",
+          prompt: "考点：办公场所安全、隐患整改、责任闭环。",
+          answer: [
+            "我会把这类问题作为办公场所安全隐患立即处理。第一，现场拍照并登记隐患，要求物业和相关科室立即清理消防通道杂物，恢复通道畅通。第二，核查配电房门禁管理责任，明确钥匙或门禁权限由专人管理，非相关人员不得随意进入。第三，对物业下达整改通知，明确整改时限、责任人和复查要求。",
+            "如果隐患较严重或涉及多部门，我会及时报告分管领导，协调物业、安保、使用科室和安全管理人员共同处理。整改完成后要复查，形成隐患销号记录，并将问题纳入物业考核。对反复出现的堆放杂物问题，要设置日常巡查频次、责任区域和处罚措施。",
+            "事后要举一反三，组织办公区域消防通道、配电房、机房、仓库、楼梯间等重点部位排查，防止单点整改、整体失控。"
+          ],
+          explanation: [
+            "安全题的原则是立即处置、明确责任、闭环销号。不能等会议研究后再清理消防通道。",
+            "高分答案要把物业责任和科室责任同时纳入。"
+          ],
+          knowledge: [
+            "消防通道和配电房属于办公场所安全重点部位。",
+            "隐患整改要有登记、通知、整改、复查、销号。",
+            "反复隐患应纳入物业考核和日常巡查机制。"
+          ],
+          references: [
+            {
+              kind: "法律法规",
+              title: "中华人民共和国安全生产法",
+              url: "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817a66b816017a7956b7db0ad4&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E6%B3%95&type=",
+              note: "用于支撑发现安全隐患后应及时整改、消除事故隐患。"
+            },
+            {
+              kind: "政策文件",
+              title: "机关事务管理条例",
+              url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+              note: "用于支撑机关后勤服务保障和办公场所管理。"
+            },
+            {
+              kind: "理论方法",
+              title: "隐患排查治理闭环",
+              note: "用于把安全问题纳入发现、整改、复查、销号全过程。"
+            }
+          ],
+          pitfalls: [
+            "只提醒物业，不现场清理隐患。",
+            "只清理消防通道，不规范配电房门禁。",
+            "整改后不复查、不销号。"
+          ],
+          review: "背诵句：办公场所安全隐患要立即控制、明确责任、复查销号，并纳入物业考核。"
+        },
+        {
+          type: ["方案设计", "物业监管台账"],
+          title: "请设计一张办公用房和物业服务监管台账。",
+          prompt: "考点：台账字段、物业考核、空间管理和风险预警。",
+          answer: [
+            "我会把台账分为办公用房管理、物业服务监管、问题整改和考核评价四个板块。办公用房管理字段包括房号、面积、用途、使用科室、使用人数、负责人、是否超标准、是否闲置、是否改变用途、权属资料和图纸编号。物业服务监管字段包括服务单位、合同编号、服务范围、人员配置、保洁频次、安保巡查、维修响应时限、绿化维护、会议保障和应急值守。",
+            "问题整改字段包括发现日期、问题类型、地点、责任方、派单时间、整改时限、整改结果、复查人、复查日期、是否销号。考核评价字段包括月度扣分、费用扣减、投诉次数、满意度、重复问题、违约事项和改进建议。",
+            "预警点包括超标准占用、长期闲置、公共空间被固定占用、维修超期、人员不到岗、安全隐患未销号、投诉反复发生、费用异常增长。台账按月更新，季度复盘，用于房屋调配、物业考核和下一轮采购需求优化。"
+          ],
+          explanation: [
+            "这道题是 Day 6 的综合题。要把办公用房和物业服务两个系统放到一张监管逻辑中。",
+            "高分答案要体现字段、预警、月度更新和季度复盘。"
+          ],
+          knowledge: [
+            "办公用房台账管空间，物业台账管服务，整改台账管闭环。",
+            "物业考核应与投诉、巡查、维修、满意度和费用扣减关联。",
+            "台账最终服务于调配、监管、考核和采购需求优化。"
+          ],
+          references: [
+            {
+              kind: "政策文件",
+              title: "党政机关办公用房管理办法",
+              url: "https://www.gov.cn/gongbao/content/2018/content_5254301.htm",
+              note: "用于支撑办公用房使用、调配、维修和监督管理。"
+            },
+            {
+              kind: "政策文件",
+              title: "机关事务管理条例",
+              url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+              note: "用于支撑机关事务服务保障、运行成本控制和监督检查。"
+            },
+            {
+              kind: "理论方法",
+              title: "SLA服务监管、风险预警台账",
+              note: "用于把物业服务标准和办公空间风险转化为可考核字段。"
+            }
+          ],
+          pitfalls: [
+            "只做房间台账，不管物业服务质量。",
+            "只有问题记录，没有整改复查和考核字段。",
+            "台账不用于月度考核和采购需求优化。"
+          ],
+          review: "背诵句：办公用房和物业服务监管台账，要同时管空间、管服务、管整改、管考核。"
+        }
+      ]
+    });
+
+    const policyReferenceBank = {
+      job: {
+        kind: "岗位依据",
+        title: "深圳市龙岗区事业单位2026年公开招聘高层次人才公告",
+        url: "https://www.lg.gov.cn/bmzz/rlzyj/xxgk/rsxx/ryzp/content/post_12817931.html",
+        note: "用于支撑本岗位覆盖采购、资产、物业、食堂、车辆、会务、财务和小型市政工程协助管理等职责。"
+      },
+      procurement: {
+        kind: "政策文件",
+        title: "中华人民共和国政府采购法",
+        url: "https://www.ccgp.gov.cn/zcfg/gjfg/201310/t20131029_3587339.htm",
+        note: "用于支撑采购程序、公平竞争、合同验收和采购文件归档等要求。"
+      },
+      demand: {
+        kind: "政策文件",
+        title: "政府采购需求管理办法",
+        url: "https://www.mof.gov.cn/gkml/caizhengwengao/wg2021/wg202005/202109/t20210917_3753625.htm",
+        note: "用于支撑采购需求、市场调查、合同文本和验收标准前置设计。"
+      },
+      asset: {
+        kind: "政策文件",
+        title: "行政事业性国有资产管理条例",
+        url: "https://www.gov.cn/zhengce/zhengceku/2021-03/17/content_5593484.htm",
+        note: "用于支撑行政事业性国有资产配置、使用、处置和监督管理。"
+      },
+      internalControl: {
+        kind: "政策文件",
+        title: "行政事业单位内部控制规范（试行）",
+        url: "https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/201212/t20121217_716289.htm",
+        note: "用于支撑预算、收支、采购、资产、合同等经济活动的风险控制和过程留痕。"
+      },
+      food: {
+        kind: "法律法规",
+        title: "中华人民共和国食品安全法",
+        url: "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817ab22e0c017abd8d85a205f1&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E9%A3%9F%E5%93%81%E5%AE%89%E5%85%A8%E6%B3%95&type=",
+        note: "用于支撑机关食堂食品采购、加工、留样、卫生和食品安全管理。"
+      },
+      vehicle: {
+        kind: "政策文件",
+        title: "党政机关公务用车管理办法",
+        url: "https://www.gov.cn/gongbao/content/2018/content_5254302.htm",
+        note: "用于支撑公务用车编制、配备、使用、维修、处置和监督管理。"
+      },
+      office: {
+        kind: "政策文件",
+        title: "党政机关办公用房管理办法",
+        url: "https://www.gov.cn/gongbao/content/2018/content_5254301.htm",
+        note: "用于支撑办公用房配置、使用、维修、调剂和监督管理。"
+      },
+      affairs: {
+        kind: "政策文件",
+        title: "机关事务管理条例",
+        url: "https://www.gov.cn/gongbao/content/2012/content_2182742.htm",
+        note: "用于支撑机关运行保障、服务管理、经费资产管理和节约型机关建设。"
+      },
+      smallWorks: {
+        kind: "政策文件",
+        title: "深圳市限额以下小型工程和零星作业安全生产纳管办法",
+        url: "https://www.sz.gov.cn/szsrmzfxxgk/zc/gfxwj/szfgfxwj/content/post_12360862.html",
+        note: "用于支撑限额以下小型工程和零星作业安全生产纳管、备案和巡查要求。"
+      },
+      safety: {
+        kind: "法律法规",
+        title: "中华人民共和国安全生产法",
+        url: "https://flk.npc.gov.cn/detail?fileId=&id=ff8081817a66b816017a7956b7db0ad4&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E6%B3%95&type=",
+        note: "用于支撑安全风险辨识、隐患整改、应急处置和责任落实。"
+      },
+      investment: {
+        kind: "政策文件",
+        title: "政府投资条例",
+        url: "https://www.gov.cn/zhengce/zhengceku/2019-05/05/content_5388798.htm",
+        note: "用于支撑政府投资项目决策、实施、监督和绩效管理。"
+      },
+      budget: {
+        kind: "政策文件",
+        title: "中华人民共和国预算法",
+        note: "用于支撑预算编制、执行、调整、监督和财政资金约束。"
+      },
+      accounting: {
+        kind: "政策文件",
+        title: "政府会计准则、政府会计制度",
+        note: "用于支撑行政事业单位会计核算、预算会计与财务会计衔接。"
+      },
+      officialDoc: {
+        kind: "政策文件",
+        title: "党政机关公文处理工作条例",
+        note: "用于支撑请示、报告、通知、纪要等机关公文格式、行文规则和办理要求。"
+      },
+      archive: {
+        kind: "法律法规",
+        title: "中华人民共和国档案法",
+        note: "用于支撑机关档案收集、整理、保管、利用和安全管理。"
+      },
+      secrecy: {
+        kind: "法律法规",
+        title: "中华人民共和国保守国家秘密法",
+        note: "用于支撑涉密事项识别、载体管理、人员责任和保密风险防控。"
+      },
+      disclosure: {
+        kind: "行政法规",
+        title: "中华人民共和国政府信息公开条例",
+        note: "用于支撑依申请公开、主动公开、公开边界和群众沟通。"
+      },
+      thrift: {
+        kind: "政策文件",
+        title: "党政机关厉行节约反对浪费条例",
+        note: "用于支撑机关运行成本控制、节能降耗、会议活动和公务支出管理。"
+      }
+    };
+
+    function dateForGeneratedDay(dayId) {
+      const date = new Date(Date.UTC(2026, 5, dayId + 9));
+      return date.toISOString().slice(0, 10);
+    }
+
+    function buildReferenceList(keys, methodTitle) {
+      const refs = keys.map(key => policyReferenceBank[key]).filter(Boolean);
+      refs.push({
+        kind: "理论方法",
+        title: methodTitle,
+        note: "用于把岗位业务题组织成原则、步骤、风险、闭环的结构化答案。"
+      });
+      return refs;
+    }
+
+    const generatedQuestionKinds = ["业务案例", "结构化", "情景处置", "方案设计", "专业问答", "综合分析", "材料分析", "压力追问", "组织协调", "数据分析"];
+
+    function buildGeneratedQuestion(plan, spec, index) {
+      const actions = spec.actions || plan.actions;
+      const risks = spec.risks || plan.risks;
+      const refs = buildReferenceList(spec.refs || plan.refs, spec.method || plan.method);
+      const focus = spec.focus || plan.short;
+      return {
+        type: spec.type || [generatedQuestionKinds[index % generatedQuestionKinds.length], plan.short],
+        title: spec.title,
+        prompt: spec.prompt || `考点：${focus}、${plan.domain}、风险识别和闭环整改。`,
+        answer: [
+          `我会先把这个问题定性为${plan.domain}中的“${focus}”问题。处理时既要保障街道机关正常运转，也要守住${plan.principle}，不能只凭经验、口头协调或临时安排推进。`,
+          `具体处理上，第一，${actions[0]}；第二，${actions[1]}；第三，${actions[2]}；第四，${actions[3]}。如果出现${risks[0]}、${risks[1]}等情况，要及时报告、分类处置并保留完整过程记录。`,
+          `事后，我会把处理结果纳入${plan.record}，复盘${risks.join("、")}等风险点，完善${plan.improvement}，推动该事项从一次性处理转为可追踪、可评价、可整改的管理闭环。`
+        ],
+        explanation: [
+          `这道题重点考${focus}，不是让你泛泛表态，而是看你能否把岗位职责转化为可执行流程。`,
+          `高分答案要同时说清原则、步骤、风险和复盘，尤其要体现${plan.short}工作的制度意识、服务意识和证据意识。`
+        ],
+        knowledge: [
+          `${plan.domain}的答题主线是：${plan.principle}。`,
+          `${focus}的关键动作是：${actions.join("、")}。`,
+          `常见易错风险包括：${risks.join("、")}。`
+        ],
+        references: refs,
+        pitfalls: [
+          `只讲“马上协调处理”，没有说明${actions[0]}和${actions[1]}。`,
+          `忽视${risks[0]}和${risks[1]}，容易显得没有底线意识。`,
+          `处理完就结束，没有形成${plan.record}和整改复盘。`
+        ],
+        review: spec.review || `背诵句：${plan.short}题要按“先定性、再核实、按制度处理、留痕复盘”的逻辑回答，把服务保障和风险闭环放在一起。`
+      };
+    }
+
+    const remainingDayPlans = [
+      {
+        id: 7,
+        short: "机关食堂",
+        domain: "机关食堂管理",
+        title: "机关食堂：食品安全、成本与满意度",
+        subtitle: "围绕食品安全底线、采购验收、价格成本、满意度反馈和外包监管展开。",
+        principle: "食品安全底线、成本透明、服务满意度和供应商履约监管",
+        record: "食堂监管台账和满意度整改清单",
+        improvement: "菜单评审、进货验收、留样检查、成本公示和供应商考核机制",
+        refs: ["food", "affairs", "internalControl"],
+        method: "HACCP风险控制、PDCA质量改进、外包服务绩效管理",
+        actions: ["核实食品安全、价格和服务投诉的具体事实", "检查进货台账、留样记录、后厨卫生、菜单价格和合同条款", "约谈食堂服务单位并提出整改清单、时限和复查要求", "把整改结果纳入月度考核、满意度调查和付款评价"],
+        risks: ["食品安全隐患", "价格不透明", "留样和进货记录缺失", "满意度持续下降"],
+        items: [
+          { title: "机关食堂收到干部反映菜品变差、价格不透明，你如何处理？", focus: "食堂投诉处理" },
+          { title: "食堂供应商送来的肉菜质量一般，但价格较低，验收人员想先收下，你怎么看？", focus: "食材验收和质量底线" },
+          { title: "如何设计机关食堂食品安全日常检查清单？", focus: "食品安全检查清单" },
+          { title: "食堂满意度连续两个月下降，你会如何调查原因并整改？", focus: "满意度调查和整改" },
+          { title: "食堂菜品价格上涨，干部认为不合理，你如何核算和沟通？", focus: "成本核算和价格公示" },
+          { title: "机关食堂发生疑似食品安全事件，你如何应急处置？", focus: "疑似食品安全事件处置", risks: ["食品安全事件", "信息报送迟缓", "留样缺失", "人员恐慌"] },
+          { title: "食堂承包单位要求减少人员以降低成本，你如何把关？", focus: "外包服务人员配置监管" },
+          { title: "如何把节约反浪费要求落实到机关食堂管理？", focus: "反食品浪费和节约管理", refs: ["food", "affairs", "thrift"] },
+          { title: "如果让你制定食堂月度考核办法，你会设置哪些指标？", focus: "食堂绩效考核" },
+          { title: "请设计一张机关食堂监管台账。", focus: "食堂监管台账设计" }
+        ]
+      },
+      {
+        id: 8,
+        short: "公务车辆",
+        domain: "公务车辆管理",
+        title: "公务车辆：调度、维修、油耗与安全",
+        subtitle: "掌握公务用车审批调度、维修保养、油耗监控、安全管理和廉政风险防控。",
+        principle: "公务出行合规、车辆安全、成本可控、过程留痕",
+        record: "公务用车调度、维修、油耗和安全台账",
+        improvement: "用车审批、车辆派遣、维修验收、油耗分析和驾驶安全制度",
+        refs: ["vehicle", "affairs", "internalControl"],
+        method: "车辆全生命周期管理、成本异常分析、廉政风险防控",
+        actions: ["核实用车事由、审批手续、路线时间和车辆状态", "按照轻重缓急和制度规则调度车辆或安排替代交通", "记录里程、油耗、维修、驾驶员和值班情况", "定期复盘用车频次、维修费用、油耗异常和安全事件"],
+        risks: ["公车私用", "私车公养", "维修费用异常", "车辆安全事故"],
+        items: [
+          { title: "两个科室同时申请公务用车，一项是临时检查，一项是重要会议，你如何调度？", focus: "公务车辆冲突调度" },
+          { title: "公务车维修费用连续偏高，你如何分析和监管？", focus: "维修费用异常分析" },
+          { title: "驾驶员反映车辆存在异响但科室急着出车，你怎么办？", focus: "车辆安全和任务保障" },
+          { title: "如何防范公车私用、私车公养等廉政风险？", focus: "公务车辆廉政风险防控" },
+          { title: "公务车辆油耗明显高于同类车辆，你如何排查？", focus: "油耗异常排查" },
+          { title: "节假日期间如何管理公务车辆停放、封存和值班用车？", focus: "节假日车辆管理" },
+          { title: "车辆发生轻微交通事故，你作为综合事务人员如何处置？", focus: "车辆事故应急处置", risks: ["车辆安全事故", "责任认定不清", "保险材料缺失", "报告迟缓"] },
+          { title: "如何设计公务用车申请审批流程？", focus: "用车审批流程设计" },
+          { title: "公务车维修保养服务供应商履约不到位，你如何处理？", focus: "车辆维修供应商监管" },
+          { title: "请设计一张公务车辆管理台账。", focus: "公务车辆台账设计" }
+        ]
+      },
+      {
+        id: 9,
+        short: "会务服务",
+        domain: "会务服务和接待保障",
+        title: "会务服务、接待保障与突发事件",
+        subtitle: "覆盖会议方案、场地设备、人员分工、接待规范、应急预案和会后复盘。",
+        principle: "准备充分、流程清晰、接待规范、突发可控、会后复盘",
+        record: "会务保障任务清单、现场巡查表和复盘台账",
+        improvement: "会前清单、会中值守、会后评价、供应商考核和应急预案",
+        refs: ["affairs", "internalControl", "thrift"],
+        method: "5W2H任务拆解、RACI责任分工、应急预案管理",
+        actions: ["核实会议规格、人数、流程、场地、设备和接待边界", "制定任务清单和责任分工，提前完成场地设备测试", "会中安排现场值守和突发事件处置", "会后收集反馈、核对费用和复盘供应商表现"],
+        risks: ["设备故障", "接待超标准", "现场秩序混乱", "费用资料缺失"],
+        items: [
+          { title: "街道临时接到大型会议保障任务，你如何组织会务准备？", focus: "大型会议会前筹备" },
+          { title: "会议开始前投影和音响突然故障，你如何应急？", focus: "会场设备突发故障", risks: ["设备故障", "会议延误", "现场秩序混乱", "责任不清"] },
+          { title: "如何把接待保障做规范，避免超标准接待？", focus: "接待标准和边界" },
+          { title: "会务服务供应商现场人员不到位，你如何处理？", focus: "会务外包服务监管" },
+          { title: "多个会议室同时被申请，你如何协调场地资源？", focus: "会议室资源调度" },
+          { title: "重要会议材料印制出现错漏，你如何补救并复盘？", focus: "会议材料差错处置" },
+          { title: "如何设计会务保障工作清单？", focus: "会务清单化管理" },
+          { title: "会议费用报销时发现资料不完整，你如何处理？", focus: "会务费用审核" },
+          { title: "群众开放日活动现场人员较多、秩序压力大，你如何保障？", focus: "活动现场秩序保障" },
+          { title: "请设计一套会务服务满意度和复盘机制。", focus: "会后复盘和满意度评价" }
+        ]
+      },
+      {
+        id: 10,
+        short: "预算财务",
+        domain: "预算执行、报销审核和政府会计基础",
+        title: "预算执行、报销审核、政府会计基础",
+        subtitle: "聚焦预算约束、支出审核、票据合同验收、预算执行率和政府会计衔接。",
+        principle: "有预算、有合同、有验收、有票据、有审批、有绩效",
+        record: "预算执行台账、报销审核清单和支出进度表",
+        improvement: "预算执行预警、报销一次性告知、付款条件清单和绩效复盘",
+        refs: ["budget", "accounting", "internalControl"],
+        method: "预算控制、收支内控、凭证审核和绩效管理",
+        actions: ["核对预算指标、合同依据、验收结论和发票票据", "检查审批权限、付款条件、附件资料和经济分类", "对超预算、无预算、资料缺失或用途不符事项暂停办理并一次性告知", "按月分析预算执行率、支出结构和异常事项"],
+        risks: ["无预算支出", "虚假报销", "附件缺失", "预算执行进度异常"],
+        items: [
+          { title: "使用科室申请报销一笔培训费用，但预算科目不清、材料不齐，你怎么办？", focus: "报销材料审核" },
+          { title: "供应商催付款，但合同、验收、发票三项资料不一致，你如何处理？", focus: "付款前置条件审核" },
+          { title: "某项后勤预算执行率偏低，临近年底如何分析和改进？", focus: "预算执行率分析" },
+          { title: "科室提出先办事后补预算，你怎么看？", focus: "预算约束和程序底线" },
+          { title: "如何理解政府会计中的预算会计和财务会计双功能？", focus: "政府会计基础" },
+          { title: "报销审核中如何识别虚假发票或不合理附件？", focus: "票据风险识别" },
+          { title: "如何设计后勤支出月度分析表？", focus: "支出数据分析" },
+          { title: "采购合同金额和实际付款金额不一致，你如何核查？", focus: "合同付款差异核查" },
+          { title: "如何在预算执行中兼顾合规和效率？", focus: "预算执行效率" },
+          { title: "请设计一张日常财务报销审核清单。", focus: "报销审核清单设计" }
+        ]
+      },
+      {
+        id: 11,
+        short: "内控廉政",
+        domain: "行政事业单位内控与廉政风险防控",
+        title: "行政事业单位内控与廉政风险防控",
+        subtitle: "把采购、资产、合同、收支、工程和外包服务纳入岗位分离、授权审批和风险清单。",
+        principle: "分事行权、分岗设权、分级授权、定期轮岗、风险留痕",
+        record: "内控风险清单、廉政风险点台账和整改销号表",
+        improvement: "岗位分离、授权审批、过程记录、监督检查和问题整改机制",
+        refs: ["internalControl", "procurement", "asset"],
+        method: "风险矩阵、三道防线、岗位不相容控制",
+        actions: ["识别业务流程中的关键权力点和风险点", "检查岗位分离、授权审批、集体决策和记录留痕是否到位", "对异常事项启动复核、报告和整改", "把风险点纳入制度、清单、培训和监督检查"],
+        risks: ["廉政风险", "直接指定", "虚假报销", "国有资产流失"],
+        items: [
+          { title: "综合管理岗有哪些高频廉政风险点？你如何防控？", focus: "岗位廉政风险识别" },
+          { title: "同一人既提需求、又采购、又验收，你怎么看？", focus: "不相容岗位分离" },
+          { title: "熟悉供应商经常主动提供便利，你如何守住边界？", focus: "供应商交往边界" },
+          { title: "如何建立采购、资产、合同、财务一体化内控流程？", focus: "经济活动内控流程" },
+          { title: "发现报销材料疑似虚假但同事催你办理，你怎么办？", focus: "报销廉政风险" },
+          { title: "如何开展一次后勤领域廉政风险排查？", focus: "风险排查专项行动" },
+          { title: "外包服务考核长期满分但投诉不断，你如何看？", focus: "考核失真风险" },
+          { title: "如何把内控制度从纸面落实到日常工作？", focus: "制度落地执行" },
+          { title: "如果领导要求加快处理但手续不完整，你如何表达？", focus: "压力下坚持原则" },
+          { title: "请设计一张综合事务中心内控风险清单。", focus: "内控风险清单设计" }
+        ]
+      },
+      {
+        id: 12,
+        short: "小型工程",
+        domain: "小型工程立项、采购衔接与合同管理",
+        title: "小型工程立项、采购衔接与合同管理",
+        subtitle: "掌握小型维修、零星工程的需求论证、预算审核、采购衔接、合同履约和验收结算。",
+        principle: "需求真实、预算合理、采购合规、合同清楚、验收结算有据",
+        record: "小型工程项目台账、合同履约台账和验收结算资料清单",
+        improvement: "立项审核、现场踏勘、工程量确认、合同节点和验收结算流程",
+        refs: ["procurement", "investment", "internalControl"],
+        method: "项目全流程管理、工程量清单、合同节点控制",
+        actions: ["核实工程必要性、现场情况、预算来源和实施边界", "组织踏勘、工程量确认和采购方式判断", "签订合同并明确工期、质量、安全、验收和结算要求", "按节点跟踪进度并组织验收、结算和归档"],
+        risks: ["化整为零", "工程量不实", "合同条款不清", "结算超预算"],
+        items: [
+          { title: "街道办公楼小修小补项目如何从需求进入立项？", focus: "小型工程立项审核" },
+          { title: "使用科室口头提出维修需求，你如何核实工程量？", focus: "现场踏勘和工程量确认" },
+          { title: "小型工程和政府采购之间如何衔接？", focus: "采购衔接和方式判断" },
+          { title: "工程预算明显偏高，你如何审核和处理？", focus: "工程预算合理性审核" },
+          { title: "施工单位要求边干边签合同，你怎么看？", focus: "先施工后补手续风险" },
+          { title: "小型工程合同应重点约定哪些条款？", focus: "工程合同关键条款" },
+          { title: "工程实施中发现需要增加工程量，你如何处理？", focus: "工程变更管理" },
+          { title: "工程验收时使用科室觉得能用，但资料不全，你怎么办？", focus: "工程验收资料审核" },
+          { title: "如何防止零星维修项目被人为拆分？", focus: "拆分工程风险防控" },
+          { title: "请设计一张小型工程全过程管理台账。", focus: "小型工程台账设计" }
+        ]
+      },
+      {
+        id: 13,
+        short: "小型工程安全",
+        domain: "限额以下小型工程安全生产纳管",
+        title: "限额以下小型工程安全生产纳管",
+        subtitle: "突出小散工程和零星作业的备案纳管、现场巡查、隐患整改和责任闭环。",
+        principle: "小工程不小视，纳管备案、风险告知、现场巡查、隐患销号",
+        record: "小型工程安全纳管台账、隐患整改台账和现场巡查记录",
+        improvement: "开工前告知、施工中巡查、隐患整改、完工验收和安全复盘机制",
+        refs: ["smallWorks", "safety", "internalControl"],
+        method: "隐患排查治理闭环、风险分级管控、现场安全检查清单",
+        actions: ["核实项目是否纳入限额以下小型工程和零星作业管理范围", "督促办理备案纳管、风险告知和安全承诺", "开展现场巡查并检查人员、用电、高处作业、围挡警示等风险", "对隐患下达整改要求、复查销号并归档"],
+        risks: ["高处坠落", "触电", "违规动火", "安全责任不清"],
+        items: [
+          { title: "为什么小型工程也要纳入安全生产管理？", focus: "小型工程安全认知" },
+          { title: "社区零星维修准备开工，你如何判断是否需要纳管？", focus: "纳管范围判断" },
+          { title: "施工现场发现未设置围挡和警示标志，你如何处理？", focus: "现场安全隐患处置" },
+          { title: "限额以下工程开工前应准备哪些安全资料？", focus: "开工前安全资料" },
+          { title: "施工人员未佩戴安全帽并违规接电，你怎么办？", focus: "人员和临时用电安全" },
+          { title: "如何组织一次小型工程安全巡查？", focus: "安全巡查组织" },
+          { title: "施工单位认为工程小、不需要安全方案，你如何回应？", focus: "安全责任压力追问" },
+          { title: "小型工程发生轻微伤害事故，你如何处置？", focus: "小型工程事故应急" },
+          { title: "如何把安全纳管要求写入合同和验收？", focus: "合同安全条款" },
+          { title: "请设计一张限额以下小型工程安全纳管台账。", focus: "安全纳管台账设计" }
+        ]
+      },
+      {
+        id: 14,
+        short: "项目管理",
+        domain: "项目管理：进度、质量、成本、风险",
+        title: "项目管理：进度、质量、成本、风险",
+        subtitle: "把后勤项目从被动跟进转为计划、节点、质量、成本和风险综合管理。",
+        principle: "目标明确、节点可控、质量达标、成本受控、风险可预警",
+        record: "项目进度表、问题清单、风险台账和复盘报告",
+        improvement: "项目计划、里程碑管理、质量验收、成本控制和风险预警机制",
+        refs: ["internalControl", "investment", "procurement"],
+        method: "项目管理三角、甘特图、风险矩阵、PDCA复盘",
+        actions: ["明确项目目标、范围、责任人、节点和交付标准", "建立进度、质量、成本和风险台账", "定期协调问题并对偏差进行预警和纠偏", "完工后组织验收、结算、归档和复盘"],
+        risks: ["进度滞后", "质量不达标", "成本超支", "责任不清"],
+        items: [
+          { title: "你如何理解后勤保障中的项目管理思维？", focus: "项目管理认知" },
+          { title: "一个维修项目进度滞后，你如何协调推进？", focus: "进度滞后纠偏" },
+          { title: "如何在项目中同时控制质量和成本？", focus: "质量成本平衡" },
+          { title: "项目需求频繁变更，你如何控制范围？", focus: "项目范围管理" },
+          { title: "如何建立项目风险清单？", focus: "项目风险识别" },
+          { title: "多个后勤项目同时推进，你如何排优先级？", focus: "多项目优先级管理" },
+          { title: "供应商交付质量不稳定，你如何做过程控制？", focus: "供应商过程质量管理" },
+          { title: "项目完工后如何组织复盘？", focus: "项目复盘方法" },
+          { title: "如果领导要求压缩工期，你如何回应风险？", focus: "工期压缩压力追问" },
+          { title: "请设计一张后勤项目进度和风险看板。", focus: "项目看板设计" }
+        ]
+      },
+      {
+        id: 15,
+        short: "综合协调",
+        domain: "街道综合协调、应急响应、部门联动",
+        title: "街道综合协调、应急响应、部门联动",
+        subtitle: "训练跨科室、社区、供应商、物业、财务之间的信息汇总、资源调度和应急联动。",
+        principle: "快速响应、权责清晰、信息同步、资源统筹、事后复盘",
+        record: "协调事项台账、应急处置记录和部门联动清单",
+        improvement: "信息报送、会商协调、责任分工、资源调度和复盘通报机制",
+        refs: ["affairs", "safety", "job"],
+        method: "RACI责任矩阵、应急四步法、协同治理",
+        actions: ["迅速核实事件事实、影响范围和责任边界", "明确牵头部门、配合部门、供应商和现场责任人", "同步报告并调度人、财、物和场地等资源", "事后复盘流程断点并完善联动机制"],
+        risks: ["信息不对称", "部门推诿", "响应迟缓", "现场秩序失控"],
+        items: [
+          { title: "街道突发停电影响办公和群众办事，你如何协调？", focus: "突发停电应急协调" },
+          { title: "多个科室对后勤事项职责边界有争议，你如何推动？", focus: "职责边界协调" },
+          { title: "社区活动需要临时调用街道场地和设备，你如何统筹？", focus: "资源统筹协调" },
+          { title: "供应商、使用科室、财务对付款责任互相推诿，你如何处理？", focus: "跨主体协调" },
+          { title: "如何建立街道后勤应急物资和联系人清单？", focus: "应急资源清单" },
+          { title: "突发舆情涉及机关食堂或物业服务，你如何配合处置？", focus: "后勤舆情协同" },
+          { title: "领导临时交办紧急保障任务，你如何拆解推进？", focus: "临时任务拆解" },
+          { title: "如何提升综合事务中心与各科室的协同效率？", focus: "日常协同机制" },
+          { title: "遇到部门不配合，你如何沟通但不越权？", focus: "沟通边界和执行力" },
+          { title: "请设计一套后勤突发事件联动处置流程。", focus: "应急联动流程设计" }
+        ]
+      },
+      {
+        id: 16,
+        short: "公文写作",
+        domain: "公文写作：请示、报告、通知、纪要",
+        title: "公文写作：请示、报告、通知、纪要",
+        subtitle: "把业务问题转化为请示、报告、通知、纪要和整改通报的机关表达。",
+        principle: "文种准确、事实清楚、依据充分、措施具体、格式规范",
+        record: "公文办理台账、会议纪要和整改事项清单",
+        improvement: "公文模板库、审核清单、事项跟踪和闭环反馈机制",
+        refs: ["officialDoc", "job", "internalControl"],
+        method: "机关公文结构化表达、金字塔原理、问题-原因-对策框架",
+        actions: ["明确行文目的、文种、主送对象和办理权限", "提炼事实、依据、问题和拟办意见", "按公文格式形成简明准确的正文和附件", "跟踪批示、落实结果并归档"],
+        risks: ["文种错误", "事实不清", "越权请示", "措施空泛"],
+        items: [
+          { title: "请说明请示和报告的区别，并结合后勤事项举例。", focus: "请示报告区别" },
+          { title: "食堂整改需要向领导汇报，你如何写一份简要报告？", focus: "整改报告写作" },
+          { title: "办公用房调整需要征求科室意见，通知应写哪些要点？", focus: "通知写作" },
+          { title: "会议研究采购整改事项，纪要应如何写？", focus: "会议纪要写作" },
+          { title: "小型工程需要追加预算，应如何拟写请示思路？", focus: "请示写作" },
+          { title: "如何把复杂材料提炼成三点式汇报？", focus: "材料提炼" },
+          { title: "公文中如何做到事实、依据、建议三者一致？", focus: "公文逻辑" },
+          { title: "领导要求你半小时内写一份情况说明，你如何快速成稿？", focus: "限时写作" },
+          { title: "如何避免公文语言口语化、空泛化？", focus: "公文语言规范" },
+          { title: "请设计一份后勤整改情况报告提纲。", focus: "报告提纲设计" }
+        ]
+      },
+      {
+        id: 17,
+        short: "数据绩效",
+        domain: "数据分析、统计思维与绩效评价",
+        title: "数据分析、统计思维与绩效评价",
+        subtitle: "训练用数据看采购、资产、食堂、车辆、物业、会务和预算运行情况。",
+        principle: "口径清楚、数据真实、对比合理、问题可解释、改进可落地",
+        record: "后勤指标看板、异常分析表和绩效评价报告",
+        improvement: "指标口径、数据采集、同比环比、异常预警和绩效复盘机制",
+        refs: ["internalControl", "affairs", "budget"],
+        method: "同比环比、结构分析、异常值分析、绩效评价",
+        actions: ["明确指标口径、数据来源和统计周期", "进行同比、环比、结构和异常分析", "结合业务事实解释指标变化原因", "提出可执行的整改措施和跟踪指标"],
+        risks: ["数据口径不清", "样本偏差", "只看平均数", "结论脱离业务"],
+        items: [
+          { title: "如何用数据评价机关食堂服务质量？", focus: "食堂满意度数据分析" },
+          { title: "公务车辆油耗数据异常，你如何做统计分析？", focus: "车辆油耗分析" },
+          { title: "采购项目废标率升高，你如何找原因？", focus: "采购废标率分析" },
+          { title: "物业投诉数量下降，是否一定说明服务变好？", focus: "指标解释风险" },
+          { title: "固定资产闲置率如何计算并用于管理？", focus: "资产闲置率指标" },
+          { title: "预算执行率过高或过低分别说明什么？", focus: "预算执行率解读" },
+          { title: "如何设计综合事务中心月度后勤看板？", focus: "后勤指标看板" },
+          { title: "满意度调查如何避免样本偏差？", focus: "问卷和样本质量" },
+          { title: "如何把数据分析结果转化为整改措施？", focus: "数据到决策" },
+          { title: "请设计一套综合管理岗绩效评价指标。", focus: "绩效评价指标设计" }
+        ]
+      },
+      {
+        id: 18,
+        short: "外包监管",
+        domain: "外包服务监管、考核扣分与整改闭环",
+        title: "外包服务监管、考核扣分与整改闭环",
+        subtitle: "聚焦物业、食堂、维修、会务、车辆服务等外包供应商的合同绩效监管。",
+        principle: "合同有标准、过程有记录、问题有整改、考核能扣分、结果可应用",
+        record: "外包服务考核台账、问题派单台账和供应商履约评价表",
+        improvement: "SLA服务标准、月度考核、扣分扣款、整改复查和履约评价机制",
+        refs: ["procurement", "affairs", "internalControl"],
+        method: "SLA服务水平协议、供应商绩效管理、闭环整改",
+        actions: ["对照合同和服务标准核实履约情况", "记录问题事实、证据、整改要求和完成时限", "根据考核办法扣分扣款或追究违约责任", "将考核结果用于付款、续约和下一轮采购需求优化"],
+        risks: ["考核流于形式", "投诉反复发生", "扣分无依据", "供应商履约评价失真"],
+        items: [
+          { title: "为什么外包服务不能只看供应商自报材料？", focus: "外包服务监管意识" },
+          { title: "如何制定物业、食堂等外包服务月度考核表？", focus: "月度考核表设计" },
+          { title: "供应商问题反复出现但每月考核都合格，你怎么看？", focus: "考核失真治理" },
+          { title: "外包服务扣分扣款需要哪些证据？", focus: "扣分证据链" },
+          { title: "如何处理供应商整改不到位？", focus: "整改不到位处置" },
+          { title: "满意度评价和现场巡查如何结合？", focus: "多源评价机制" },
+          { title: "外包人员服务态度差、投诉多，你如何约谈？", focus: "外包人员管理" },
+          { title: "如何把供应商履约评价用于下一次采购？", focus: "履约评价应用" },
+          { title: "供应商认为扣分不合理并提出异议，你如何处理？", focus: "考核争议处理" },
+          { title: "请设计一套外包服务整改闭环流程。", focus: "整改闭环流程设计" }
+        ]
+      },
+      {
+        id: 19,
+        short: "档案保密",
+        domain: "档案、保密、信息公开与群众沟通",
+        title: "档案、保密、信息公开与群众沟通",
+        subtitle: "覆盖采购档案、资产档案、工程资料、涉密载体、信息公开边界和群众沟通。",
+        principle: "资料完整、分类清楚、保密安全、公开有界、回应及时",
+        record: "档案目录、保密风险清单、信息公开办理台账和群众沟通记录",
+        improvement: "随办随归、密级识别、公开审查、答复模板和沟通复盘机制",
+        refs: ["archive", "secrecy", "disclosure"],
+        method: "证据链管理、保密审查、公众沟通",
+        actions: ["识别材料性质、保存期限、公开属性和保密要求", "按项目或事项归集合同、验收、审批、沟通和整改资料", "涉及公开申请或群众咨询时依法核查边界并规范答复", "对资料缺失、泄密风险和沟通争议进行复盘整改"],
+        risks: ["档案缺失", "泄密", "公开边界错误", "群众误解扩大"],
+        items: [
+          { title: "采购档案和资产档案为什么要随办随归？", focus: "随办随归意识" },
+          { title: "群众申请公开某采购项目资料，你如何处理？", focus: "政府信息公开办理" },
+          { title: "会务材料中含有敏感信息，如何保管和流转？", focus: "涉密敏感材料管理" },
+          { title: "工程项目验收资料缺失，如何补救？", focus: "工程档案补正" },
+          { title: "如何设计综合事务中心档案目录？", focus: "档案目录设计" },
+          { title: "同事把内部文件发到工作群外部人员，你如何提醒和处理？", focus: "保密风险处置" },
+          { title: "群众投诉食堂或物业问题，你如何沟通回应？", focus: "群众沟通回应" },
+          { title: "信息公开中哪些内容不能简单公开？", focus: "公开边界识别" },
+          { title: "如何避免档案材料事后补签、责任不清？", focus: "证据链完整性" },
+          { title: "请设计一张档案、保密和信息公开风险清单。", focus: "档案保密风险清单" }
+        ]
+      },
+      {
+        id: 20,
+        short: "降本增效",
+        domain: "机关运行降本增效与绿色低碳机关",
+        title: "机关运行降本增效与绿色低碳机关",
+        subtitle: "围绕水电能耗、办公耗材、食堂浪费、车辆油耗、会议成本和绿色采购。",
+        principle: "保障不降质、成本可解释、节能有措施、绩效可评价",
+        record: "运行成本分析表、节能整改台账和绿色机关指标看板",
+        improvement: "能耗监测、耗材定额、绿色采购、反浪费宣传和绩效评价机制",
+        refs: ["affairs", "thrift", "procurement"],
+        method: "成本动因分析、绿色低碳管理、绩效改进",
+        actions: ["明确成本项目、数据口径和责任部门", "分析费用变化的业务、季节、设备和管理原因", "制定节能、节约、共享和绿色采购措施", "跟踪费用下降、满意度和服务质量变化"],
+        risks: ["只降成本不保质量", "数据口径不清", "节能措施不可持续", "形式主义宣传"],
+        items: [
+          { title: "你如何理解机关运行降本增效？", focus: "降本增效认知" },
+          { title: "办公耗材使用量明显增加，你如何分析？", focus: "办公耗材管理" },
+          { title: "如何推进绿色低碳机关建设？", focus: "绿色低碳机关" },
+          { title: "食堂反浪费如何做到既有宣传又有管理？", focus: "食堂反浪费" },
+          { title: "会议活动如何节约成本但不降低保障质量？", focus: "会议成本控制" },
+          { title: "公务车辆油耗和维修如何纳入降本增效？", focus: "车辆运行成本控制" },
+          { title: "绿色采购在后勤工作中如何体现？", focus: "绿色采购" },
+          { title: "如何设计节能降耗月度通报？", focus: "节能通报设计" },
+          { title: "有人说降本就是少花钱，你怎么看？", focus: "降本误区辨析" },
+          { title: "请设计一套机关运行成本绩效指标。", focus: "运行成本绩效指标" }
+        ]
+      },
+      {
+        id: 21,
+        short: "冲突协调",
+        domain: "多方冲突协调：社区、科室、供应商",
+        title: "多方冲突协调：社区、科室、供应商",
+        subtitle: "训练面对资源冲突、责任争议、供应商异议和群众诉求时的协调表达。",
+        principle: "依法依规、事实清楚、利益平衡、边界明确、结果闭环",
+        record: "协调事项记录、会议纪要、问题清单和落实反馈表",
+        improvement: "会商机制、责任矩阵、沟通模板和争议升级处理机制",
+        refs: ["job", "internalControl", "affairs"],
+        method: "利益相关方分析、非暴力沟通、RACI责任矩阵",
+        actions: ["确认争议事实、诉求和各方责任边界", "依据制度、合同、预算和岗位职责提出处理原则", "组织会商并形成责任清单、时间表和反馈机制", "对争议升级事项及时报告并保留沟通记录"],
+        risks: ["部门推诿", "供应商施压", "群众误解", "越权承诺"],
+        items: [
+          { title: "科室和供应商对验收责任各执一词，你如何协调？", focus: "验收责任争议协调" },
+          { title: "社区希望优先使用街道会议室，但机关会议也需要使用，你如何处理？", focus: "场地资源冲突" },
+          { title: "供应商认为考核扣分不公平，情绪激动，你如何沟通？", focus: "供应商异议沟通" },
+          { title: "群众对物业维修响应不满，到街道反映问题，你怎么办？", focus: "群众诉求协调" },
+          { title: "财务认为材料不全，使用科室认为流程太慢，你如何协调？", focus: "财务和业务协调" },
+          { title: "多部门共同负责事项无人牵头，你如何推动？", focus: "牵头责任明确" },
+          { title: "领导、科室、供应商三方要求不一致，你如何排序处理？", focus: "多方要求冲突" },
+          { title: "如何在沟通中既有服务意识又守住制度边界？", focus: "服务和原则平衡" },
+          { title: "面对不合理诉求，你如何拒绝而不激化矛盾？", focus: "拒绝表达技巧" },
+          { title: "请设计一套多方协调会议纪要模板。", focus: "协调纪要模板" }
+        ]
+      },
+      {
+        id: 22,
+        short: "公共管理",
+        domain: "公共管理理论与基层治理综合分析",
+        title: "公共管理理论与基层治理综合分析",
+        subtitle: "把服务型政府、整体性治理、公共价值、绩效治理、协同治理用于岗位答题。",
+        principle: "以公共价值为目标，以制度和数据为工具，以协同和服务为路径",
+        record: "理论框架复习卡、案例迁移表和岗位表达模板",
+        improvement: "理论-岗位-案例三段式表达机制",
+        refs: ["job", "affairs", "internalControl"],
+        method: "服务型政府、整体性治理、公共价值、绩效管理",
+        actions: ["先解释理论核心含义", "再映射到采购、资产、物业、食堂、车辆、会务等岗位场景", "提出制度化、数据化、协同化的管理措施", "用风险闭环和绩效评价收束答案"],
+        risks: ["理论空泛", "脱离岗位", "只讲宏观不讲措施", "没有案例支撑"],
+        items: [
+          { title: "如何用服务型政府理论理解综合管理岗？", focus: "服务型政府" },
+          { title: "整体性治理对街道后勤保障有什么启发？", focus: "整体性治理" },
+          { title: "公共价值理论如何用于政府采购和资产管理？", focus: "公共价值" },
+          { title: "绩效管理如何用于机关事务管理？", focus: "绩效管理" },
+          { title: "协同治理如何解决部门联动不畅？", focus: "协同治理" },
+          { title: "风险治理思维如何用于小型工程和食品安全？", focus: "风险治理" },
+          { title: "数字治理如何提升后勤保障效率？", focus: "数字治理" },
+          { title: "如何避免答理论题空泛？", focus: "理论落地表达" },
+          { title: "请用一个理论分析公务车辆管理问题。", focus: "理论案例迁移" },
+          { title: "请设计一套公共管理理论答题模板。", focus: "理论答题模板" }
+        ]
+      },
+      {
+        id: 23,
+        short: "博士优势",
+        domain: "博士应届生优势、研究能力转化表达",
+        title: "博士应届生优势、研究能力转化表达",
+        subtitle: "把博士训练转化为政策学习、系统分析、数据治理、制度建设和基层执行能力。",
+        principle: "学历不等于优势，能把研究能力转化为岗位产出才是优势",
+        record: "个人能力案例库、岗位匹配素材和答题表达模板",
+        improvement: "政策学习、数据分析、制度优化、沟通协同和执行复盘机制",
+        refs: ["job", "internalControl", "affairs"],
+        method: "能力迁移、STAR案例法、岗位匹配表达",
+        actions: ["识别博士训练中的可迁移能力", "把能力对应到岗位具体业务场景", "用案例说明如何解决真实问题", "承认基层经验不足并提出学习融入计划"],
+        risks: ["只谈学历", "脱离基层", "显得不愿做事务", "缺少岗位案例"],
+        items: [
+          { title: "博士应届生报考街道综合管理岗，你的优势是什么？", focus: "博士优势表达" },
+          { title: "如何把科研训练转化为政府采购和资产管理能力？", focus: "研究能力迁移" },
+          { title: "如果考官质疑你学历高但基层经验少，你如何回应？", focus: "基层经验压力追问" },
+          { title: "博士如何处理事务性、重复性工作？", focus: "事务工作态度" },
+          { title: "如何把数据分析能力用于后勤保障？", focus: "数据能力转化" },
+          { title: "如何把论文训练中的严谨性用于内控和风险防控？", focus: "严谨性转化" },
+          { title: "进入岗位前三个月你如何快速适应？", focus: "入职适应计划" },
+          { title: "你如何看待研究能力和执行力的关系？", focus: "研究与执行关系" },
+          { title: "请讲一个你解决复杂问题的经历并迁移到岗位。", focus: "STAR案例迁移" },
+          { title: "请设计一段岗位匹配自我介绍。", focus: "自我介绍模板" }
+        ]
+      },
+      {
+        id: 24,
+        short: "团队执行",
+        domain: "团队协作、执行力、服务意识与边界",
+        title: "团队协作、执行力、服务意识与边界",
+        subtitle: "训练机关工作中向上汇报、横向协同、服务科室、坚持原则和落实闭环。",
+        principle: "主动补位不越位，服务保障不失原则，执行落实有反馈",
+        record: "任务清单、协同记录、落实反馈和复盘台账",
+        improvement: "任务拆解、节点反馈、协同沟通、边界管理和复盘改进机制",
+        refs: ["job", "affairs", "internalControl"],
+        method: "执行闭环、向上管理、团队协作",
+        actions: ["明确任务目标、责任人、节点和交付标准", "主动沟通协同并及时反馈困难和风险", "在服务中坚持制度边界和程序底线", "完成后复盘问题、沉淀模板和清单"],
+        risks: ["越位承诺", "反馈不及时", "服务无边界", "执行无闭环"],
+        items: [
+          { title: "你如何理解综合管理岗的服务意识？", focus: "服务意识" },
+          { title: "领导交办任务不够清楚，你如何确认并推进？", focus: "任务确认" },
+          { title: "同事临时请你帮忙但会影响你本职工作，你怎么办？", focus: "团队协作边界" },
+          { title: "科室认为后勤服务慢、态度不好，你如何改进？", focus: "服务反馈改进" },
+          { title: "如何做到主动补位但不越位？", focus: "补位不越位" },
+          { title: "执行过程中发现原方案有风险，你如何向领导汇报？", focus: "风险汇报" },
+          { title: "面对重复琐碎工作，你如何保持质量？", focus: "重复工作质量" },
+          { title: "如何提升跨科室协作效率？", focus: "跨科室协作" },
+          { title: "你如何处理原则性和灵活性的关系？", focus: "原则和灵活" },
+          { title: "请设计一张个人任务闭环清单。", focus: "任务闭环清单" }
+        ]
+      },
+      {
+        id: 25,
+        short: "压力追问",
+        domain: "压力追问：原则底线与灵活处理",
+        title: "压力追问：原则底线与灵活处理",
+        subtitle: "集中训练熟人关系、领导催办、供应商施压、突发紧急和程序底线题。",
+        principle: "态度稳、原则清、办法实、表达柔、留痕全",
+        record: "压力情景答题卡和风险边界清单",
+        improvement: "底线表达、替代方案、报告机制和证据留痕机制",
+        refs: ["internalControl", "procurement", "job"],
+        method: "压力面试四步法、边界沟通、替代方案设计",
+        actions: ["先稳定情绪并明确合规底线", "解释不能突破程序的原因和风险", "提出合规替代方案和加快流转办法", "必要时请示报告并保留沟通记录"],
+        risks: ["突破程序", "人情干预", "越权承诺", "责任倒查"],
+        items: [
+          { title: "领导让你先付款后补验收，你怎么办？", focus: "付款底线压力" },
+          { title: "熟人供应商希望你透露采购信息，你如何处理？", focus: "供应商关系压力" },
+          { title: "科室催你绕过流程先采购，你如何回应？", focus: "采购程序压力" },
+          { title: "同事说大家以前都这么办，你如何坚持原则？", focus: "惯例压力" },
+          { title: "紧急任务确实影响工作，你如何在效率和合规间平衡？", focus: "效率合规平衡" },
+          { title: "考官追问你会不会太书生气，你如何回应？", focus: "个人质疑压力" },
+          { title: "如果领导批评你流程意识太强、效率低，你怎么办？", focus: "领导批评压力" },
+          { title: "供应商威胁投诉你不配合，你如何处理？", focus: "供应商施压" },
+          { title: "群众情绪激动质疑后勤安排，你如何沟通？", focus: "群众情绪压力" },
+          { title: "请总结压力追问题的万能答题框架。", focus: "压力题框架" }
+        ]
+      },
+      {
+        id: 26,
+        short: "材料分析",
+        domain: "材料分析：从材料提炼问题和对策",
+        title: "材料分析：从材料提炼问题和对策",
+        subtitle: "训练从长材料中提取事实、问题、原因、风险和对策，适配业务考核材料题。",
+        principle: "先读任务、再抓事实、归纳问题、分析原因、提出对策",
+        record: "材料题审题表、问题归纳表和对策清单",
+        improvement: "审题标注、分层归纳、证据引用和对策闭环模板",
+        refs: ["job", "internalControl", "affairs"],
+        method: "材料分析五步法、MECE分类、问题树",
+        actions: ["先看题目要求和作答对象", "圈出时间、主体、数据、矛盾和风险", "按采购、资产、财务、服务、安全等维度归纳问题", "提出有主体、有时限、有措施、有复盘的对策"],
+        risks: ["复述材料", "漏掉关键矛盾", "对策空泛", "没有引用材料证据"],
+        items: [
+          { title: "材料题拿到后，你如何快速审题？", focus: "材料题审题方法" },
+          { title: "如何从一段采购投诉材料中提炼问题？", focus: "采购材料分析" },
+          { title: "如何从食堂满意度材料中找原因？", focus: "满意度材料分析" },
+          { title: "如何从资产盘点材料中提出整改对策？", focus: "资产盘点材料题" },
+          { title: "材料中有多方说法矛盾，你如何判断？", focus: "矛盾信息处理" },
+          { title: "材料题如何避免只复述材料？", focus: "归纳提炼能力" },
+          { title: "如何把数据材料转化为管理建议？", focus: "数据材料对策" },
+          { title: "材料分析题如何安排答题结构？", focus: "材料题结构" },
+          { title: "如果材料信息不足，你如何作出合理假设？", focus: "信息不足处理" },
+          { title: "请设计一张材料分析题作答模板。", focus: "材料题模板" }
+        ]
+      },
+      {
+        id: 27,
+        short: "方案策划",
+        domain: "方案策划：专项整治、制度建设、培训",
+        title: "方案策划：专项整治、制度建设、培训",
+        subtitle: "训练写出可执行的专项整治方案、制度建设方案和培训方案。",
+        principle: "目标明确、问题导向、措施具体、责任到人、评估闭环",
+        record: "专项方案、任务分解表、培训签到和整改评估表",
+        improvement: "方案模板、任务清单、督办机制和效果评估机制",
+        refs: ["internalControl", "job", "affairs"],
+        method: "方案设计六要素、SMART目标、PDCA闭环",
+        actions: ["明确背景问题、目标和范围", "分解任务、责任部门、时间节点和资源保障", "设置宣传培训、检查整改和考核评估措施", "形成总结报告并固化制度成果"],
+        risks: ["方案空泛", "责任不清", "没有时限", "缺少评估"],
+        items: [
+          { title: "如何策划一次政府采购专项整改？", focus: "采购专项整改方案" },
+          { title: "如何制定固定资产盘点专项方案？", focus: "资产盘点方案" },
+          { title: "如何组织机关食堂食品安全培训？", focus: "食品安全培训方案" },
+          { title: "如何开展公务车辆规范使用专项检查？", focus: "公务车专项检查" },
+          { title: "如何制定物业服务质量提升方案？", focus: "物业质量提升方案" },
+          { title: "如何设计小型工程安全生产培训？", focus: "工程安全培训" },
+          { title: "如何推动内控制度修订和宣贯？", focus: "制度建设方案" },
+          { title: "方案策划中如何设置量化目标？", focus: "SMART目标设计" },
+          { title: "专项整治如何避免一阵风？", focus: "长效机制" },
+          { title: "请设计一份后勤领域风险排查专项方案。", focus: "风险排查方案" }
+        ]
+      },
+      {
+        id: 28,
+        short: "大型会议",
+        domain: "综合案例：大型会议与后勤保障联动",
+        title: "综合案例：大型会议与后勤保障联动",
+        subtitle: "把会务、车辆、食堂、物业、安全、预算和供应商联动起来做综合模拟。",
+        principle: "统筹资源、明确分工、预案先行、现场值守、复盘改进",
+        record: "大型会议保障总表、应急预案、供应商联络表和复盘报告",
+        improvement: "跨部门联动、场景推演、任务督办和会后评价机制",
+        refs: ["affairs", "internalControl", "thrift"],
+        method: "大型活动项目管理、RACI矩阵、应急演练",
+        actions: ["明确会议规格、人数、流程和保障范围", "统筹场地、设备、车辆、餐饮、安保、物业和预算", "开展会前检查、现场值守和应急预案演练", "会后核对费用、评价供应商并复盘问题"],
+        risks: ["现场秩序混乱", "设备故障", "接待超标准", "多部门衔接断点"],
+        items: [
+          { title: "街道承办大型会议，你如何制定总体保障方案？", focus: "大型会议总体方案" },
+          { title: "会议当天车辆、餐饮、会场同时出问题，你如何优先处理？", focus: "多点突发优先级" },
+          { title: "如何协调物业、食堂、车辆和会务供应商？", focus: "供应商联动协调" },
+          { title: "大型会议如何控制接待和会议费用？", focus: "会议费用控制" },
+          { title: "如何开展会前压力测试？", focus: "会前检查演练" },
+          { title: "重要嘉宾临时增加，保障方案如何调整？", focus: "临时变更处置" },
+          { title: "大型会议材料、会场、设备如何分工到人？", focus: "任务分工" },
+          { title: "会后发现供应商服务瑕疵，如何处理？", focus: "会后供应商考核" },
+          { title: "如何把大型会议经验沉淀为标准流程？", focus: "经验固化" },
+          { title: "请设计大型会议保障一页纸指挥表。", focus: "指挥表设计" }
+        ]
+      },
+      {
+        id: 29,
+        short: "综合一体化",
+        domain: "综合案例：采购、资产、财务、工程一体化",
+        title: "综合案例：采购、资产、财务、工程一体化",
+        subtitle: "综合模拟办公场所改造、设备采购、资产入账、财务付款和工程验收联动。",
+        principle: "业务一体化、流程相衔接、证据链完整、风险可追溯",
+        record: "综合项目全过程台账、资料清单和风险闭环表",
+        improvement: "采购资产财务工程联动审核和统一归档机制",
+        refs: ["procurement", "asset", "internalControl"],
+        method: "全过程管理、证据链、跨模块内控",
+        actions: ["从需求、预算、采购、合同、实施、验收、付款、入账全链条梳理", "明确采购、资产、财务、工程各环节责任和资料", "对超预算、验收不合格、资产未入账等风险设置预警", "项目结束后统一归档并复盘流程断点"],
+        risks: ["采购资产脱节", "财务付款缺依据", "工程验收资料不全", "责任链断裂"],
+        items: [
+          { title: "办公场所改造并采购设备，你如何统筹全流程？", focus: "综合项目统筹" },
+          { title: "工程已完工但设备未入账、发票未到，你如何处理？", focus: "工程资产财务衔接" },
+          { title: "采购、资产、财务三套台账数据不一致，你如何核对？", focus: "台账数据一致性" },
+          { title: "小型工程涉及追加采购，如何防止程序混乱？", focus: "工程采购衔接" },
+          { title: "资产验收和工程验收如何区分又衔接？", focus: "双重验收衔接" },
+          { title: "项目付款前应核对哪些资料？", focus: "付款资料总清单" },
+          { title: "如何建立综合项目风险预警点？", focus: "综合风险预警" },
+          { title: "项目资料分散在多个科室，如何统一归档？", focus: "综合档案归集" },
+          { title: "如何向领导汇报综合项目推进情况？", focus: "综合汇报" },
+          { title: "请设计采购、资产、财务、工程一体化流程图。", focus: "一体化流程设计" }
+        ]
+      },
+      {
+        id: 30,
+        short: "全真模拟",
+        domain: "全真模拟、个性化答题模板、复盘清单",
+        title: "全真模拟、个性化答题模板、复盘清单",
+        subtitle: "最后一天进行全真混合题型训练，形成个人答题模板和考前复盘清单。",
+        principle: "岗位贴合、结构清楚、依据明确、表达稳健、复盘到位",
+        record: "个人答题模板、易错题清单和考前冲刺复盘表",
+        improvement: "题型识别、时间控制、关键词表达和模拟反馈机制",
+        refs: ["job", "internalControl", "affairs"],
+        method: "结构化面试、STAR法、复盘清单、限时模拟",
+        actions: ["快速判断题型和考点", "用原则、措施、风险、闭环组织答案", "嵌入岗位关键词和政策依据", "答后复盘表达、逻辑和遗漏点"],
+        risks: ["答题空泛", "时间失控", "岗位贴合不足", "没有政策依据"],
+        items: [
+          { title: "请用2分钟介绍你对综合管理岗的理解和匹配优势。", focus: "岗位匹配全真题" },
+          { title: "如果入职后发现制度很多、流程复杂，你如何快速上手？", focus: "入职适应全真题" },
+          { title: "政府采购、固定资产、财务付款同时出问题，你如何排序？", focus: "多问题排序全真题" },
+          { title: "请现场设计一个后勤保障风险清单。", focus: "风险清单全真题" },
+          { title: "请分析一个供应商履约不到位的综合案例。", focus: "履约案例全真题" },
+          { title: "请说明你如何把博士能力转化为基层执行力。", focus: "博士能力全真题" },
+          { title: "如果考官连续追问你经验不足，你如何稳住表达？", focus: "压力追问全真题" },
+          { title: "请从公共管理理论角度分析机关运行保障。", focus: "理论综合全真题" },
+          { title: "请给出你考前最应背熟的五个答题框架。", focus: "答题框架复盘" },
+          { title: "请设计一张个人考前最后复盘清单。", focus: "最终复盘清单" }
+        ]
+      }
+    ];
+
+    const existingGeneratedDayIds = new Set(appData.days.map(day => day.id));
+    remainingDayPlans.forEach(plan => {
+      if (existingGeneratedDayIds.has(plan.id)) return;
+      appData.days.push({
+        id: plan.id,
+        date: dateForGeneratedDay(plan.id),
+        title: plan.title,
+        subtitle: plan.subtitle,
+        summary: {
+          core: [
+            `${plan.domain}的核心不是临时事务处理，而是围绕${plan.principle}建立稳定运行机制。`,
+            `高频题会围绕${plan.risks.slice(0, 3).join("、")}展开，必须同时回答处理措施和风险闭环。`,
+            `本日复习要把${plan.short}放回岗位职责中，体现服务保障、程序合规、过程留痕和复盘改进。`
+          ],
+          frameworks: [
+            `四步框架：先定性为${plan.domain}问题，再核实事实，按制度处理，最后复盘建制。`,
+            `风险框架：识别${plan.risks.join("、")}，逐项设置预警、整改和责任追踪。`,
+            `表达框架：岗位职责 + 政策依据 + 执行动作 + 台账闭环。`
+          ],
+          review: [
+            `看到${plan.short}题，先说原则：${plan.principle}。`,
+            `答措施时至少包含：${plan.actions.slice(0, 3).join("、")}。`,
+            `结尾必须落到${plan.record}和${plan.improvement}。`
+          ]
+        },
+        questions: plan.items.map((item, index) => buildGeneratedQuestion(plan, item, index))
+      });
+    });
+
+    const app = document.querySelector("#app");
+
+    function esc(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    const highlightTerms = [
+      {
+        className: "policy",
+        terms: [
+          "中华人民共和国政府采购法实施条例", "政府采购需求管理办法", "中华人民共和国政府采购法",
+          "行政事业性国有资产管理条例", "深圳市行政事业单位国有资产处置办法",
+          "行政事业单位内部控制规范", "中华人民共和国食品安全法", "党政机关公务用车管理办法",
+          "党政机关办公用房管理办法", "机关事务管理条例", "深圳市限额以下小型工程和零星作业安全生产纳管办法",
+          "中华人民共和国安全生产法", "政府投资条例", "政府采购法实施条例", "政府采购法", "食品安全法",
+          "安全生产法", "内控规范", "公务用车管理办法", "办公用房管理办法",
+          "法律法规", "政策", "制度要求", "制度", "程序", "审批", "合同", "发票",
+          "权限", "公开透明", "公平竞争", "公正", "诚实信用", "依法合规",
+          "公开招标", "邀请招标", "竞争性谈判", "单一来源", "询价", "废标",
+          "质疑", "投诉", "集中采购目录", "采购限额标准", "招标文件", "采购文件",
+          "资格条件", "评分标准", "评审方法", "评审专家", "中标通知书", "成交结果",
+          "质疑答复", "政府采购质疑和投诉办法", "政府采购货物和服务招标投标管理办法",
+          "行政事业单位资产清查核实管理办法", "中央行政单位通用办公设备家具配置标准",
+          "资产处置", "报废", "损失核销", "调拨", "捐赠", "账务核销", "配置标准",
+          "办公用房管理办法", "统一规划", "统一权属", "统一配置", "统一处置",
+          "物业合同", "维修", "用途变更", "消防", "预算法", "政府会计准则", "政府会计制度",
+          "党政机关公文处理工作条例", "中华人民共和国档案法", "中华人民共和国保守国家秘密法",
+          "中华人民共和国政府信息公开条例", "党政机关厉行节约反对浪费条例", "采购需求", "合同验收",
+          "政府投资", "备案纳管", "公开", "保密", "档案"
+        ]
+      },
+      {
+        className: "risk",
+        terms: [
+          "廉政风险", "食品安全", "安全生产", "国有资产流失", "公车私用", "私车公养",
+          "先报后补", "先供货后补手续", "直接指定", "不能", "不得", "不突破程序底线",
+          "底线", "风险", "隐患", "违规", "超预算", "虚假报销", "账实不符", "责任倒查",
+          "责任认定", "触电", "滑倒", "资料损毁", "化整为零", "规避公开招标",
+          "供应商不足三家", "报价超预算", "品牌指向", "排他条件", "地域限制",
+          "本地保护", "实质性变更", "商业秘密", "泄露", "先付款后补材料", "验收不合格",
+          "资产流失", "账外资产", "未贴标", "长期闲置", "私自处理", "数据泄露",
+          "人员调离未交接", "维修外送超期", "未审批处置", "超标准", "闲置",
+          "改变用途", "公共空间被固定占用", "维修超期", "人员不到岗", "安全隐患",
+          "消防通道", "配电房", "费用异常", "投诉反复发生", "食品安全事件", "留样缺失",
+          "公车私用", "维修费用异常", "接待超标准", "现场秩序混乱", "无预算支出",
+          "附件缺失", "考核流于形式", "档案缺失", "越权承诺", "答题空泛", "时间失控",
+          "高处坠落", "违规动火", "工程量不实", "结算超预算"
+        ]
+      },
+      {
+        className: "logic",
+        terms: [
+          "首先", "其次", "最后", "第一", "第二", "第三", "第四", "第五",
+          "一是", "二是", "三是", "四是", "五是", "具体推进上", "具体处理上",
+          "在管理推进上", "处理过程中", "同时", "事后", "因此", "如果", "一方面", "另一方面",
+          "先控安全风险", "再保障机关运行", "同步记录责任", "复盘整改", "整改闭环",
+          "形成整改闭环", "按制度", "按程序", "一次性告知", "清单化", "闭环", "复盘", "台账",
+          "登记", "核查", "答复", "归档", "更正", "澄清", "书面说明",
+          "核实差异", "查明原因", "分类处理", "建制防复发", "红黄绿管理",
+          "发现问题", "登记派单", "限时处理", "复查评价", "考核归档", "整改销号",
+          "同比", "环比", "异常分析", "任务拆解", "责任分工", "现场值守", "会后复盘",
+          "问题导向", "目标明确", "责任到人", "效果评估", "先读任务", "归纳问题", "提出对策"
+        ]
+      },
+      {
+        className: "key",
+        terms: [
+          "综合管理岗", "机关运行保障", "内部治理", "公共资源配置", "政府采购", "固定资产",
+          "国有资产", "机关饭堂", "公务用车", "政府物业", "办公场所", "会务保障", "会务服务",
+          "日常财务", "小型市政工程", "小型工程", "后勤保障", "基层治理", "预算", "采购需求",
+          "采购程序", "合同履约", "验收", "资产台账", "采购台账", "采购代理机构", "采购人责任",
+          "市场调查", "需求审查", "需求管理", "合同变更", "采购档案", "履约台账", "验收标准",
+          "付款条件", "服务标准", "考核扣分", "资产配置", "资产调剂", "资产清查",
+          "盘点整改", "资产盘活", "一物一码", "责任到人", "领用交接", "固定资产台账",
+          "账账相符", "账卡相符", "账实相符", "资产标签", "资产编号", "使用科室",
+          "保管责任", "办公用房", "政府物业", "物业服务", "物业监管", "空间管理",
+          "办公场所", "使用面积", "公共会议室", "房屋台账", "平面图", "维修响应",
+          "保洁", "安保", "绿化", "门禁", "能耗", "节约型机关", "满意度", "外包服务", "合同绩效",
+          "机关食堂", "进货台账", "食品留样", "菜单评审", "成本公示", "公务车辆", "车辆调度",
+          "油耗", "维修保养", "会务服务", "接待保障", "会议室", "预算执行", "报销审核",
+          "政府会计", "内控", "廉政风险", "岗位分离", "授权审批", "小型工程", "零星作业",
+          "项目管理", "进度", "质量", "成本", "综合协调", "应急响应", "部门联动",
+          "公文写作", "请示", "报告", "通知", "纪要", "数据分析", "绩效评价",
+          "档案管理", "信息公开", "群众沟通", "降本增效", "绿色低碳", "多方协调",
+          "公共管理", "博士优势", "执行力", "服务意识", "压力追问", "材料分析",
+          "方案策划", "专项整治", "全真模拟", "答题模板", "复盘清单",
+          "服务型政府", "整体性治理", "PDCA", "5W2H", "RACI", "全生命周期管理",
+          "项目管理三角", "公共价值", "岗位职责", "政策学习", "系统分析", "数据处理", "制度建设"
+        ]
+      }
+    ];
+
+    const flatHighlightTerms = highlightTerms
+      .flatMap(group => group.terms.map(term => ({ term, className: group.className })))
+      .sort((a, b) => b.term.length - a.term.length);
+
+    function rich(value) {
+      const text = esc(value);
+      const ranges = [];
+      for (const { term, className } of flatHighlightTerms) {
+        let start = 0;
+        while (start < text.length) {
+          const index = text.indexOf(term, start);
+          if (index === -1) break;
+          const end = index + term.length;
+          const overlaps = ranges.some(range => index < range.end && end > range.start);
+          if (!overlaps) ranges.push({ start: index, end, className });
+          start = end;
+        }
+      }
+      ranges.sort((a, b) => a.start - b.start);
+      let output = "";
+      let cursor = 0;
+      for (const range of ranges) {
+        output += text.slice(cursor, range.start);
+        output += `<span class="hl ${range.className}">${text.slice(range.start, range.end)}</span>`;
+        cursor = range.end;
+      }
+      output += text.slice(cursor);
+      return output;
+    }
+
+    function list(items, ordered = false) {
+      const tag = ordered ? "ol" : "ul";
+      return `<${tag}>${items.map(item => `<li>${rich(item)}</li>`).join("")}</${tag}>`;
+    }
+
+    function paragraphs(items) {
+      return items.map(item => `<p>${rich(item)}</p>`).join("");
+    }
+
+    function referenceList(items) {
+      if (!items || !items.length) {
+        return `<p>本题未单独引用外部文件，主要依据岗位职责和通用面试答题方法。</p>`;
+      }
+      return `<div class="ref-list">${items.map(ref => {
+        const title = ref.url
+          ? `<a href="${esc(ref.url)}" target="_blank" rel="noopener">${esc(ref.title)}</a>`
+          : `<span class="ref-title">${esc(ref.title)}</span>`;
+        return `
+          <div class="ref-item">
+            <span class="ref-kind">${esc(ref.kind)}</span>
+            <div>${title}</div>
+            <p>${esc(ref.note)}</p>
+          </div>
+        `;
+      }).join("")}</div>`;
+    }
+
+    function chips(items) {
+      return items.map((item, index) => `<span class="chip ${index % 2 ? "teal" : ""}">${esc(item)}</span>`).join("");
+    }
+
+    function dayById(dayId) {
+      return appData.days.find(day => day.id === Number(dayId));
+    }
+
+    function renderHome() {
+      const generatedDays = appData.days;
+      const latestDay = generatedDays[generatedDays.length - 1];
+      const nextDayNumber = generatedDays.length + 1;
+      const nextTopic = appData.roadmap[nextDayNumber - 1] || "全真模拟与查漏补缺";
+      app.innerHTML = `
+        <div class="view">
+          <section class="hero">
+            <p class="eyebrow">清爽版 · 单题练习系统</p>
+            <h2>每天点进练习，每个页面只看一道题。</h2>
+            <p class="lead">${esc(appData.job.name)}围绕政府采购、固定资产、政府物业、机关饭堂、公务车辆、办公场所、会务服务、日常财务和小型市政工程协助管理展开。页面已改成“总览 - 每日入口 - 单题 - 当日总结 - 总复盘”的结构。</p>
+            <div class="meta-grid">
+              <div class="meta"><b>岗位代码</b><span>${esc(appData.job.code)}</span></div>
+              <div class="meta"><b>报考单位</b><span>${esc(appData.job.unit)}</span></div>
+              <div class="meta"><b>最新内容</b><span>Day ${latestDay.id} · 10题</span></div>
+              <div class="meta"><b>页面结构</b><span>一题一页 · 答案讲解完整</span></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>每日练习入口</h2>
+                <p>每一天结束后都有单独总结页，并汇入总复盘。现在已生成 ${generatedDays.length} 天。</p>
+              </div>
+              <span class="status">已生成 ${generatedDays.length} 天</span>
+            </div>
+            <div class="card-grid">
+              ${generatedDays.map(day => `
+                <article class="card">
+                  <span class="status">Day ${day.id} 已完成</span>
+                  <h3>${esc(day.title)}</h3>
+                  <p>${esc(day.subtitle)}</p>
+                  <div class="button-row">
+                    <a class="btn primary" href="#day-${day.id}">进入 Day ${day.id}</a>
+                    <a class="btn" href="#day-${day.id}-q-1">直接做第 1 题</a>
+                    <a class="btn ghost" href="#day-${day.id}-summary">看本日总结</a>
+                  </div>
+                </article>
+              `).join("")}
+              <article class="card">
+                <span class="status pending">Day ${nextDayNumber} 待新增</span>
+                <h3>${esc(nextTopic)}</h3>
+                <p>下一次你让我新增10题时，会按这个主题追加，并自动进入总复盘。</p>
+              </article>
+              <article class="card">
+                <span class="status pending">总复盘</span>
+                <h3>每天结束后的整体回顾</h3>
+                <p>按职责模块整理所有已完成天数的知识点，便于考前快速回看。</p>
+                <div class="button-row"><a class="btn" href="#overall">进入总复盘</a></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>30天计划</h2>
+                <p>清爽展示，不在首页塞题目。题目只在单题页展示。</p>
+              </div>
+            </div>
+            <div class="day-roadmap">
+              ${appData.roadmap.map((topic, index) => `
+                <div class="roadmap-item ${index < generatedDays.length ? "current" : ""}">
+                  <b>Day ${String(index + 1).padStart(2, "0")}</b>
+                  <span>${esc(topic)}</span>
+                </div>
+              `).join("")}
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderDay(dayId) {
+      const day = dayById(dayId);
+      if (!day) return renderNotFound();
+      app.innerHTML = `
+        <div class="view">
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Day ${day.id}：${esc(day.title)}</h2>
+                <p>${esc(day.subtitle)}</p>
+              </div>
+              <span class="status">${esc(day.date)}</span>
+            </div>
+            <div class="button-row">
+              <a class="btn primary" href="#day-${day.id}-q-1">开始第 1 题</a>
+              <a class="btn" href="#day-${day.id}-summary">查看本日知识点总结</a>
+              <a class="btn ghost" href="#home">返回总览</a>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>题目目录</h2>
+                <p>点开后进入单题页面；单题页只展示一道题、完整答案和讲解。</p>
+              </div>
+              <span class="status warn">10题</span>
+            </div>
+            <div class="question-list">
+              ${day.questions.map((question, index) => `
+                <a class="question-link" href="#day-${day.id}-q-${index + 1}">
+                  <span class="q-index">${String(index + 1).padStart(2, "0")}</span>
+                  <span>
+                    <strong>${esc(question.title)}</strong>
+                    <span>${esc(question.type.join(" / "))}</span>
+                  </span>
+                  <span class="status pending">进入</span>
+                </a>
+              `).join("")}
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderQuestion(dayId, questionNo) {
+      const day = dayById(dayId);
+      const index = Number(questionNo) - 1;
+      const question = day && day.questions[index];
+      if (!question) return renderNotFound();
+      const total = day.questions.length;
+      const previous = index > 0 ? `#day-${day.id}-q-${index}` : `#day-${day.id}`;
+      const next = index + 1 < total ? `#day-${day.id}-q-${index + 2}` : `#day-${day.id}-summary`;
+      const nextText = index + 1 < total ? "下一题" : "查看本日总结";
+      const percent = Math.round(((index + 1) / total) * 100);
+
+      app.innerHTML = `
+        <article class="question-panel">
+          <div class="question-shell">
+            <section class="question-main">
+              <div class="crumbs">
+                <a href="#home">总览</a>
+                <span>/</span>
+                <a href="#day-${day.id}">Day ${day.id}</a>
+                <span>/</span>
+                <span>第 ${index + 1} 题</span>
+              </div>
+              <div class="question-type">${chips(question.type)}</div>
+              <h2 class="question-title">${esc(question.title)}</h2>
+              <p class="prompt">${esc(question.prompt)}</p>
+
+              <div class="answer-block">
+                <h3>参考答案</h3>
+                ${paragraphs(question.answer)}
+              </div>
+
+              <div class="answer-block">
+                <h3>讲解</h3>
+                ${paragraphs(question.explanation)}
+              </div>
+
+              <div class="answer-block">
+                <h3>本题知识点</h3>
+                ${list(question.knowledge)}
+              </div>
+
+              <div class="answer-block">
+                <h3>引用依据 / 相关理论政策</h3>
+                ${referenceList(question.references)}
+              </div>
+
+              <div class="note teal">
+                <h4>复习卡片</h4>
+                <p>${rich(question.review)}</p>
+              </div>
+
+              <div class="button-row">
+                <a class="btn" href="${previous}">上一页</a>
+                <a class="btn primary" href="${next}">${nextText}</a>
+                <a class="btn ghost" href="#day-${day.id}">回到题目目录</a>
+              </div>
+            </section>
+
+            <aside class="question-aside">
+              <div class="side-box">
+                <h3>进度</h3>
+                <p>Day ${day.id} · 第 ${index + 1} / ${total} 题</p>
+                <div class="progress" aria-label="练习进度"><div style="width:${percent}%"></div></div>
+              </div>
+              <div class="side-box">
+                <h3>答题提醒</h3>
+                <ul>
+                  <li>先讲原则，再讲步骤。</li>
+                  <li>每题至少点出一个制度或风险。</li>
+                  <li>最后一定说闭环改进。</li>
+                </ul>
+              </div>
+              <div class="side-box">
+                <h3>易失分点</h3>
+                ${list(question.pitfalls)}
+              </div>
+            </aside>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderDaySummary(dayId) {
+      const day = dayById(dayId);
+      if (!day) return renderNotFound();
+      const allKnowledge = day.questions.map((question, index) => ({
+        title: `第 ${index + 1} 题：${question.type.join(" / ")}`,
+        text: question.knowledge[0]
+      }));
+
+      app.innerHTML = `
+        <div class="view">
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Day ${day.id} 本日知识点总结</h2>
+                <p>这是10道题结束后的复习页。考前可以只看这一页快速回忆今日重点。</p>
+              </div>
+              <span class="status">10题已归纳</span>
+            </div>
+            <div class="button-row">
+              <a class="btn" href="#day-${day.id}-q-10">回看第 10 题</a>
+              <a class="btn primary" href="#overall">进入总复盘</a>
+              <a class="btn ghost" href="#day-${day.id}">返回 Day ${day.id}</a>
+            </div>
+          </section>
+
+          <section class="summary-grid">
+            <div class="panel">
+              <div class="panel-head"><div><h2>今日核心结论</h2></div></div>
+              <div class="summary-list">
+                ${day.summary.core.map(item => `<div class="mini-card"><p>${rich(item)}</p></div>`).join("")}
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-head"><div><h2>今日答题框架</h2></div></div>
+              <div class="summary-list">
+                ${day.summary.frameworks.map(item => `<div class="mini-card"><p>${rich(item)}</p></div>`).join("")}
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>10题知识点回看</h2>
+                <p>每题抓一个最重要的知识点，形成复习索引。</p>
+              </div>
+            </div>
+            <div class="summary-list">
+              ${allKnowledge.map(item => `
+                <div class="mini-card">
+                  <h3>${esc(item.title)}</h3>
+                  <p>${rich(item.text)}</p>
+                </div>
+              `).join("")}
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head"><div><h2>今日复习清单</h2></div></div>
+            ${list(day.summary.review)}
+          </section>
+        </div>
+      `;
+    }
+
+    function renderOverall() {
+      const generatedDays = appData.days;
+      app.innerHTML = `
+        <div class="view">
+          <section class="hero">
+            <p class="eyebrow">总复盘 · 每天结束后更新</p>
+            <h2>把已完成的每日知识点，汇总成考前回顾页。</h2>
+            <p class="lead">目前已完成 ${generatedDays.length} 天：${generatedDays.map(day => `Day ${day.id}`).join("、")}。后续新增题目后，这里会继续汇总每一天的核心结论、答题框架和易错点。</p>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>岗位总框架</h2>
+                <p>${rich(appData.job.duties)}</p>
+              </div>
+            </div>
+            <div class="summary-grid">
+              <div class="mini-card"><h3>一条主线</h3><p>${rich("机关运行保障，本质是公共资源管理、内部治理和风险防控。")}</p></div>
+              <div class="mini-card"><h3>四个底线</h3><p>${rich("财政资金安全、国有资产安全、工程和食品安全、廉政纪律安全。")}</p></div>
+              <div class="mini-card"><h3>五个动作</h3><p>${rich("核实依据、按程序办、过程留痕、验收评价、复盘建制。")}</p></div>
+              <div class="mini-card"><h3>高分表达</h3><p>${rich("从事务处理上升到制度化、清单化、数据化、闭环化管理。")}</p></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>已完成天数回顾</h2>
+                <p>每一天结束后会在这里留下总括，避免复习材料越堆越散。</p>
+              </div>
+              <span class="status">${generatedDays.length} 天</span>
+            </div>
+            <div class="summary-list">
+              ${generatedDays.map(day => `
+                <div class="mini-card">
+                  <h3>Day ${day.id}：${esc(day.title)}</h3>
+                  <p>${rich(day.summary.core.join(" "))}</p>
+                  <div class="button-row">
+                    <a class="btn" href="#day-${day.id}">回到当天</a>
+                    <a class="btn ghost" href="#day-${day.id}-summary">当天总结</a>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>依据来源</h2>
+                <p>页面内容依据官方公告、岗位职责和相关制度整理；公告明确不指定考试教材。</p>
+              </div>
+            </div>
+            <ul class="source-list">
+              ${appData.sources.map(source => `<li><a href="${esc(source[1])}" target="_blank" rel="noopener">${esc(source[0])}</a></li>`).join("")}
+            </ul>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderNotFound() {
+      app.innerHTML = `
+        <section class="panel empty">
+          <h2>没有找到这个页面</h2>
+          <p>可能是题号或天数还没有生成。</p>
+          <div class="button-row" style="justify-content:center">
+            <a class="btn primary" href="#home">返回总览</a>
+          </div>
+        </section>
+      `;
+    }
+
+    function render() {
+      const route = location.hash.replace(/^#/, "") || "home";
+      const questionMatch = route.match(/^day-(\d+)-q-(\d+)$/);
+      const summaryMatch = route.match(/^day-(\d+)-summary$/);
+      const dayMatch = route.match(/^day-(\d+)$/);
+
+      if (route === "home") renderHome();
+      else if (route === "overall") renderOverall();
+      else if (questionMatch) renderQuestion(questionMatch[1], questionMatch[2]);
+      else if (summaryMatch) renderDaySummary(summaryMatch[1]);
+      else if (dayMatch) renderDay(dayMatch[1]);
+      else renderNotFound();
+
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+
+    window.addEventListener("hashchange", render);
+    render();
+  </script>
+</body>
+</html>
